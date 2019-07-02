@@ -21,7 +21,7 @@ sudo rm /home/pi/RXF_BM.desktop
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_MMDVMBM /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh cerrar_bm_30.sh'" /home/pi/Abrir_MMDVMBM
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh cerrar_bm.sh'" /home/pi/Abrir_MMDVMBM
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/BRANDMEISTER_ON.png" /home/pi/Abrir_MMDVMBM
 sed -i "10c Name[es_ES]=Cerrar BM" /home/pi/Abrir_MMDVMBM
 sed -i "7c MMDVMBM=ON" /home/pi/status.ini
