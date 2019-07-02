@@ -7,6 +7,6 @@ Type=Application
 #StartupNotify=false
 #Categories=GTK;Utility;TerminalEmulator;
 #Terminal=false
-Name=Abrir Brandmeister
+Name=/home/pi/Desktop/Abrir_MMDVMBM.desktop/Abrir Brandmeister
 #Hidden=false
 #Comment[es_ES]=EA3EIZ
