@@ -294,7 +294,6 @@ letra=c
 linea_sed_29=$numero_linea$letra
 echo "$Local"
 echo ""
-echo ""
 indi=$(awk "NR==2" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini)
 echo "  ${ROJO}PARAMETROS NXDNGateway.ini "
 echo "  ${CIAN} 1)${GRIS} Modificar Indicativo  - ${VERDE}$indi"
