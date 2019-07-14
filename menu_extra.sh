@@ -31,7 +31,7 @@ echo "\33[1;36m   6)\33[1;37m Anclar el puerto rfcomm0 para conectar el Bluetoot
 echo "\33[1;36m   7)\33[1;37m Anclar el puerto rfcomm1 para conectar el Bluetooth para siempre"
 echo "\33[1;32m      =================="
 echo ""
-echo "\33[1;36m   8)\33[1;37m Instalar Anydesk ${ROJO}(reiniciar después de instalar)"
+echo "\33[1;36m   8)\33[1;37m Instalar Anydesk"
 echo "\33[1;36m   9)\33[1;37m Grabar pantalla Nextion"
 echo ""
 echo "\33[1;36m  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
@@ -236,7 +236,7 @@ do
 clear
                         
 						
-						#comprueba si el ficgero existe
+						#comprueba si el fichero existe
                         if [ -d /home/pi/.anydesk ];
                         then
                         clear
