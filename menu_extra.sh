@@ -58,15 +58,16 @@ clear
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
                         sudo cp DExtra_Hosts.txt /home/pi/dv4mini/xref.ip
 
-
                         cd /home/pi/$SCRIPTS_version
                         sudo git pull
-                        sleep 1
 
                         sudo rm -R  /home/pi/$AUTOARRANQUE
                         cd /home/pi/
                         git clone http://github.com/ea3eiz/$AUTOARRANQUE
-                        sleep 1
+
+                        cd /home/pi/$SCRIPTS_version/Desktop
+                        sudo cp *.* /home/pi/Desktop
+
                         clear                                                              
                         exit;
                         break;;
