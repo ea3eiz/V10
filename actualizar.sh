@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-SCRIPTS_version="V7"
+SCRIPTS_version="V10"
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
 sed -i "2c BlueDV=OFF" /home/pi/status.ini
@@ -79,18 +79,13 @@ sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_solodstar_
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/repeater.png" /home/pi/Desktop/Abrir_D-STARRepeater
 sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" /home/pi/Desktop/Abrir_D-STARRepeater
 
-
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version/;lxterminal --geometry=80x20 -e sudo sh ejecutar_YSF2DMR.sh'" /home/pi/Desktop/Abrir_YSF2DMR.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/YSF2DMR.png" /home/pi/Desktop/Abrir_YSF2DMR.desktop
 sed -i "10c Name[es_ES]=Abrir YSF2DMR" /home/pi/Desktop/Abrir_YSF2DMR.desktop
 
-
-
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMR2YSF.sh'" /home/pi/Desktop/Abrir_DMR2YSF.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/DMR2YSF.png" /home/pi/Desktop/Abrir_DMR2YSF.desktop
 sed -i "10c Name[es_ES]=Abrir DMR2YSF" /home/pi/Desktop/Abrir_DMR2YSF.desktop
-
-
 
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_DMR2NXDN.sh'" /home/pi/Desktop/Abrir_DMR2NXDN.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/DMR2NXDN.png" /home/pi/Desktop/Abrir_DMR2NXDN.desktop
@@ -222,21 +217,12 @@ rplus=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 
 sudo cp /home/pi/$SCRIPTS_version/Desktop/Menu_Autoarranque /home/pi/Desktop
 
-
-						#comprueba si el fichero existe
-						if [ -f /home/pi/prueba.sh ];
-						then
-						SCRIPTS_version="V7_C"
-						else
-						SCRIPTS_version="V7"	
-					    fi
-						#================================
 # Fin Rutina =========================================================================================================================
 
-indicativo=`sed -n '2p'  /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
+
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 
-sudo rm -R /home/pi/V7/associacioader.com/
-sudo rm -R /home/pi/V7/ea3eiz.com/
+sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
+sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
 
 
