@@ -2,11 +2,11 @@
 Encoding=UTF-8
 TryExec=lxterminal
 Exec=ls
-Icon=/home/pi/V7/RXF_BM.png
+Icon=/home/pi/V7/ICONO_NEGRO.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
-Name[en_US]=MMDVM Connect Screen
 Terminal=false
-Name=0
+Name[es_ES]=Anulado
 Hidden=false
+X-KeepTerminal=true
