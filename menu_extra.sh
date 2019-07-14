@@ -3,6 +3,8 @@ while true
 do
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+AUTOARRANQUE="AUTOARRANQUE"
+AUTOARRANQUE=$AUTOARRANQUE$SCRIPTS_version
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -60,23 +62,10 @@ clear
                         sudo git pull
                         sleep 1
 
-                        sudo rm -R  /home/pi/AUTOARRANQUEV7
+                        sudo rm -R  /home/pi/$AUTOARRANQUE
                         cd /home/pi/
-                        git clone http://github.com/ea3eiz/AUTOARRANQUEV7
+                        git clone http://github.com/ea3eiz/$AUTOARRANQUE
                         sleep 1
-
-                        # copia prueba.sh en /home/pi
-                        cp /home/pi/$SCRIPTS_version/prueba.sh /home/pi
-
-
-                        #comprueba si el fichero existe
-                        if [ -f /home/pi/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini ];
-                        then
-                        echo ""
-                        else
-                        cp /home/pi/$SCRIPTS_version/versiones_YSF2DMR_DMR2YSF_DMR2NXDN.ini /home/pi/
-                        fi
-                        #================================
                         clear                                                              
                         exit;
                         break;;
