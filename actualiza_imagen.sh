@@ -16,7 +16,7 @@ echo "   *********************************"
 echo "   * ACTUALIZANDO POSIBLES CAMBIOS *"
 echo "   * EN LA IMAGEN V.02.07.$version *"
 echo "   *********************************"
-
+sleep 2
 #Actualiza reflectores
                         cd /usr/local/share/opendv/
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
