@@ -9,10 +9,16 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "   *          Script para Modificar MMDVMNXDN.ini          \33[1;31m by EA3EIZ\33[1;32m       *"
-echo "   **************************************************************************"
+echo "   ********************************************************************"
+echo -n "${CIAN}"
+echo "               Script para Modificar MMDVMNXDN.ini   "
+echo -n "${ROJO}"
+echo "                             $SCRIPTS_version by EA3EIZ"
+echo -n "${VERDE}"
+echo "   ********************************************************************"
+
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" /home/pi/MMDVMHost/MMDVMNXDN.ini`
 ind1=`expr substr $ind 3 30`
