@@ -1,8 +1,9 @@
 [Desktop Entry]
+version=V10
 Encoding=UTF-8
 TryExec=lxterminal
 Exec=ls
-Icon=/home/pi/V7/ICONO_NEGRO.png
+Icon=/home/pi/$version/ICONO_NEGRO.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
