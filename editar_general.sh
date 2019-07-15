@@ -2,16 +2,23 @@
 while true
 do
 clear
+
+SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
+
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "   *    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ TODOS LOS .ini   *"
-echo "   *                             \33[1;31mby EA3EIZ \33[1;32m                                 *"
-echo "   **************************************************************************"
-echo""
+echo "   ********************************************************************"
+echo -n "${CIAN}"
+echo "   CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ TODOS LOS .ini   "
+echo -n "${ROJO}"
+echo "                             $SCRIPTS_version by EA3EIZ"
+echo -n "${VERDE}"
+echo "   ********************************************************************"
+
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
 ind1=`expr substr $ind 3 30`
@@ -100,10 +107,6 @@ MODULE=$(awk "NR==$numero_linea" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini)
 letra=c
 linea_sed_MODULE=$numero_linea$letra
 echo "$MODULE"
-
-echo ""
-echo "\33[1;36m  0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
-echo ""
 
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
