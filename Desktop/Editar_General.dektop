@@ -1,8 +1,8 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=sh -c "cd /home/pi/V7;lxterminal --geometry=80x30 -e sudo sh  editar_INIS_02_07_04.sh"
-Icon=/home/pi/V7/EDITOR.png
+Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=80x30 -e sudo sh  editar_general.sh"
+Icon=/home/pi/V10/EDITOR.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
