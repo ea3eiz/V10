@@ -40,7 +40,7 @@ sleep 2
 
 
 #Lee el fichero INFO_NXDN para poner lod datos en los iconos INFO TXF                        
-frecuencia=$(awk "NR==10" /home/pi/INFO_NXDN)
+frecuencia=$(awk "NR==10" /home/pi/INFO_RXF)
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NMXDN.desktop
 
 
