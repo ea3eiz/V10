@@ -12,10 +12,10 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 echo "${VERDE}"
-echo "*********************************"
-echo "* ACTUALIZANDO POSIBLES CAMBIOS *"
-echo "*     EN LA IMAGEN V.02.07.$version   *"
-echo "*********************************"
+echo "     *********************************"
+echo "     * ACTUALIZANDO POSIBLES CAMBIOS *"
+echo "     *     EN LA IMAGEN V.02.07.$version   *"
+echo "     *********************************"
 sleep 2
 #Actualiza reflectores
                         cd /usr/local/share/opendv/
