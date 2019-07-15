@@ -84,10 +84,16 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "             Script para Modificar $DIRECTORIO             \33[1;31m by EA3EIZ\33[1;32m   "
-echo "   **************************************************************************"
+echo "   ********************************************************************"
+echo -n "${CIAN}"
+echo "               Script para Modificar $DIRECTORIO    "
+echo -n "${ROJO}"
+echo "                             $SCRIPTS_version by EA3EIZ"
+echo -n "${VERDE}"
+echo "   ********************************************************************"
+
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 ind=`grep -n "^Callsign=" /home/pi/MMDVMHost/$DIRECTORIO`
 indi1=`echo "$ind" | tr -d '[[:space:]]'`
