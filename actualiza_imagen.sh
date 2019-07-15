@@ -37,7 +37,7 @@ sleep 2
                         cd /home/pi/$SCRIPTS_version/Desktop
                         sudo cp * /home/pi/Desktop
                         echo "${AMARILLO}"
-echo "*********************************"
-echo " <<<<< IMAGEN ACTUALIZADA >>>>>  "
-echo "*********************************"
+echo "     *********************************"
+echo "      <<<<< IMAGEN ACTUALIZADA >>>>>  "
+echo "     *********************************"
                         sleep 2
