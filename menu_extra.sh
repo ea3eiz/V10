@@ -60,11 +60,12 @@ clear
 
                         cd /home/pi/$SCRIPTS_version
                         sudo git pull
-
+clear
+sleep 1
                         sudo rm -R  /home/pi/$AUTOARRANQUE
                         cd /home/pi/
-                        git clone http://github.com/ea3eiz/$AUTOARRANQUE
-
+clear
+sleep 1
                         cd /home/pi/$SCRIPTS_version/Desktop
                         sudo cp *.* /home/pi/Desktop
 
