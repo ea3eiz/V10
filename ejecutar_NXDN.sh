@@ -18,6 +18,8 @@ sudo cp /home/pi/RXF_NXDN.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_NXDN.desktop
 
+sed -i "10c Name=$frecuencia" /home/pi/INFO_RXF
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_NXDN.desktop /home/pi
