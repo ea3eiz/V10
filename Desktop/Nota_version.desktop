@@ -2,7 +2,7 @@
 Encoding=UTF-8
 TryExec=lxterminal
 Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=88x30 -e sudo sh nota_version.sh"
-Icon=/home/pi/V10/ICONO-ADER_02_07_03.png
+Icon=/home/pi/V10/ICONO_NOTA_VERSION.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
