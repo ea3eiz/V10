@@ -7,6 +7,6 @@ Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
 Terminal=true
-Name[es_ES]=Abrir NXDN
+Name[es_ES]=Reiniciar IMAGEN
 Hidden=false
 Comment[es_ES]=EA3EIZ
