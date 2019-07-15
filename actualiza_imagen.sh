@@ -14,7 +14,7 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   *********************************"
 echo "   * ACTUALIZANDO POSIBLES CAMBIOS *"
-echo "   * EN LA IMAGEN V.02.07.$version *"
+echo "   * EN LA IMAGEN V.02.07.$version         *"
 echo "   *********************************"
 sleep 2
 #Actualiza reflectores
