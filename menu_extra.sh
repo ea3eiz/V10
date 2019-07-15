@@ -67,9 +67,9 @@ sleep 1
 clear
 sleep 1
                         cd /home/pi/$SCRIPTS_version/Desktop
-                        sudo cp *.* /home/pi/Desktop
+                        sudo cp * /home/pi/Desktop
 
-                        clear                                                              
+                        #clear                                                              
                         exit;
                         break;;
                         [nN]* ) echo ""
