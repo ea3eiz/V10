@@ -20,6 +20,11 @@ sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
 sed -i "17c NXDN=OFF" /home/pi/status.ini
 
  
+#Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
+                        cd /home/pi/$SCRIPTS_version/Desktop
+                        sudo cp * /home/pi/Desktop
+                        echo "${AMARILLO}"
+                        
 #sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_dv4_30.sh'" /home/pi/Desktop/Abrir_dv4mini
 #sed -i "5c Icon=/home/pi/$SCRIPTS_version/dv4k.png" /home/pi/Desktop/Abrir_dv4mini
 #sed -i "10c Name[es_ES]=Abrir DV4mini" /home/pi/Desktop/Abrir_dv4mini
@@ -235,10 +240,6 @@ sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS
 
 
 
-#Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
-                        #cd /home/pi/$SCRIPTS_version/Desktop
-                        #sudo cp * /home/pi/Desktop
-                        #echo "${AMARILLO}"
 sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
 sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
 sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
