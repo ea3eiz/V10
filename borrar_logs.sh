@@ -11,4 +11,4 @@ clear
 sudo rm /home/pi/NXDNClients/NXDNGateway/*.log
 clear
 echo "\33[1;32m<<<<< BORRANDO TODOS LOS LOGS >>>>>"
-sleep 
+sleep 2
