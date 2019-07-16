@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 Terminal=true
-Exec=sh -c "cd  /home/pi/V10; lxterminal --geometry=80x30 -e sudo sh copiar_restaurar.sh"
+Exec=sh -c "cd  /home/pi/V10; lxterminal --geometry=80x15 -e sudo sh copiar_restaurar.sh"
 Icon=/home/pi/V10/ICONO_COPIAR_RESTAURAR.png
 Type=Application
 Categories=GTK;Utility;TerminalEmulator;
