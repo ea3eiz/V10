@@ -19,9 +19,8 @@ echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ********************************************************************"
 
-echo  "${CIAN}   1)${VERDE} Instalación limpia de MMDVMHost\33[1;33m"
-echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
+echo  "${CIAN}   1)${VERDE} Instalar MMDVMHost mas reciente\33[1;33m"
+
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
