@@ -51,9 +51,6 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
 						echo "$var1 $var3"
 						echo "   $var4"
 						echo "   $var5"
-						
-echo "${CIAN}"
-                        echo -n "   Pulsa la tecla ENTER para salir "
                         read A
 						exit;
 						
