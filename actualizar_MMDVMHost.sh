@@ -31,12 +31,20 @@ do
 clear
                     echo "${ROJO}"
                     echo " *********************************************************************"
-                    echo " * Si instalas MMDVMhost desde esta opción, perderás todas las       *"
+                    echo " * Si actualizas MMDVMhost desde esta opción, perderás todas las     *"
                     echo " * configuraciones y tendrás que volver a configurar los .ini        *"
-                    echo " * Desde el icono Editor GENERAL podras configurarlos todos a la vez *"
                     echo " *********************************************************************"
+                    
+                    echo "${BLANCO}"
+                    echo " *********************************************************************"
+                    echo " * Haz antes una copia de seguridad desde el icono COPIAR RESTAURAR   *"
+                    echo " * O desde un navegador poniendo la ip de la raspberry pi y luego     *"
+                    echo " * utiLiza el icono HACER COPIA SEGURIDAD el cual te creará           *"
+                    echo " * el archivo [copia.tar.gz] en la carpeta Downloads de tu ordenador  *"
+                    echo " *********************************************************************"                    
+
                     echo "${VERDE}"
-                    read -p '  Quieres hacer una instalación limpia de MMDVMHost? S/N: ' ejecutar1
+                    read -p '  Quieres hacer la actualización? S/N: ' ejecutar1
                     case $ejecutar1 in
                     [sS]* ) echo ""
                     echo "ok >>>>>"
