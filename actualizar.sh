@@ -37,7 +37,7 @@ sed -i "17c NXDN=OFF" /home/pi/status.ini
 #sed -i "10c Name[es_ES]=Abrir BlueDV" /home/pi/Desktop/Abrir_BlueDV
 
 sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh ejecutar_bm.sh'" /home/pi/Desktop/Abrir_MMDVMBM.desktop
-sed -i "5c Icon=/home/pi/$SCRIPTS_version/DMR.png" /home/pi/Desktop/Abrir_MMDVMBM.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_BM_OFF.png" /home/pi/Desktop/Abrir_MMDVMBM.desktop
 sed -i "10c Name[es_ES]=Abrir BM" /home/pi/Desktop/Abrir_MMDVMBM.desktop
 
 #sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh ejecutar_mmdvm_30.sh'" /home/pi/Desktop/Abrir_Radio
@@ -95,6 +95,10 @@ sed -i "10c Name[es_ES]=Abrir BM" /home/pi/Desktop/Abrir_MMDVMBM.desktop
 #sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_dvrptr_02_07_05.sh'" /home/pi/Desktop/Boton_3
 #sed -i "7c Icon=/home/pi/$SCRIPTS_version/DVRPTR.png" /home/pi/Desktop/Boton_3
 #sed -i "11c Name[es_ES]=Abrir Dvrptr" /home/pi/Desktop/Boton_3
+
+sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh ejecutar_NXDN.sh'" /home/pi/Desktop/Abrir_NXDN.desktop
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_NXDN_OFF.png" /home/pi/Desktop/Abrir_NXDN.desktop
+sed -i "10c Name[es_ES]=Abrir NXDN" /home/pi/Desktop/Abrir_NXDN.desktop
 
 cd /home/pi/$SCRIPTS_version
 sudo git pull 
