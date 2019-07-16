@@ -19,11 +19,7 @@ sed -i "15c DMR2YSF=OFF" /home/pi/status.ini
 sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
 sed -i "17c NXDN=OFF" /home/pi/status.ini
 
-#Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
-cd /home/pi/$SCRIPTS_version/Desktop
-sudo cp * /home/pi/Desktop
-sleep 2
-
+ 
 #sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_dv4_30.sh'" /home/pi/Desktop/Abrir_dv4mini
 #sed -i "5c Icon=/home/pi/$SCRIPTS_version/dv4k.png" /home/pi/Desktop/Abrir_dv4mini
 #sed -i "10c Name[es_ES]=Abrir DV4mini" /home/pi/Desktop/Abrir_dv4mini
@@ -229,7 +225,7 @@ frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 rbm=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 rplus=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 
-#sudo cp /home/pi/$SCRIPTS_version/Desktop/Menu_Autoarranque /home/pi/Desktop
+sudo cp /home/pi/$SCRIPTS_version/Desktop/Menu_Autoarranque /home/pi/Desktop
 
 # Fin Rutina =========================================================================================================================
 
@@ -239,6 +235,10 @@ sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS
 
 
 
+#Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
+                        #cd /home/pi/$SCRIPTS_version/Desktop
+                        #sudo cp * /home/pi/Desktop
+                        #echo "${AMARILLO}"
 sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
 sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
 sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
