@@ -7,18 +7,29 @@ ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
+
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "   *       Script para Copiar y Restaurar Configuraciones \33[1;33m\33[1;32m                  *"
-echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                                     *"
-echo "   **************************************************************************"
+echo "   ********************************************************************"
+echo -n "${CIAN}"
+echo "               Script para Copiar y Restaurar Configuraciones   "
+echo -n "${ROJO}"
+echo "                             $SCRIPTS_version by EA3EIZ"
+echo -n "${VERDE}"
+echo "   ********************************************************************"
+
+
+
+
+
+
+
 echo "\33[1;36m   1)\33[1;37m Hacer Copia de seguridad de BM, DMR+, LIBRE, RADIO, solo D-STAR,"
-echo "      solo FUSION, YSF2DMR, DMR2YSFF, DMR2NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
+echo "      solo FUSION, YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
 echo "      D-STAR Repeater y Editor GENERAL"
 
 echo ""
-echo "\33[1;36m   2)\33[1;32m Restaurar Copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, "
-echo "      solo FUSION, YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN,YSF, BlueDV, SVXLINK, ircDDB, "
+echo "\33[1;36m   2)\33[1;32m Restaurar Copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION, "
+echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN,YSF, BlueDV, SVXLINK, ircDDB, "
 echo "      D-STAR Repeater y Editor GENERAL"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
