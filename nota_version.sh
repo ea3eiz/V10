@@ -17,7 +17,7 @@ echo "   ***********************************************************************
 echo ""
 echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIO AFICIONADOS."
 echo "\33[1;32m"
-echo "   Imagen Linux basada en Raspbian, creada por: EA3EIZ"
+echo "   Imagen Linux basada en Raspbian, creada por EA3EIZ y testeada por EA3EG"
 echo ""
 echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
 echo ""
@@ -52,9 +52,6 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
 						echo "   $var4"
 						echo "   $var5"
 						
-echo "${AMARILLO}"
-echo "   - Utilizar adecuadamente los puertos de los correspondientes Módems."
-echo ""
 echo "${CIAN}"
                         echo -n "   Pulsa la tecla ENTER para salir "
                         read A
