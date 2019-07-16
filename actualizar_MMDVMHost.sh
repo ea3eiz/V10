@@ -19,7 +19,7 @@ echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ********************************************************************"
 
-echo  "${CIAN}   1)${VERDE} Instalar MMDVMHost mas reciente\33[1;33m"
+echo  "${CIAN}   1)${VERDE} Actualizar MMDVMHost al mas reciente\33[1;33m"
 
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
