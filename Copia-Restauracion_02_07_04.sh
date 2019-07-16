@@ -18,7 +18,7 @@ echo "      D-STAR Repeater y Editor GENERAL"
 
 echo ""
 echo "\33[1;36m   2)\33[1;32m Restaurar Copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, "
-echo "      solo FUSION, YSF2DMR, DMR2YSFF, DMR2NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
+echo "      solo FUSION, YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN,YSF, BlueDV, SVXLINK, ircDDB, "
 echo "      D-STAR Repeater y Editor GENERAL"
 echo ""
 echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
@@ -41,14 +41,6 @@ clear
             echo "*****************************************"
             sleep 5
             sudo chmod -R 777 /home/pi/Downloads/
-            #Comprueba si existe el fichero info.ini
-            if [ -f /home/pi/info.ini ];
-            then
-            echo ""
-            else
-            sudo cp /home/pi/$SCRIPTS_version/info.ini /home/pi
-            fi
-            #===============================================
 
 match1=$(awk "NR==2" /home/pi/info.ini)
 sed -i "1c $match1" /home/pi/info.ini
@@ -71,9 +63,9 @@ sed -i "1c $match1" /home/pi/info.ini
             sudo cp -f MMDVMPLUS.ini_copia /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia2 /home/pi/Downloads
             sudo cp -f MMDVMPLUS.ini_copia3 /home/pi/Downloads
-
             sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
             sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
+            sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
 
             cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
             cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
@@ -172,6 +164,7 @@ sleep 3
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
 
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
+            cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMDMR2YSF.ini /home/pi/MMDVMHost
 
             cp -f DMR2NXDN.ini  /home/pi/DMR2NXDN
