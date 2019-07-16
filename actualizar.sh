@@ -237,5 +237,6 @@ sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS
 
 sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
 sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
+sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
 
 
