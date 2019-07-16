@@ -103,6 +103,14 @@ sed -i "10c Name[es_ES]=Abrir NXDN" /home/pi/Desktop/Abrir_NXDN.desktop
 cd /home/pi/$SCRIPTS_version
 sudo git pull 
 
+
+#Actualiza todos los iconos
+                        cd /home/pi/$SCRIPTS_version/Desktop
+                        sudo cp * /home/pi/Desktop
+                        echo "${AMARILLO}"
+
+
+
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 

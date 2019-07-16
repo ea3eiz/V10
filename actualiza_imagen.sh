@@ -34,9 +34,9 @@ sleep 2
                         clear
                         sleep 1
 #Actualiza todos los iconos
-                        cd /home/pi/$SCRIPTS_version/Desktop
-                        sudo cp * /home/pi/Desktop
-                        echo "${AMARILLO}"
+                        #cd /home/pi/$SCRIPTS_version/Desktop
+                        #sudo cp * /home/pi/Desktop
+                        #echo "${AMARILLO}"
 
 
 #Lee el fichero INFO_NXDN para poner lod datos en los iconos INFO TXF                        
