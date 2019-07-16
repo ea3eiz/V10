@@ -232,12 +232,13 @@ sudo cp /home/pi/$SCRIPTS_version/Desktop/Menu_Autoarranque /home/pi/Desktop
 
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 
-sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
-sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
-sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
+
 
 
 #Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
                         cd /home/pi/$SCRIPTS_version/Desktop
                         sudo cp * /home/pi/Desktop
                         echo "${AMARILLO}"
+sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
+sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
+sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
