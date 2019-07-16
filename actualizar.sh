@@ -104,10 +104,7 @@ cd /home/pi/$SCRIPTS_version
 sudo git pull 
 
 
-#Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
-                        cd /home/pi/$SCRIPTS_version/Desktop
-                        sudo cp * /home/pi/Desktop
-                        echo "${AMARILLO}"
+
 
 
 
@@ -240,3 +237,7 @@ sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
 sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
 
 
+#Actualiza todos los iconos Y Quita todos los iconos verdes que se quedan al cerrar la imagen
+                        cd /home/pi/$SCRIPTS_version/Desktop
+                        sudo cp * /home/pi/Desktop
+                        echo "${AMARILLO}"
