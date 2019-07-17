@@ -49,8 +49,8 @@ sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
 
 
 
-
-echo "${VERDE}"
+clear
+echo "${AMARILLO}"
 echo "     **********************************"
 echo "     *                                *"
 echo "     * <<<<< IMAGEN ACTUALIZADA >>>>> *"
