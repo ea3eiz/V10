@@ -911,8 +911,8 @@ clear
                         [sS]* ) echo ""
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi/AUTOARRANQUEV10
-                        sudo mv BM.desktop /home/pi/.config/autostart
+                        cd /home/pi/SCRIPTS_version/AUTOARRANQUEV10
+                        mv BM.desktop /home/pi/.config/autostart
                         sed -i "7c MMDVMBM=ON" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
