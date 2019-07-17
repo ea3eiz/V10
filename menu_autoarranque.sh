@@ -775,6 +775,23 @@ clear
                                             break;;
 esac
 done;;
+117) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""                   
+                                            echo "Quitando NXDN del autoarranque >>>>>"
+                                            sleep 2
+                                            cd /home/pi/.config/autostart
+                                            mv NXDN.desktop /home/pi/AUTOARRANQUEV10
+                                            sed -i "17c NXDN=OFF" /home/pi/autoarranque.ini
+                                            break;; 
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
 201) echo ""
 while true
 do
@@ -1083,6 +1100,23 @@ clear
                                             break;;
 esac
 done;;
+217) echo ""
+while true
+do
+clear
+                                            actualizar=S
+                                            case $actualizar in
+                                            [sS]* ) echo ""
+                                            echo "Poniendo NXDN en el autoarranque >>>>>"
+                                            sleep 2
+                                            cd /home/pi/AUTOARRANQUEV10
+                                            mv NXDN.desktop /home/pi/.config/autostart
+                                            sed -i "17c NXDN=ON" /home/pi/autoarranque.ini
+                                            break;;
+                                            [nN]* ) echo ""
+                                            break;;
+esac
+done;;
 27) echo ""
 while true
 do
@@ -1119,6 +1153,7 @@ clear
                         mv AMBE_SERVER.desktop /home/pi/AUTOARRANQUEV10
                         mv DMR2YSF.desktop /home/pi/AUTOARRANQUEV10
                         mv DMR2NXDN.desktop /home/pi/AUTOARRANQUEV10
+                        mv NXDN.desktop /home/pi/AUTOARRANQUEV10
 
 sed -i "1c D-STAR=OFF" /home/pi/autoarranque.ini
 sed -i "2c BlueDV=OFF" /home/pi/autoarranque.ini
@@ -1136,8 +1171,8 @@ sed -i "13c DVRPTR=OFF" /home/pi/autoarranque.ini
 sed -i "14c AMBE_SERVER=OFF" /home/pi/autoarranque.ini
 sed -i "15c F2DMR=OFF" /home/pi/autoarranque.ini
 sed -i "16c DMR2YSF=OFF" /home/pi/autoarranque.ini
-sed -i "17c NXDN=OFF" /home/pi/autoarranque.ini
-
+sed -i "17c DMR2NXDN=OFF" /home/pi/autoarranque.ini
+sed -i "18c NXDN=OFF" /home/pi/autoarranque.ini
 
 
                         exit;
