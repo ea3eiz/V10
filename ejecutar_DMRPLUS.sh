@@ -18,7 +18,7 @@ sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_DMRPLUS.desktop
 
-sed -i "10c $frecuencia" /home/pi/INFO_RXF
+sed -i "2c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
