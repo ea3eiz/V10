@@ -229,7 +229,7 @@ var2=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m   118)\33[1;37m  Quitar NXDN del  autoarranque         - \33[1;32m"
-var1=`grep "NXDN" /home/pi/autoarranque.ini`
+var1=$(awk "NR==18" /home/pi/autoarranque.ini)
 var1=`expr substr $var1 6 3`
 if [ $var1 = "ON" ]
 then
