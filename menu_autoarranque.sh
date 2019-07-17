@@ -11,13 +11,13 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 echo "${VERDE}"
-echo "   ********************************************************************"
+echo "   ************************************************************"
 echo -n "${CIAN}"
 echo "                    Script Modificar AUTOARRANQUE    "
 echo -n "${ROJO}"
 echo "                               $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ********************************************************************"
+echo "   ************************************************************"
 
 echo -n "\33[1;36m   101)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
 dstar=`grep "D-STAR" /home/pi/autoarranque.ini`
