@@ -201,7 +201,7 @@ var2=`grep "dstarrepeater" /home/pi/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m   116)\33[1;37m  Quitar DMR2YSF del  autoarranque      - \33[1;32m"
-var1=$(awk "NR==16" /home/pi/autoarranque.ini)
+var1=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 var1=`expr substr $var1 9 3`
 if [ $var1 = "ON" ]
 then
@@ -215,21 +215,20 @@ var2=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m   117)\33[1;37m  Quitar DMR2NXDN del  autoarranque     - \33[1;32m"
-var1=$(awk "NR==17" /home/pi/autoarranque.ini)
-var1=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
-var1=`expr substr $var1 10 3`
+var1=`grep "D2NX" /home/pi/autoarranque.ini`
+var1=`expr substr $var1 6 3`
 if [ $var1 = "ON" ]
 then
 echo "\33[1;32m$var1"
 else
 echo "\33[1;31m"
 fi
-var2=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
+var2=`grep "D2NX" /home/pi/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
 echo -n "\33[1;36m   118)\33[1;37m  Quitar NXDN del  autoarranque         - \33[1;32m"
-var1=$(awk "NR==18" /home/pi/autoarranque.ini)
+var1=`grep "NXDN" /home/pi/autoarranque.ini`
 var1=`expr substr $var1 6 3`
 if [ $var1 = "ON" ]
 then
@@ -443,15 +442,15 @@ trans=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m   217)\33[1;33m  Poner DMR2NXDN en el autoarranque     - "
-var1=$(awk "NR==17" /home/pi/autoarranque.ini)
-var1=`expr substr $var1 10 3`
+var1=`grep "NXDN" /home/pi/autoarranque.ini`
+var1=`expr substr $var1 6 3`
 if [ $var1 = "OFF" ]
 then
 echo "\33[1;31m$var1"
 else
 echo "\33[1;31m"
 fi
-trans=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
+trans=`grep "NXDN" /home/pi/autoarranque.ini`
 #==================================================================================
 
 
@@ -912,7 +911,7 @@ clear
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV10
-                        sudo mv BM.desktop /home/pi/.config/autostart
+                        mv BM.desktop /home/pi/.config/autostart
                         sed -i "7c MMDVMBM=ON" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
