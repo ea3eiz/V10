@@ -443,8 +443,8 @@ trans=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m   217)\33[1;33m  Poner DMR2NXDN en el autoarranque     - "
-var1=`grep "NXDN" /home/pi/autoarranque.ini`
-var1=`expr substr $var1 6 3`
+var1=$(awk "NR==17" /home/pi/autoarranque.ini)
+var1=`expr substr $var1 10 3`
 if [ $var1 = "OFF" ]
 then
 echo "\33[1;31m$var1"
