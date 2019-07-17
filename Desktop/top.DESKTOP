@@ -2,7 +2,7 @@
 Encoding=UTF-8
 TryExec=lxterminal
 Exec=sh -c "lxterminal -e top"
-Icon=/home/pi/V7/top.png
+Icon=/home/pi/V10/ICONO_TOP.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
