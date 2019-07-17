@@ -201,7 +201,7 @@ var2=`grep "dstarrepeater" /home/pi/autoarranque.ini`
 
 #==================================================================================
 echo -n "\33[1;36m   116)\33[1;37m  Quitar DMR2YSF del  autoarranque      - \33[1;32m"
-var1=`grep "DMR2YSF" /home/pi/autoarranque.ini`
+var1=$(awk "NR==16" /home/pi/autoarranque.ini)
 var1=`expr substr $var1 9 3`
 if [ $var1 = "ON" ]
 then
@@ -211,7 +211,7 @@ echo "\33[1;31m"
 fi
 var2=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 #=================================================================================
-
+read A
 
 #==================================================================================
 echo -n "\33[1;36m   117)\33[1;37m  Quitar DMR2NXDN del  autoarranque     - \33[1;32m"
