@@ -8,6 +8,6 @@ StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
 Name[en_US]=MMDVM Connect Screen
 Terminal=false
-Name[es_ES]=Topx
+Name[es_ES]=Top
 Hidden=false
 Comment[es_ES]=
