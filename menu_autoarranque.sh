@@ -775,7 +775,7 @@ clear
                                             break;;
 esac
 done;;
-117) echo ""
+118) echo ""
 while true
 do
 clear
@@ -786,7 +786,7 @@ clear
                                             sleep 2
                                             cd /home/pi/.config/autostart
                                             mv NXDN.desktop /home/pi/AUTOARRANQUEV10
-                                            sed -i "17c NXDN=OFF" /home/pi/autoarranque.ini
+                                            sed -i "18c NXDN=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
                                             break;;
@@ -1111,7 +1111,7 @@ clear
                                             sleep 2
                                             cd /home/pi/AUTOARRANQUEV10
                                             mv NXDN.desktop /home/pi/.config/autostart
-                                            sed -i "17c NXDN=ON" /home/pi/autoarranque.ini
+                                            sed -i "18c NXDN=ON" /home/pi/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
