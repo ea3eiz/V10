@@ -219,7 +219,7 @@ var1=`grep "D2NX" /home/pi/autoarranque.ini`
 var1=`expr substr $var1 6 3`
 
 echo "$var1"
-rerad a
+read a
 
 if [ $var1 = "ON" ]
 then
