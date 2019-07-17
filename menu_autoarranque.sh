@@ -216,7 +216,7 @@ var2=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 #==================================================================================
 echo -n "\33[1;36m   117)\33[1;37m  Quitar DMR2NXDN del  autoarranque     - \33[1;32m"
 var1=`grep "D2NX" /home/pi/autoarranque.ini`
-echo "$var1"
+echo "hola$var1"
 read a
 var1=`expr substr $var1 6 3`
 
