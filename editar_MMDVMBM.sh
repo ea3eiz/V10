@@ -2,6 +2,8 @@
 while true
 do
 clear
+SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+
   #Editor MMDVM.ini
 #DIRECTORIO="MMDVM.ini"
 #DIRECTORIO_copia="MMDVM.ini_copia"
