@@ -451,7 +451,7 @@ echo "\33[1;31m$var1"
 else
 echo "\33[1;31m"
 fi
-trans=`grep "NXDN" /home/pi/autoarranque.ini`
+trans=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
 #==================================================================================
 
 
