@@ -29,10 +29,10 @@ sleep 2
                         sleep 1
 
 #Importa directorio AUTOARRANQUE
-                        sudo rm -R  /home/pi/$AUTOARRANQUE
-                        cd /home/pi/
-                        clear
-                        sleep 1
+                        #sudo rm -R  /home/pi/$AUTOARRANQUE
+                        #cd /home/pi/
+                        #clear
+                        #sleep 1
 #Actualiza todos los iconos
                         #cd /home/pi/$SCRIPTS_version/Desktop
                         #sudo cp * /home/pi/Desktop
