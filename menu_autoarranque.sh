@@ -211,28 +211,20 @@ echo "\33[1;31m"
 fi
 var2=`grep "DMR2YSF" /home/pi/autoarranque.ini`
 #=================================================================================
-read A
+
 
 #==================================================================================
 echo -n "\33[1;36m   117)\33[1;37m  Quitar DMR2NXDN del  autoarranque     - \33[1;32m"
 var1=$(awk "NR==17" /home/pi/autoarranque.ini)
-
-
-#var1=`grep "D2NX" /home/pi/autoarranque.ini`
-echo "hola$var1"
-read a
-var1=`expr substr $var1 6 3`
-
-echo "hola$var1"
-read a
-
+var1=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
+var1=`expr substr $var1 10 3`
 if [ $var1 = "ON" ]
 then
 echo "\33[1;32m$var1"
 else
 echo "\33[1;31m"
 fi
-var2=`grep "D2NX" /home/pi/autoarranque.ini`
+var2=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
 #=================================================================================
 
 #==================================================================================
