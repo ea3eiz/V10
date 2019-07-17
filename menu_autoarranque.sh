@@ -455,7 +455,7 @@ trans=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
 #==================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m   218)\33[1;33m  Poner NXDN en el autoarranque     - "
+echo -n "\33[1;36m   218)\33[1;33m  Poner NXDN en el autoarranque         - "
 var1=$(awk "NR==18" /home/pi/autoarranque.ini)
 var1=`expr substr $var1 6 3`
 if [ $var1 = "OFF" ]
@@ -1100,7 +1100,7 @@ clear
                                             break;;
 esac
 done;;
-217) echo ""
+218) echo ""
 while true
 do
 clear
