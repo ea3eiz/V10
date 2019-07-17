@@ -446,8 +446,6 @@ echo ""
 echo "${CIAN}  35)\33[1;31m Recuperar el fichero original $DIRECTORIO${AMARILLO}"
 
 echo ""
-echo "${CIAN}   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
-echo ""
 echo -n "${CIAN}   Elige una opción: " 
 read escoger_menu
 
