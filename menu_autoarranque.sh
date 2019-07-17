@@ -3,6 +3,8 @@
 while true
 do
 clear
+SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+version=`expr substr $SCRIPTS_version 2 2`
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
