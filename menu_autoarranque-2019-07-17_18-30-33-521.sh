@@ -9,16 +9,12 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-
 echo "${VERDE}"
-echo "   ********************************************************************"
-echo -n "${CIAN}"
-echo "                    Script Modificar AUTOARRANQUE    "
-echo -n "${ROJO}"
-echo "                               $SCRIPTS_version by EA3EIZ"
-echo -n "${VERDE}"
-echo "   ********************************************************************"
-
+echo "   ************************************************************"
+echo "   *                                                          *"
+echo "   * Script Modificar AUTOARRANQUE     \33[1;33m       \33[1;31m by EA3EIZ     \33[1;32m *"
+echo "   *                                                          *"
+echo "   ************************************************************"
 echo -n "\33[1;36m   101)\33[1;37m  Quitar ircDDB del autoarranque        - \33[1;32m"
 dstar=`grep "D-STAR" /home/pi/autoarranque.ini`
 dstar=`expr substr $dstar 8 3`
@@ -459,7 +455,7 @@ trans=`grep "DMR2NXDN" /home/pi/autoarranque.ini`
 #==================================================================================
 
 #==================================================================================
-echo -n "\33[1;36m   218)\33[1;33m  Poner NXDN en el autoarranque         - "
+echo -n "\33[1;36m   217)\33[1;33m  Poner NXDN en el autoarranque     - "
 var1=$(awk "NR==18" /home/pi/autoarranque.ini)
 var1=`expr substr $var1 6 3`
 if [ $var1 = "OFF" ]
@@ -477,7 +473,8 @@ echo "\33[1;36m    27)\33[1;32m *** RESTABLECER LOS AUTOARRANQUES A ${RED}OFF ${
 echo ""
 
 echo "\33[1;36m    28)\33[1;31m *** REINICIAR LA RASPBERRY PI ***"
-
+echo ""
+echo "\33[1;36m     0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 echo -n "\33[1;36m   Por favor, elige una opción: " 
 read escoger_menu
@@ -778,7 +775,7 @@ clear
                                             break;;
 esac
 done;;
-118) echo ""
+117) echo ""
 while true
 do
 clear
@@ -789,7 +786,7 @@ clear
                                             sleep 2
                                             cd /home/pi/.config/autostart
                                             mv NXDN.desktop /home/pi/AUTOARRANQUEV10
-                                            sed -i "18c NXDN=OFF" /home/pi/autoarranque.ini
+                                            sed -i "17c NXDN=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
                                             break;;
@@ -1103,7 +1100,7 @@ clear
                                             break;;
 esac
 done;;
-218) echo ""
+217) echo ""
 while true
 do
 clear
@@ -1114,7 +1111,7 @@ clear
                                             sleep 2
                                             cd /home/pi/AUTOARRANQUEV10
                                             mv NXDN.desktop /home/pi/.config/autostart
-                                            sed -i "18c NXDN=ON" /home/pi/autoarranque.ini
+                                            sed -i "17c NXDN=ON" /home/pi/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
