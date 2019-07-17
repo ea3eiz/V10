@@ -758,7 +758,7 @@ clear
                                             sleep 2
                                             cd /home/pi/.config/autostart
                                             mv DMR2NXDN.desktop /home/pi/AUTOARRANQUEV10
-                                            sed -i "17c DMR2NXDN=OFF" /home/pi/autoarranque.ini
+                                            sed -i "17c D2NX=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
                                             break;;
@@ -911,7 +911,7 @@ clear
                         [sS]* ) echo ""
                         echo "Poniendo BM en el autoarranque >>>>>"
                         sleep 2
-                        cd /home/pi/AUTOARRANQUEV10
+                        cd /home/pi/SCRIPTS_version/AUTOARRANQUEV10
                         mv BM.desktop /home/pi/.config/autostart
                         sed -i "7c MMDVMBM=ON" /home/pi/autoarranque.ini
                         break;;
@@ -1066,7 +1066,7 @@ clear
                                             sleep 2
                                             cd /home/pi/AUTOARRANQUEV10
                                             mv DMR2NXDN.desktop /home/pi/.config/autostart
-                                            sed -i "17c DMR2NXDN=ON" /home/pi/autoarranque.ini
+                                            sed -i "17c NXDN=ON" /home/pi/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
                                             break;;
