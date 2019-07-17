@@ -7,5 +7,5 @@ Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
 Terminal=false
-Name[es_ES]=md380tools
+Name[es_ES]=MD380 TOOLS
 Hidden=false
