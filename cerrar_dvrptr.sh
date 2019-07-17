@@ -4,7 +4,7 @@ cd /home/pi/Desktop
 cp Abrir_Dvrptr.desktop /home/pi
 sleep 1
 sed -i "6c Exec=sh -c 'cd /home/pi/$SCRIPTS_version; sudo sh ejecutar_dvrptr.sh'" /home/pi/Abrir_Dvrptr.desktop
-sed -i "7c Icon=/home/pi/$SCRIPTS_version/DVRPTR.png" /home/pi/Abrir_Dvrptr.desktop
+sed -i "7c Icon=/home/pi/$SCRIPTS_version/ICONO_DVRPTR_OFF.png" /home/pi/Abrir_Dvrptr.desktop
 sed -i "11c Name[es_ES]=Abrir Dvrptr" /home/pi/Abrir_Dvrptr.desktop
 sleep 1
 cd /home/pi
