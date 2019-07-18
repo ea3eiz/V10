@@ -1,7 +1,5 @@
 ﻿#!/bin/bash
-while true
-do
-clear
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -10,25 +8,6 @@ AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
 
-echo "${VERDE}"
-echo "   ********************************************************************"
-echo -n "${CIAN}"
-echo "                    Script para Actualizar MMDVMHost   "
-echo -n "${ROJO}"
-echo "                                  $SCRIPTS_version by EA3EIZ"
-echo -n "${VERDE}"
-echo "   ********************************************************************"
-
-echo  "${CIAN}   1)${VERDE} Actualizar MMDVMHost a la versión mas reciente\33[1;33m"
-
-echo ""
-echo -n "\33[1;36m   Elige una opción: " 
-read escoger_menu
-case $escoger_menu in
-1) echo ""
-while true
-do
-clear
                     echo "${ROJO}"
                     echo " *********************************************************************"
                     echo " * Si actualizas MMDVMhost desde esta opción, perderás todas las     *"
@@ -134,19 +113,3 @@ clear
                     sleep 1
                     clear
                     exit;
-                    break;;
-esac
-done;;
-0) echo ""
-clear
-echo "\33[1;33m   ******************************"
-echo "   *                            *"
-echo "   *     CERRANDO SCRIPT        *"
-echo "   *                            *"
-echo "   ******************************"
-sleep 1
-clear
-exit;;	
-esac
-done
-
