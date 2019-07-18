@@ -109,9 +109,9 @@ GRIS="\033[0m"
                     echo ""
                     echo "Ok, se ha ejecutado correctamente"
                     echo ""
-                    break;;
+                    ;;
                     [nN]* ) echo ""
-                    break;;
+                    ;;
                     esac
                     sleep 1
                     clear
