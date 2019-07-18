@@ -57,7 +57,7 @@ echo -n "${VERDE}"
 echo "   ********************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
-ind=`grep -n "^Callsign=" /$HOME/MMDVMHost/$DIRECTORIO`
+ind=`grep -n "^Callsign=" ~/MMDVMHost/$DIRECTORIO`
 indi1=`echo "$ind" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $indi1 $buscar`
