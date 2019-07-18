@@ -490,13 +490,13 @@ case $escoger_menu in
 while true
 do
 clear
-	                     actualizar=S
-		                   case $actualizar in
+	                         actualizar=S
+		                     case $actualizar in
 			                 [sS]* ) echo ""
 			                 echo "Quitando D-STAR del autoarranque >>>>>"
 			                 sleep 2
 			                 cd /home/pi/.config/autostart
-                       sudo cp IRCDDB.desktop /home/pi/AUTOARRANQUEV10
+                       		 sudo rm IRCDDB.desktop
 			                 sed -i "1c D-STAR=OFF" /home/pi/autoarranque.ini
 			                 break;;
 			                 [nN]* ) echo ""
@@ -508,13 +508,13 @@ done;;
 while true
 do
 clear
-	                     actualizar=S
-		                   case $actualizar in
+	                     	 actualizar=S
+		                   	 case $actualizar in
 			                 [sS]* ) echo ""
 			                 echo "Quitando BlueDV del autoarranque >>>>>"
-                       sleep 2
-                       cd /home/pi/.config/autostart
-                       sudo cp BLUEDV.desktop /home/pi/AUTOARRANQUEV10
+                       		 sleep 2
+                       		 cd /home/pi/.config/autostart
+                       		 sudo rm BLUEDV.desktop
 			                 sed -i "2c BlueDV=OFF" /home/pi/autoarranque.ini
 			                 break;;
 			                 [nN]* ) echo ""
@@ -526,17 +526,17 @@ while true
 do
 clear
 
-                       actualizar=S
-		                   case $actualizar in
-			                 [sS]* ) echo ""
-			                 echo "Quitando YSF del autoarranque >>>>>"
-                       sleep 2
-                       cd /home/pi/.config/autostart
-                       sudo cp YSF.desktop /home/pi/AUTOARRANQUEV10
-                       sed -i "3c C4F=OFF" /home/pi/autoarranque.ini
-                       break;;
-                       [nN]* ) echo ""
-                       break;;
+                       		actualizar=S
+		                    case $actualizar in
+			                [sS]* ) echo ""
+			                echo "Quitando YSF del autoarranque >>>>>"
+                       		sleep 2
+                       		cd /home/pi/.config/autostart
+                       		sudo rm YSF.desktop
+                       		sed -i "3c C4F=OFF" /home/pi/autoarranque.ini
+                       		break;;
+                       		[nN]* ) echo ""
+                       		break;;
 esac
 done;;
 104) echo ""
@@ -544,12 +544,12 @@ while true
 do
 clear            
                         actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Quitando DV4mini del autoarranque >>>>>"
+		                case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Quitando DV4mini del autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/.config/autostart
-                        sudo cp DV4MINI.desktop /home/pi/AUTOARRANQUEV10
+                        sudo rm DV4MINI.desktop
                         sed -i "4c DV4mini=OFF" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -561,12 +561,12 @@ while true
 do
 clear              
                         actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Quitando MMDVM del autoarranque >>>>>"
+		                case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Quitando MMDVM del autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/.config/autostart
-                        sudo cp RADIO.desktop /home/pi/AUTOARRANQUEV10
+                        sudo rm RADIO.desktop
                         sed -i "5c MMDVMPLACA=OFF" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -578,12 +578,12 @@ while true
 do
 clear              
                         actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Quitando MMDVMPLUS del autoarranque >>>>>"
+		                case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Quitando MMDVMPLUS del autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/.config/autostart
-                        sudo cp DMRPLUS.desktop /home/pi/AUTOARRANQUEV10
+                        sudo rm DMRPLUS.desktop
                         sed -i "6c MMDVMPLUS=OFF" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -603,7 +603,7 @@ clear
                         echo "Quitando LIBRE del autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/.config/autostart
-                        sudo cp LIBRE.desktop /home/pi/AUTOARRANQUEV10
+                        sudo rm LIBRE.desktop
                         sed -i "10c MMDVMLIBRE=OFF" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -620,7 +620,7 @@ clear
                         echo "Quitando BM del autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/.config/autostart
-                        sudo cp BM.desktop /home/pi/AUTOARRANQUEV10
+                        sudo rm BM.desktop
                         sed -i "7c MMDVMBM=OFF" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
@@ -631,13 +631,13 @@ done;;
 while true
 do
 clear	        
-		  actualizar=S
-		  case $actualizar in
+		  	actualizar=S
+		  	case $actualizar in
 			[sS]* ) echo ""
 			echo "Quitando SVXLINK del autoarranque >>>>>"
-      sleep 2
-      cd /home/pi/.config/autostart
-      sudo cp SVXLINK.desktop /home/pi/AUTOARRANQUEV10
+      		sleep 2
+      		cd /home/pi/.config/autostart
+      		sudo rm SVXLINK.desktop
 			sed -i "8c SVXLINK=OFF" /home/pi/autoarranque.ini
 			break;;
 			[nN]* ) echo ""
@@ -654,7 +654,7 @@ clear
             echo "Quitando SOLO_D-STAR del autoarranque >>>>>"
             sleep 2
             cd /home/pi/.config/autostart
-            sudo cp DSTARSOLO_05.desktop /home/pi/AUTOARRANQUEV10
+            sudo rm DSTARSOLO_05.desktop
             sed -i "11c SOLO_DSTAR=OFF" /home/pi/autoarranque.ini
             break;;
             [nN]* ) echo ""
@@ -671,7 +671,7 @@ clear
             echo "Quitando SOLO_FUSION del autoarranque >>>>>"
             sleep 2
             cd /home/pi/.config/autostart
-            sudo cp FUSIONSOLO.desktop /home/pi/AUTOARRANQUEV10
+            sudo rm FUSIONSOLO.desktop
             sed -i "12c SOLO_FUSION=OFF" /home/pi/autoarranque.ini
             break;;
             [nN]* ) echo ""
@@ -688,7 +688,7 @@ clear
                                             echo "Quitando DVRPTR en el autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp DVRPTR.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm DVRPTR.desktop
                                             sed -i "13c DVRPTR=OFF" /home/pi/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
@@ -705,7 +705,7 @@ clear
                                             echo "Quitando YSF2DMR en el autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp YSF2DMR.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm YSF2DMR.desktop
                                             sed -i "15c F2DMR=OFF" /home/pi/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
@@ -722,7 +722,7 @@ clear
                                             echo "Quitando D-STAR REPEATER del autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp dstarrepeater.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm dstarrepeater.desktop
                                             sed -i "9c dstarrepeater=OFF" /home/pi/autoarranque.ini
                                             break;;
                                             [nN]* ) echo ""
@@ -739,7 +739,7 @@ clear
                                             echo "Quitando AMBE SERVER del autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp AMBE_SERVER.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm AMBE_SERVER.desktop
                                             sed -i "14c AMBE_SERVER=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
@@ -773,7 +773,7 @@ clear
                                             echo "Quitando DMR2NXDN del autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp DMR2NXDN.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm DMR2NXDN.desktop
                                             sed -i "17c DMR2NXDN=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
@@ -790,7 +790,7 @@ clear
                                             echo "Quitando NXDN del autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp NXDN.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm NXDN.desktop
                                             sed -i "18c NXDN=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
@@ -801,15 +801,15 @@ done;;
 while true
 do
 clear	        
-		              actualizar=S
-		              case $actualizar in
+		              	actualizar=S
+		              	case $actualizar in
 			            [sS]* ) echo ""
 			            echo "Poniendo DSTAR en el autoarranque >>>>>"
-                  sleep 2
-                  cd /home/pi/AUTOARRANQUEV10
-                  sudo cp IRCDDB.desktop /home/pi/.config/autostart
+                  		sleep 2
+                  		cd /home/pi/AUTOARRANQUEV10
+                  		sudo cp IRCDDB.desktop /home/pi/.config/autostart
 			            sed -i "1c D-STAR=ON" /home/pi/autoarranque.ini
-                  clear
+                  		clear
                   echo "\33[1;32m**********************************************************"
                   echo "*                                                        *"
                   echo "*  \33[1;31mDebes de tener BM ó DMR+ en el autoarranque \33[1;32m*"
@@ -827,17 +827,17 @@ done;;
 while true
 do
 clear
-	                                          actualizar=S
-		                                        case $actualizar in
-			                                      [sS]* ) echo ""                          
-                                            echo "Poniendo BlueDV en el autoarranque >>>>>"
-                                            sleep 2
-                                            cd /home/pi/AUTOARRANQUEV10
-                                            sudo cp BLUEDV.desktop /home/pi/.config/autostart
-                                            sed -i "2c BlueDV=ON" /home/pi/autoarranque.ini
-			                                      break;;
-			                                      [nN]* ) echo ""
-			                                      break;;
+	                                          		actualizar=S
+		                                        	case $actualizar in
+			                                      	[sS]* ) echo ""                          
+                                            		echo "Poniendo BlueDV en el autoarranque >>>>>"
+                                            		sleep 2
+                                            		cd /home/pi/AUTOARRANQUEV10
+                                            		sudo cp BLUEDV.desktop /home/pi/.config/autostart
+                                            		sed -i "2c BlueDV=ON" /home/pi/autoarranque.ini
+			                                      	break;;
+			                                      	[nN]* ) echo ""
+			                                      	break;;
 esac
 done;;
 203) echo ""
@@ -845,9 +845,9 @@ while true
 do
 clear              
                         actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Poniendo YSF en el autoarranque >>>>>"
+		                case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Poniendo YSF en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV10
                         sudo cp YSF.desktop /home/pi/.config/autostart
@@ -871,9 +871,9 @@ while true
 do
 clear               
                         actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Poniendo DV4mini en el autoarranque >>>>>"
+		                case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Poniendo DV4mini en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV10
                         sudo cp DV4MINI.desktop /home/pi/.config/autostart
@@ -888,9 +888,9 @@ while true
 do
 clear           
                         actualizar=S
-		                    case $actualizar in
-			                  [sS]* ) echo ""
-			                  echo "Poniendo Radio en el autoarranque >>>>>"
+		                case $actualizar in
+			            [sS]* ) echo ""
+			            echo "Poniendo Radio en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV10
                         sudo cp RADIO.desktop /home/pi/.config/autostart
@@ -906,8 +906,8 @@ while true
 do
 clear              
                         actualizar=S
-	                      case $actualizar in
-	                      [sS]* ) echo ""
+	                    case $actualizar in
+	                    [sS]* ) echo ""
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV10
@@ -956,13 +956,13 @@ done;;
 while true
 do
 clear
-		              actualizar=S
-		              case $actualizar in
+		              	actualizar=S
+		              	case $actualizar in
 			            [sS]* ) echo ""
 			            echo "Poniendo SVXLINK en el autoarranque >>>>>"
-                  sleep 2
-                  cd /home/pi/AUTOARRANQUEV10
-                  sudo cp SVXLINK.desktop /home/pi/.config/autostart
+                  		sleep 2
+                  		cd /home/pi/AUTOARRANQUEV10
+                  		sudo cp SVXLINK.desktop /home/pi/.config/autostart
 			            sed -i "8c SVXLINK=ON" /home/pi/autoarranque.ini
 			            break;;
 			            [nN]* ) echo ""
@@ -1198,8 +1198,8 @@ echo "   *     OJO!!   SE VA A REINICIAR LA RASPBERRY PI            *"
 echo "   *                                                          *"
 echo "   ************************************************************"
 echo ""
-                read -p '   Estás seguro de querer reiniciar ? Si/No: ' ejecutar13
-                    case $ejecutar13 in
+                		read -p '   Estás seguro de querer reiniciar ? Si/No: ' ejecutar13
+                    	case $ejecutar13 in
                         [sS]* ) echo ""
                         echo "ok >>>>>"
                         sudo reboot
