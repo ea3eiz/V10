@@ -4,9 +4,7 @@ while true
 do
 clear
 # path usuario
-usuario=$USER
-echo "usuario: $usuario"
-read a
+usuario=$PWD
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
   #Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
