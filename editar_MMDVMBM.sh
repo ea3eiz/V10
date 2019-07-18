@@ -1,4 +1,11 @@
 ﻿#!/bin/bash
+
+directorio=$HOME
+echo "directorio:$directorio"
+read a
+
+
+
 while true
 do
 clear
