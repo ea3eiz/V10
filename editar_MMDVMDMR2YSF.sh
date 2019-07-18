@@ -4,7 +4,7 @@ while true
 do
 clear
 # path usuario
-usuario=$usuario
+usuario=/home/pi
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
