@@ -54,6 +54,7 @@ echo "***************************************************"
             cp -f TG-YSFList.txt /home/pi/DMR2YSF
                       
             cp -f MMDVMDMR2NXDN.ini /home/pi/MMDVMHost
+            cp -f MMDVMNXDN.ini /home/pi/MMDVMHost
             cp -f MMDVMDMR2YSF.ini /home/pi/MMDVMHost
 
             cp -f DMR2NXDN.ini  /home/pi/DMR2NXDN
