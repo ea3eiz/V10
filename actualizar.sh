@@ -25,6 +25,23 @@ sleep 2
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
 sudo git pull 
+
+
+#Lee el fichero INFO_NXDN para poner lod datos en los iconos INFO TXF                        
+frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_BM.desktop
+
+frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
+
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
+frecuencia=$(awk "NR==8" /home/pi/INFO_RXF)
+
+frecuencia=$(awk "NR==10" /home/pi/INFO_RXF)
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
+
+
+
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 #BM
