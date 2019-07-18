@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 
-directorio=$HOME
+directorio=$home
 echo "directorio:$directorio"
 read a
 
