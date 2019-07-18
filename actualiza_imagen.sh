@@ -43,6 +43,11 @@ sleep 2
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_BM.desktop
 frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
+
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
+frecuencia=$(awk "NR==8" /home/pi/INFO_RXF)
+
+
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
 frecuencia=$(awk "NR==10" /home/pi/INFO_RXF)
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
