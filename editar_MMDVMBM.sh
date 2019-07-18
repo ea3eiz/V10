@@ -3,26 +3,6 @@ while true
 do
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-
-  #Editor MMDVM.ini
-#DIRECTORIO="MMDVM.ini"
-#DIRECTORIO_copia="MMDVM.ini_copia"
-#DIRECTORIO_copia2="MMDVM.ini_copia2"
-#DIRECTORIO_copia3="MMDVM.ini_copia3"
-  #Escribe datos en el fichero /home/pi/info_panel_control.ini para leer desde el panel de control
-#primero="6c"
-#segundo="7c"
-#tercero="8c"
-#cuarto="9c"
-  #Escribe datos en el fichero /home/pi/info_panel_control.ini para las memorias M1, M2 y M3
-#primer="37c"
-#segun="38c"
-#tercer="39c"
-  #Lee los datos del fichero /home/pi/info_panel_control.ini para las memorias M1, M2 y M3
-#primer1="37c"
-#segun1="38c"
-#tercer1="39c"
-
   #Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
 DIRECTORIO_copia="MMDVMBM.ini_copia"
@@ -41,26 +21,6 @@ tercer="36c"
 primer1="34c"
 segun1="35c"
 tercer1="36c"
-
-  #Editor MMDVMPLUS.ini
-#DIRECTORIO="MMDVMPLUS.ini"
-#DIRECTORIO_copia="MMDVMPLUS.ini_copia"
-#DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
-#DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
-  #Escribe datos en el fichero /home/pi/info_panel_control.ini para leer desde el panel de control
-#primero="11c"
-#segundo="12c"
-#tercero="13c"
-#cuarto="14c"
-  #Escribe datos en el fichero /home/pi/info_panel_control.ini para las memorias M1, M2 y M3
-#primer="31c"
-#segun="32c"
-#tercer="33c"
-  #Lee los datos del fichero /home/pi/info_panel_control.ini para las memorias M1, M2 y M3
-#primer1="31c"
-#segun1="32c"
-#tercer1="33c"
-
 # Recoge datos para leer desde el panel de control
 indi=$(awk "NR==2" /home/pi/MMDVMHost/$DIRECTORIO)
 sed -i "$primero $indi" /home/pi/info_panel_control.ini
@@ -97,7 +57,7 @@ echo -n "${VERDE}"
 echo "   ********************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
-ind=`grep -n "^Callsign=" /home/pi/MMDVMHost/$DIRECTORIO`
+ind=`grep -n "^Callsign=" $HOME/MMDVMHost/$DIRECTORIO`
 indi1=`echo "$ind" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $indi1 $buscar`
