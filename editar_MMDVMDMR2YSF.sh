@@ -325,8 +325,6 @@ echo ""
 echo "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList \33[1;33m"
 
 echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
-echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 case $escoger_menu in
