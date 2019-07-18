@@ -111,6 +111,7 @@ GRIS="\033[0m"
                     echo ""
                     break;;
                     [nN]* ) echo ""
+                    break;;
                     sleep 1
                     clear
                     exit;
