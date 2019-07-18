@@ -5,6 +5,8 @@ do
 clear
 # path usuario
 usuario=$PWD
+echo "usuario: $usuario"
+read a
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
   #Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
