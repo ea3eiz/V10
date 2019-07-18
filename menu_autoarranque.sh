@@ -756,7 +756,7 @@ clear
                                             echo "Quitando DMR2YSF del autoarranque >>>>>"
                                             sleep 2
                                             cd /home/pi/.config/autostart
-                                            sudo cp DMR2YSF.desktop /home/pi/AUTOARRANQUEV10
+                                            sudo rm DMR2YSF.desktop
                                             sed -i "16c DMR2YSF=OFF" /home/pi/autoarranque.ini
                                             break;; 
                                             [nN]* ) echo ""
