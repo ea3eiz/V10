@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-
+# -*- ENCODING: UTF-8 -*-
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
