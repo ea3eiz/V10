@@ -4,7 +4,7 @@ while true
 do
 clear
 # path usuario
-usuario=$USER
+usuario=$PWD
 echo "usuario: $usuario"
 read a
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
