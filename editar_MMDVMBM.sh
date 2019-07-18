@@ -2,6 +2,7 @@
 while true
 do
 clear
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
   #Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
@@ -57,7 +58,7 @@ echo -n "${VERDE}"
 echo "   ********************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
-ind=`grep -n "^Callsign=" /home/pi/MMDVMHost/$DIRECTORIO`
+ind=`grep -n "^Callsign=" $usuario/MMDVMHost/$DIRECTORIO`
 indi1=`echo "$ind" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $indi1 $buscar`
