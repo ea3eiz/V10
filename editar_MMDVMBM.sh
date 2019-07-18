@@ -1,11 +1,9 @@
 ﻿#!/bin/bash
-clear
 while true
 do
 clear
 # path usuario Raspberry pi /home/pi
-usuario=$(awk "NR==1" usuario)
-
+usuario=/home/pi
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
   #Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
