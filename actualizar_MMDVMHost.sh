@@ -112,6 +112,7 @@ GRIS="\033[0m"
                     break;;
                     [nN]* ) echo ""
                     break;;
+                    esac
                     sleep 1
                     clear
                     exit;
