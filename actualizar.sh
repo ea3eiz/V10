@@ -37,7 +37,7 @@ sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
 frecuencia=$(awk "NR==8" /home/pi/INFO_RXF)
 
-frecuencia=$(awk "NR==10" /home/pi/INFO_RXF)
+frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
 
 
