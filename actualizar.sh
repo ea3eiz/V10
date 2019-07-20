@@ -27,42 +27,20 @@ cd /home/pi/$SCRIPTS_version
 sudo git pull 
 
 
-#Escribe los datos INFO TXF en el fichero /home/pi/INFO_RXF                        
+#Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_BM.desktop /home/pi
-sleep 1
-sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
-sleep 1
-sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
-sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_BM.desktop
 
 frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_DMRPLUS.desktop /home/pi
-sleep 1
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
-sleep 1
-sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
-sleep 1
 
-frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_DMR2YSF.desktop /home/pi
-sleep 1
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
-sleep 1
-sudo cp /home/pi/RXF_DMR2YSF.desktop /home/pi/Desktop
-sleep 1
+frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
 
 frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_NXDN.desktop /home/pi
-sleep 1
 sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
-sleep 1
-sudo cp /home/pi/RXF_NXDN.desktop /home/pi/Desktop
-sleep 1
+
+
 
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
