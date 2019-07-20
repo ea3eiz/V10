@@ -1,5 +1,48 @@
 ﻿#!/bin/bash
 SCRIPTS_version="V10"
+
+
+#Escribe los datos INFO TXF en el fichero /home/pi/INFO_RXF                        
+frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_BM.desktop /home/pi
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
+sleep 1
+sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
+sleep 1
+
+frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_DMRPLUS.desktop /home/pi
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
+sleep 1
+sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
+sleep 1
+
+frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_DMR2YSF.desktop /home/pi
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
+sleep 1
+sudo cp /home/pi/RXF_DMR2YSF.desktop /home/pi/Desktop
+sleep 1
+
+frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_NXDN.desktop /home/pi
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
+sleep 1
+sudo cp /home/pi/RXF_NXDN.desktop /home/pi/Desktop
+sleep 1
+
+
+
+
+
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
 sed -i "2c BlueDV=OFF" /home/pi/status.ini
@@ -27,18 +70,6 @@ cd /home/pi/$SCRIPTS_version
 sudo git pull 
 
 
-#Lee el fichero INFO_NXDN para poner lod datos en los iconos INFO TXF                        
-frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_BM.desktop
-
-frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
-
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
-frecuencia=$(awk "NR==8" /home/pi/INFO_RXF)
-
-frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
 
 
 
