@@ -3,16 +3,27 @@
 while true
 do
 clear
+
+# path usuario
+usuario=/home/pi
+SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
+
+#Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "   *                                                                        *"
-echo "   *   Editar fichero .ini de configuración BlueDV   \33[1;31mby EA3EIZ  \33[1;33m            \33[1;32m*"
-echo "   *                                                                        *"
-echo "   **************************************************************************"
+echo "   ********************************************************************"
+echo -n "${CIAN}"
+echo "                    Editar fichero .ini de configuración BlueDV    "
+echo -n "${ROJO}"
+echo "                               $SCRIPTS_version by EA3EIZ"
+echo -n "${VERDE}"
+echo "   ********************************************************************"
 echo ""
 echo "\33[1;36m   1)\33[0m Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)\33[1;33m"
 echo "\33[1;36m   2)\33[0m Puerto para DVMEGA doble banda pinchado en arduino (ttyACM0)\33[1;33m"
@@ -22,8 +33,6 @@ echo -n "                                            - "
 var1= sed -n '4p'  /home/pi/bluedv/BlueDVconfig.ini
 echo ""
 echo "\33[1;36m   5)\33[1;33m Abrir fichero .ini para hacer cualquier cambio\33[1;33m"
-echo ""
-echo "\33[1;36m   0)\33[1;33m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
