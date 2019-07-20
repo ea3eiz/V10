@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-# script para instalar md380tools
+clear
 while true
 do
 clear
