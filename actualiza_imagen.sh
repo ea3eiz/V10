@@ -28,29 +28,48 @@ sleep 2
                         sudo git pull
                         sleep 1
 
-#Importa directorio AUTOARRANQUE
-                        #sudo rm -R  /home/pi/$AUTOARRANQUE
-                        #cd /home/pi/
-                        #clear
-                        #sleep 1
-#Actualiza todos los iconos
-                        #cd /home/pi/$SCRIPTS_version/Desktop
-                        #sudo cp * /home/pi/Desktop
-                        #echo "${AMARILLO}"
-
-
-#Lee el fichero INFO_NXDN para poner lod datos en los iconos INFO TXF                        
+#Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_BM.desktop
+cd /home/pi/Desaktop/
+sudo cp RXF_BM.desktop /home/pi/
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
+cd /home/pi
+sudo cp RXF_BM.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/RXF_BM.desktop
 
 frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
+cd /home/pi/Desaktop/
+sudo cp RXF_DMRPLUS.desktop /home/pi/
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/RXF_DMRPLUS.desktop
+cd /home/pi
+sudo cp RXF_DMRPLUS.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/RXF_DMRPLUS.desktop
 
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
-frecuencia=$(awk "NR==8" /home/pi/INFO_RXF)
+frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
+cd /home/pi/Desaktop/
+sudo cp RXF_DMR2YSF.desktop /home/pi/
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/RXF_DMR2YSF.desktop
+cd /home/pi
+sudo cp RXF_DMR2YSF.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/RXF_DMR2YSF.desktop
 
-frecuencia=$(awk "NR==10" /home/pi/INFO_RXF)
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
+frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
+cd /home/pi/Desaktop/
+sudo cp RXF_NXDN.desktop /home/pi/
+sleep 1
+sed -i "11c Name=$frecuencia" /home/pi/RXF_NXDN.desktop
+cd /home/pi
+sudo cp RXF_NXDN.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/RXF_NXDN.desktop
+
+
 
 
 
