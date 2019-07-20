@@ -18,7 +18,8 @@ sudo cp /home/pi/RXF_NXDN.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_NXDN.desktop
 
-sed -i "10c $frecuencia" /home/pi/INFO_RXF
+#Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF 
+sed -i "17c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
