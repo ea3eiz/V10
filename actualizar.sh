@@ -21,15 +21,10 @@ sed -i "17c NXDN=OFF" /home/pi/status.ini
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 cd /home/pi/$SCRIPTS_version/Desktop
 sudo cp * /home/pi/Desktop
-sleep 2
+sleep 1
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
 sudo git pull 
-
-
-
-
-
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 #BM
@@ -130,19 +125,12 @@ bm=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 plus=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 dstar=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMFUSION.ini`
-
 frbm=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 rbm=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 rplus=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 # Fin Rutina =========================================================================================================================
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
-
-
-
-
-
-
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
@@ -176,5 +164,3 @@ cd /home/pi
 sudo cp RXF_NXDN.desktop /home/pi/Desktop
 sudo rm /home/pi/RXF_NXDN.desktop
 sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
-#sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
-#sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
