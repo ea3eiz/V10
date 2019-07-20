@@ -175,12 +175,6 @@ sed -i "11c Name=$frecuencia" /home/pi/RXF_NXDN.desktop
 cd /home/pi
 sudo cp RXF_NXDN.desktop /home/pi/Desktop
 sudo rm /home/pi/RXF_NXDN.desktop
-
-
-
-
-
-
-#sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
+sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
 #sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
 #sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
