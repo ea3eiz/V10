@@ -1,48 +1,5 @@
 ﻿#!/bin/bash
 SCRIPTS_version="V10"
-
-
-#Escribe los datos INFO TXF en el fichero /home/pi/INFO_RXF                        
-frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_BM.desktop /home/pi
-sleep 1
-sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
-sleep 1
-sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
-sleep 1
-
-frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_DMRPLUS.desktop /home/pi
-sleep 1
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
-sleep 1
-sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
-sleep 1
-
-frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_DMR2YSF.desktop /home/pi
-sleep 1
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
-sleep 1
-sudo cp /home/pi/RXF_DMR2YSF.desktop /home/pi/Desktop
-sleep 1
-
-frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
-cd /home/pi/Desktop
-sudo cp RXF_NXDN.desktop /home/pi
-sleep 1
-sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
-sleep 1
-sudo cp /home/pi/RXF_NXDN.desktop /home/pi/Desktop
-sleep 1
-
-
-
-
-
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
 sed -i "2c BlueDV=OFF" /home/pi/status.ini
@@ -180,6 +137,41 @@ rbm=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 rplus=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 # Fin Rutina =========================================================================================================================
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
+
+
+
+
+
+
+#Escribe los datos INFO TXF en el fichero /home/pi/INFO_RXF                        
+frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_BM.desktop /home/pi
+sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
+sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
+
+frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_DMRPLUS.desktop /home/pi
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMRPLUS.desktop
+sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
+
+frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_DMR2YSF.desktop /home/pi
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_DMR2YSF.desktop
+sudo cp /home/pi/RXF_DMR2YSF.desktop /home/pi/Desktop
+
+frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
+cd /home/pi/Desktop
+sudo cp RXF_NXDN.desktop /home/pi
+sed -i "11c Name=$frecuencia" /home/pi/Desktop/RXF_NXDN.desktop
+
+
+
+
+
+
 sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
 sudo rm -R /home/pi/$SCRIPTS_version/ea3eiz.com/
 sudo rm -R /home/pi/SCRIPTS_version/Desktop/associacioader.com
