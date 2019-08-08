@@ -1,18 +1,28 @@
 ﻿#!/bin/bash
+clear
 while true
 do
 clear
+# path usuario 
+usuario=/home/pi
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+DIRECTORIO="MMDVMDMR2NXDN.ini"
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+
 echo "${VERDE}"
-echo "   **************************************************************************"
-echo "   *          Script para Modificar MMDVMDMR2NXDN.ini          \33[1;31m by EA3EIZ\33[1;32m   *"
-echo "   **************************************************************************"
+echo "   ********************************************************************"
+echo -n "${CIAN}"
+echo "                    Script para Modificar $DIRECTORIO    "
+echo -n "${ROJO}"
+echo "                               $SCRIPTS_version by EA3EIZ"
+echo -n "${VERDE}"
+echo "   ********************************************************************"
+
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini`
 ind1=`expr substr $ind 3 30`
@@ -347,8 +357,6 @@ echo ""
 
 echo "\33[1;36m  33)${AMARILLO} Actualizar listado NXDNHosts.txt"
 
-echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
