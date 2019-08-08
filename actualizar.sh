@@ -156,6 +156,15 @@ cd /home/pi
 sudo cp RXF_DMR2YSF.desktop /home/pi/Desktop
 sudo rm /home/pi/RXF_DMR2YSF.desktop
 
+frecuencia=$(awk "NR==15" /home/pi/INFO_RXF)
+cd /home/pi/Desktop/
+sudo cp RXF_DMR2NXDN.desktop /home/pi/
+sed -i "11c Name=$frecuencia" /home/pi/RXF_DMR2NXDN.desktop
+cd /home/pi
+sudo cp RXF_DMR2NXDN.desktop /home/pi/Desktop
+sudo rm /home/pi/RXF_DMR2NXDN.desktop
+sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
+
 frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
 sudo cp RXF_NXDN.desktop /home/pi/
