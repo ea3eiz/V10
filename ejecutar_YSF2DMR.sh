@@ -18,6 +18,9 @@ sudo cp /home/pi/RXF_YSF2DMR.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_YSF2DMR.desktop
 
+#Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF 
+sed -i "13c $frecuencia" /home/pi/INFO_RXF
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_YSF2DMR.desktop /home/pi
