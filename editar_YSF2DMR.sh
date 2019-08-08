@@ -185,8 +185,6 @@ echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
 
 echo ""
-echo "\33[1;36m   0)\33[1;32m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
-echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 
