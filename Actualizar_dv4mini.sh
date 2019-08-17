@@ -100,7 +100,7 @@ clear
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r /home/pi/dv4mini
                         sudo mkdir /home/pi/dv4mini
-                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190307new
+                        cd /home/pi/$SCRIPTS_version/DV4MINI/20170517
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
                         cp xref.ip /home/pi/dv4mini
@@ -136,7 +136,7 @@ clear
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r /home/pi/dv4mini
                         sudo mkdir /home/pi/dv4mini
-                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190127
+                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190307new
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
                         cp xref.ip /home/pi/dv4mini
