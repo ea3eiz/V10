@@ -100,7 +100,7 @@ clear
                         git clone http://github.com/ea3eiz/DV4MINI
                         sudo rm -r /home/pi/dv4mini
                         sudo mkdir /home/pi/dv4mini
-                        cd /home/pi/$SCRIPTS_version/DV4MINI/20170517
+                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190307new
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
                         cp xref.ip /home/pi/dv4mini
@@ -134,8 +134,9 @@ clear
                         sudo rm -r /home/pi/$SCRIPTS_version/DV4MINI/
                         cd /home/pi/$SCRIPTS_version
                         git clone http://github.com/ea3eiz/DV4MINI
-                        sudo rm /home/pi/dv4mini/*.*
-                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190307new
+                        sudo rm -r /home/pi/dv4mini
+                        sudo mkdir /home/pi/dv4mini
+                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190127
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
                         cp xref.ip /home/pi/dv4mini
@@ -146,7 +147,7 @@ clear
                         sudo chmod 777 dv_serial
                         clear
                         echo "************************************"
-                        echo "*** SE HA ACTUALIZADO CON EXITO la version new  ***"
+                        echo "*** SE HA ACTUALIZADO CON EXITO  ***"
                         echo "************************************"
                         sleep 3                        
                         clear
