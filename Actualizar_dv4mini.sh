@@ -120,6 +120,43 @@ clear
                         break;;
 esac
 done;;
+
+
+1000) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+                        sudo rm -r /home/pi/$SCRIPTS_version/DV4MINI/
+                        cd /home/pi/$SCRIPTS_version
+                        git clone http://github.com/ea3eiz/DV4MINI
+                        sudo rm /home/pi/dv4mini/*.*
+                        cd /home/pi/$SCRIPTS_version/DV4MINI/20190307new
+                        cp dv_serial /home/pi/dv4mini
+                        cp dv4mini.exe /home/pi/dv4mini
+                        cp xref.ip /home/pi/dv4mini
+                        sudo cp dv_serial /usr/bin/
+                        cd /usr/bin/
+                        sudo chmod 777 dv_serial
+                        cd /home/pi/dv4mini
+                        sudo chmod 777 dv_serial
+                        clear
+                        echo "************************************"
+                        echo "*** SE HA ACTUALIZADO CON EXITO la version new  ***"
+                        echo "************************************"
+                        sleep 3                        
+                        clear
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+
+
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
