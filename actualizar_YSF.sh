@@ -21,6 +21,7 @@ echo ""
 echo "\33[1;36m   1)\33[1;37m Actualizar YSFHosts.txt (listado de reflectores)"
 echo "\33[1;36m   2)\33[1;37m Ver el listado de reflectores YSF"
 echo ""
+echo "0) Salir (si tienes ratón puedes salirdirectamente dandole a la x del terminal"
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 echo ""
