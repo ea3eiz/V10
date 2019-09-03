@@ -4,27 +4,27 @@ while true
 do
 clear
 # path usuario
-usuario=/home/pi
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+# path usuario
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
-  #Editor MMDVMPLUS.ini
-DIRECTORIO="MMDVMPLUS.ini"
-DIRECTORIO_copia="MMDVMPLUS.ini_copia"
-DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
-DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
-  #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
-primero="11c"
-segundo="12c"
-tercero="13c"
-cuarto="14c"
-  #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer="31c"
-segun="32c"
-tercer="33c"
-  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer1="31c"
-segun1="32c"
-tercer1="33c"
 
+DIRECTORIO="MMDVMBM.ini"
+DIRECTORIO_copia="MMDVMBM.ini_copia"
+DIRECTORIO_copia2="MMDVMBM.ini_copia2"
+DIRECTORIO_copia3="MMDVMBM.ini_copia3"
+  #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
+primero="1c"
+segundo="2c"
+tercero="3c"
+cuarto="4c"
+  #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
+primer="34c"
+segun="35c"
+tercer="36c"
+  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
+primer1="34c"
+segun1="35c"
+tercer1="36c"
 # Recoge datos para leer desde el panel de control
 indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "$primero $indi" $usuario/info_panel_control.ini
@@ -52,13 +52,13 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 echo "${VERDE}"
-echo "   ********************************************************************"
+echo "   **************************************************************************"
 echo -n "${CIAN}"
-echo "                    Script para Modificar $DIRECTORIO    "
+echo "                       Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
-echo "                               $SCRIPTS_version by EA3EIZ"
+echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ********************************************************************"
+echo "   **************************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 ind=`grep -n "^Callsign=" $usuario/MMDVMHost/$DIRECTORIO`
@@ -114,9 +114,9 @@ url1=`expr substr $url 4 30`
 echo "$url1"
 
 echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)${AMARILLO}"
-echo "${CIAN}   7)${GRIS} Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM0)${AMARILLO}"
-echo "${CIAN}   8)${GRIS} Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM1)${AMARILLO}"
-echo "${CIAN}   9)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)${AMARILLO}"
+echo "${CIAN}   8)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
+echo "${CIAN}   8)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM1)${AMARILLO}"
+echo "${CIAN}   9)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
 echo -n "                            - "
 
 mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
@@ -162,7 +162,7 @@ txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/$DIRECTORIO`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
-echo -n "${CIAN}      a)${GRIS} D-STAR      - ${AMARILLO}"
+echo -n "${CIAN}        a)${GRIS} D-STAR      - ${AMARILLO}"
 dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $dstar $buscar`
@@ -180,7 +180,7 @@ rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 rx1=`expr substr $rx 4 30`
 echo -n "$rx1"
 
-echo -n "${CIAN}      b)${GRIS} DMR         - ${AMARILLO}"
+echo -n "${CIAN}        b)${GRIS} DMR         - ${AMARILLO}"
 dmr=`grep -n "\[DMR\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $dmr $buscar`
@@ -198,7 +198,7 @@ tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
-echo -n "${CIAN}      c)${GRIS} FUSION      - ${AMARILLO}"
+echo -n "${CIAN}        c)${GRIS} FUSION      - ${AMARILLO}"
 fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $fusion $buscar`
@@ -216,7 +216,7 @@ dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/$DIRECTORIO`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
-echo -n "${CIAN}        d)${GRIS} P25         - ${AMARILLO}"
+echo -n "${CIAN}          d)${GRIS} P25         - ${AMARILLO}"
 p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $p25 $buscar`
@@ -234,7 +234,7 @@ txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
-echo -n "${CIAN}        e)${GRIS} Baliza      - ${AMARILLO}"
+echo -n "${CIAN}          e)${GRIS} Baliza      - ${AMARILLO}"
 cw= sed -n "31p"  $usuario/MMDVMHost/$DIRECTORIO;
 
 echo -n "${CIAN}  19)${GRIS} Modificar Tramas      - ${AMARILLO}"
@@ -242,7 +242,7 @@ lg=`grep -n -m 1 '\<DisplayLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 lg1=`expr substr $lg 4 30`
 echo -n "$lg1"
 
-echo -n "${CIAN}  f)${GRIS} RFModeHang  - ${AMARILLO}"
+echo -n "${CIAN}    f)${GRIS} RFModeHang  - ${AMARILLO}"
 modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $modehang = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -257,7 +257,7 @@ sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
-echo -n "${CIAN}         g)${GRIS} Timeout     - ${AMARILLO}"
+echo -n "${CIAN}           g)${GRIS} Timeout     - ${AMARILLO}"
 timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
@@ -286,7 +286,7 @@ numero_linea=`expr $numero_linea + 2`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}  h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -308,7 +308,7 @@ numero_linea=`expr $numero_linea + 1`
 NXDN=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
-echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
+echo "  ${CIAN}  i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 # 23) IdleBrightness=
 var=`grep -n -m 1 "^IdleBrightness=" $usuario/MMDVMHost/$DIRECTORIO`
@@ -332,7 +332,7 @@ numero_linea=`expr $numero_linea + 1`
 POCSAG=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_POCSAG=$numero_linea$letra
-echo "${CIAN} j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
+echo "${CIAN}   j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 # 24) Latitude=
 echo -n "${CIAN}  24)${GRIS} Coordenada Latitud    - ${AMARILLO}"
@@ -349,18 +349,18 @@ echo "$long1"
 echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
-echo -n "$modu1"
+echo  "$modu1"
 
 # k) Jitter=
-Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
-buscar=":"
-largo_linea=`expr index $Jitter $buscar`
-largo_linea=`expr $largo_linea - 1`
-numero_linea=`expr substr $Jitter 1 $largo_linea`
-Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
-letrac=c
-numero_linea_jiter_letrac=$numero_linea$letrac
-echo "  ${CIAN}      k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+#Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
+#buscar=":"
+#largo_linea=`expr index $Jitter $buscar`
+#largo_linea=`expr $largo_linea - 1`
+#numero_linea=`expr substr $Jitter 1 $largo_linea`
+#Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+#letrac=c
+#numero_linea_jiter_letrac=$numero_linea$letrac
+#cho "  ${CIAN}      k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
 
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
 OPCION=`expr substr $pas 1 $largo1`
@@ -409,6 +409,8 @@ echo " - $memoria3"
 echo ""
 echo "${CIAN}  35)\33[1;31m Recuperar el fichero original $DIRECTORIO${AMARILLO}"
 
+echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "${CIAN}   Elige una opción: " 
 read escoger_menu
