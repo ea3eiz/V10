@@ -4,9 +4,10 @@ while true
 do
 clear
 # path usuario
-usuario=/home/pi
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+# path usuario
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
-  #Editor MMDVMBM.ini
+
 DIRECTORIO="MMDVMBM.ini"
 DIRECTORIO_copia="MMDVMBM.ini_copia"
 DIRECTORIO_copia2="MMDVMBM.ini_copia2"
@@ -409,7 +410,8 @@ echo ""
 echo "${CIAN}  35)\33[1;31m Recuperar el fichero original $DIRECTORIO${AMARILLO}"
 
 echo ""
-
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo ""
 echo -n "${CIAN}   Elige una opción: " 
 read escoger_menu
 
