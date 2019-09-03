@@ -52,13 +52,13 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 echo "${VERDE}"
-echo "   ********************************************************************"
+echo "   *****************************************************************************"
 echo -n "${CIAN}"
 echo "                    Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
 echo "                               $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ********************************************************************"
+echo "   *****************************************************************************"
 
 echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 ind=`grep -n "^Callsign=" $usuario/MMDVMHost/$DIRECTORIO`
