@@ -1,7 +1,7 @@
 ﻿#!/bin/bash
-clear
 while true
 do
+clear
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -188,7 +188,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo ssed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 			                     break;;
 			                     [nN]* ) echo ""
 			                     break;;
@@ -206,7 +206,7 @@ echo "Valor actual: \33[1;33m$ID"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_ID Id=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo ssed -i "$linea_sed_ID Id=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -224,7 +224,7 @@ echo "Valor actual: \33[1;33m$RXF"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_RXF RXFrequency=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_RXF RXFrequency=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -242,7 +242,7 @@ echo "Valor actual: \33[1;33m$TXF"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_TXF TXFrequency=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_TXF TXFrequency=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -260,7 +260,7 @@ echo "Valor actual: \33[1;33m$LATITUD"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_LA Latitude=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_LA Latitude=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -278,7 +278,7 @@ echo "Valor actual: \33[1;33m$LONGITUD"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_LO Longitude=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_LO Longitude=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -292,7 +292,7 @@ echo "Valor actual: \33[1;33m$NAME"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_NAME Name=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_NAME Name=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -306,7 +306,7 @@ echo "Valor actual: \33[1;33m$STARTUP"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_ST Startup=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_ST Startup=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            #YSF
                            #master=$(awk "NR==39" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
                            #sed -i "21c $master" /home/pi/info_panel_control.ini
@@ -323,7 +323,7 @@ echo "Valor actual:   \33[1;33m$YSF"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_YSF Enable=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_YSF Enable=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -337,7 +337,7 @@ echo "Valor actual:   \33[1;33m$FCS"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_FCS Enable=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo ed -i "$linea_sed_FCS Enable=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -351,7 +351,7 @@ echo "Valor actual:   \33[1;33m$Inactiv"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sed -i "$linea_sed_Inactiv InactivityTimeout=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_Inactiv InactivityTimeout=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
