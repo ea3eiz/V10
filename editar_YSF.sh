@@ -1,7 +1,8 @@
 ﻿#!/bin/bash
+clear
 while true
 do
-clear
+sudo chmod 777 /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -188,7 +189,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sudo sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 			                     break;;
 			                     [nN]* ) echo ""
 			                     break;;
