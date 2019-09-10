@@ -20,11 +20,11 @@ sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
 sed -i "17c NXDN=OFF" /home/pi/status.ini
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 cd /home/pi/$SCRIPTS_version/Desktop
-sudo cp * /home/pi/Desktop
+cp * /home/pi/Desktop
 sleep 1
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
-sudo git pull 
+git pull 
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 #BM
@@ -134,50 +134,50 @@ sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
-sudo cp RXF_BM.desktop /home/pi/
+cp RXF_BM.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
 cd /home/pi
-sudo cp RXF_BM.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_BM.desktop
+cp RXF_BM.desktop /home/pi/Desktop
+rm /home/pi/RXF_BM.desktop
 
 frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
-sudo cp RXF_DMRPLUS.desktop /home/pi/
+cp RXF_DMRPLUS.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DMRPLUS.desktop
 cd /home/pi
-sudo cp RXF_DMRPLUS.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_DMRPLUS.desktop
+cp RXF_DMRPLUS.desktop /home/pi/Desktop
+rm /home/pi/RXF_DMRPLUS.desktop
 
 frecuencia=$(awk "NR==13" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
-sudo cp RXF_YSF2DMR.desktop /home/pi/
+cp RXF_YSF2DMR.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_YSF2DMR.desktop
 cd /home/pi
-sudo cp RXF_YSF2DMR.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_YSF2DMR.desktop
+cp RXF_YSF2DMR.desktop /home/pi/Desktop
+rm /home/pi/RXF_YSF2DMR.desktop
 
 frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
-sudo cp RXF_DMR2YSF.desktop /home/pi/
+cp RXF_DMR2YSF.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DMR2YSF.desktop
 cd /home/pi
-sudo cp RXF_DMR2YSF.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_DMR2YSF.desktop
+cp RXF_DMR2YSF.desktop /home/pi/Desktop
+rm /home/pi/RXF_DMR2YSF.desktop
 
 frecuencia=$(awk "NR==15" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
-sudo cp RXF_DMR2NXDN.desktop /home/pi/
+cp RXF_DMR2NXDN.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DMR2NXDN.desktop
 cd /home/pi
-sudo cp RXF_DMR2NXDN.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_DMR2NXDN.desktop
+cp RXF_DMR2NXDN.desktop /home/pi/Desktop
+rm /home/pi/RXF_DMR2NXDN.desktop
 
 frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
-sudo cp RXF_NXDN.desktop /home/pi/
+cp RXF_NXDN.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_NXDN.desktop
 cd /home/pi
-sudo cp RXF_NXDN.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_NXDN.desktop
+cp RXF_NXDN.desktop /home/pi/Desktop
+rm /home/pi/RXF_NXDN.desktop
 
-sudo rm -R /home/pi/$SCRIPTS_version/associacioader.com/
+rm -R /home/pi/$SCRIPTS_version/associacioader.com/
