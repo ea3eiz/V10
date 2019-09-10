@@ -188,7 +188,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 			                     break;;
 			                     [nN]* ) echo ""
 			                     break;;
