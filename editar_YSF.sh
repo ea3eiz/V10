@@ -188,7 +188,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sudo ssed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_INDICATIVO Callsign=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 			                     break;;
 			                     [nN]* ) echo ""
 			                     break;;
@@ -206,7 +206,7 @@ echo "Valor actual: \33[1;33m$ID"
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
-                           sudo ssed -i "$linea_sed_ID Id=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_ID Id=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
@@ -337,7 +337,7 @@ echo "Valor actual:   \33[1;33m$FCS"
                            actualizar=S 
                            case $actualizar in
                            [sS]* ) echo ""
-                           sudo ed -i "$linea_sed_FCS Enable=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
+                           sudo sed -i "$linea_sed_FCS Enable=$Valor" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
