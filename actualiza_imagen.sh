@@ -25,10 +25,10 @@ sleep 2
                         sudo cp DExtra_Hosts.txt /home/pi/dv4mini/xref.ip
 #Actualiza IMAGEN
                         cd /home/pi/$SCRIPTS_version
-                        sudo git pull
+                        git pull
                         sleep 1
 
-#Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
+#Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
 sudo cp RXF_BM.desktop /home/pi/
