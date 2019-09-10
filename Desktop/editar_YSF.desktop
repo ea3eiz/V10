@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Editar YSF
 Comment=EA3EIZ
-Exec=sh -c "cd /home/pi/V7;lxterminal --geometry=80x30 -e sudo sh editar_YSF_02_07_02_NEW.sh"
+Exec=sh -c "cd /home/pi/V7;lxterminal --geometry=80x30 -e sh editar_YSF.sh"
 Type=Application
 Terminal=false
 Comment[es_ES]=
