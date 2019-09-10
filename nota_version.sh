@@ -58,8 +58,11 @@ echo "\33[1;31m   Podria dañar algún fichero del sistema y el funcionamiento d
                         echo ""
                         echo "   ************************************************************************************"
 
+                        echo ""
+                        echo -n "\33[1;36m   Pulsa la tecla ENTER para salir "
                         read A
 						exit;
+
 						
 
 
