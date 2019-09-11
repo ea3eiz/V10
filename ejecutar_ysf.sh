@@ -11,7 +11,7 @@ sudo cp Abrir_YSF.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_YSF.desktop
 
-cd /home/pi/YSFClients/Abrir_YSF.desktop
+cd /home/pi/YSFClients/YSFGateway
 echo "\33[1;32m"
 clear
 
