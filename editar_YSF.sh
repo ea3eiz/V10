@@ -6,6 +6,7 @@ do
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # path usuario
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
+DIRECTORIO="YSFGateway.ini "
 
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -180,7 +181,7 @@ echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSFGateway.ini para hacer cualquier cambio\33[1;33m"
 
 echo ""
-echo "\33[1;36m   0)\33[1;32m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
