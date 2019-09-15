@@ -15,13 +15,13 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 echo "${VERDE}"
-echo "   *******************************************************************************"
+echo "   ***************************************************************************"
 echo -n "${CIAN}"
 echo "                       Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
 echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   *******************************************************************************"
+echo "   ***************************************************************************"
 
 var=`grep -n -m 1 '\<Callsign\>' $usuario/YSFClients/YSFGateway/YSFGateway.ini` # 2:Callsign=EA3EIZ 
 var1=`grep -m 1 '\<Callsign\>' $usuario/YSFClients/YSFGateway/YSFGateway.ini` # Callsign=EA3EIZ
