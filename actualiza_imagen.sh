@@ -1,6 +1,6 @@
 #!/bin/bash
 # path usuario
-usuario=$(awk "NR==1" $usuario/.config/autostart/usuario)
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 version=`expr substr $SCRIPTS_version 2 2`
 AUTOARRANQUE="AUTOARRANQUE"
