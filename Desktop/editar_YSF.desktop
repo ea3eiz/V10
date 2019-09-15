@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Editar YSF
 Comment=EA3EIZ
-Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=80x30 -e sh editar_YSF.sh"
+Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=80x25 -e sh editar_YSF.sh"
 Icon=/home/pi/V10/ICONO_EDITAR_YSF.png
 Type=Application
 Terminal=false
