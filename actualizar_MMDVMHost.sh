@@ -30,12 +30,12 @@ GRIS="\033[0m"
                     echo "ok >>>>>"
                     cd /home/pi 
                     sudo rm -r /home/pi/MMDVMHost
-                    git clone https://github.com/g4klx/MMDVMHost
+                    git clone https://github.com/ea3eiz/MMDVMHost
                     cd /home/pi/MMDVMHost
 
                     HOY=$(date +%Y%m%d)
                     FIJA="const char* VERSION = "\"
-                    PI="ADER7"\"
+                    PI="ADER10"\"
                     HOY1=$HOY$PI
                     PUNTO=";"   
                     
