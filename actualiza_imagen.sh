@@ -1,6 +1,7 @@
 #!/bin/bash
-
-SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+# path usuario
+usuario=$(awk "NR==1" $usuario/.config/autostart/usuario)
+SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 version=`expr substr $SCRIPTS_version 2 2`
 AUTOARRANQUE="AUTOARRANQUE"
 AUTOARRANQUE=$AUTOARRANQUE$SCRIPTS_version
@@ -22,44 +23,44 @@ sleep 2
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
                         sudo curl --fail -o DCS_Hosts.txt -s http://www.pistar.uk/downloads/DCS_Hosts.txt
                         sudo curl --fail -o DPlus_Hosts.txt -s http://www.pistar.uk/downloads/DPlus_Hosts.txt
-                        sudo cp DExtra_Hosts.txt /home/pi/dv4mini/xref.ip
+                        sudo cp DExtra_Hosts.txt $usuario/dv4mini/xref.ip
 #Actualiza IMAGEN
-                        cd /home/pi/$SCRIPTS_version
+                        cd $usuario/$SCRIPTS_version
                         git pull
                         sleep 1
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF                        
-frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
-cd /home/pi/Desktop/
-sudo cp RXF_BM.desktop /home/pi/
-sed -i "11c Name=$frecuencia" /home/pi/RXF_BM.desktop
-cd /home/pi
-sudo cp RXF_BM.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_BM.desktop
+frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
+cd $usuario/Desktop/
+sudo cp RXF_BM.desktop $usuario/
+sed -i "11c Name=$frecuencia" $usuario/RXF_BM.desktop
+cd $usuario
+sudo cp RXF_BM.desktop $usuario/Desktop
+sudo rm $usuario/RXF_BM.desktop
 
-frecuencia=$(awk "NR==2" /home/pi/INFO_RXF)
-cd /home/pi/Desktop/
-sudo cp RXF_DMRPLUS.desktop /home/pi/
-sed -i "11c Name=$frecuencia" /home/pi/RXF_DMRPLUS.desktop
-cd /home/pi
-sudo cp RXF_DMRPLUS.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_DMRPLUS.desktop
+frecuencia=$(awk "NR==2" $usuario/INFO_RXF)
+cd $usuario/Desktop/
+sudo cp RXF_DMRPLUS.desktop $usuario/
+sed -i "11c Name=$frecuencia" $usuario/RXF_DMRPLUS.desktop
+cd $usuario
+sudo cp RXF_DMRPLUS.desktop $usuario/Desktop
+sudo rm $usuario/RXF_DMRPLUS.desktop
 
-frecuencia=$(awk "NR==14" /home/pi/INFO_RXF)
-cd /home/pi/Desktop/
-sudo cp RXF_DMR2YSF.desktop /home/pi/
-sed -i "11c Name=$frecuencia" /home/pi/RXF_DMR2YSF.desktop
-cd /home/pi
-sudo cp RXF_DMR2YSF.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_DMR2YSF.desktop
+frecuencia=$(awk "NR==14" $usuario/INFO_RXF)
+cd $usuario/Desktop/
+sudo cp RXF_DMR2YSF.desktop $usuario/
+sed -i "11c Name=$frecuencia" $usuario/RXF_DMR2YSF.desktop
+cd $usuario
+sudo cp RXF_DMR2YSF.desktop $usuario/Desktop
+sudo rm $usuario/RXF_DMR2YSF.desktop
 
-frecuencia=$(awk "NR==17" /home/pi/INFO_RXF)
-cd /home/pi/Desktop/
-sudo cp RXF_NXDN.desktop /home/pi/
-sed -i "11c Name=$frecuencia" /home/pi/RXF_NXDN.desktop
-cd /home/pi
-sudo cp RXF_NXDN.desktop /home/pi/Desktop
-sudo rm /home/pi/RXF_NXDN.desktop
+frecuencia=$(awk "NR==17" $usuario/INFO_RXF)
+cd $usuario/Desktop/
+sudo cp RXF_NXDN.desktop $usuario/
+sed -i "11c Name=$frecuencia" $usuario/RXF_NXDN.desktop
+cd $usuario
+sudo cp RXF_NXDN.desktop $usuario/Desktop
+sudo rm $usuario/RXF_NXDN.desktop
 
 clear
 echo "${AMARILLO}"
