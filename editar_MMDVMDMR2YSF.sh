@@ -14,13 +14,13 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 echo "${VERDE}"
-echo "   ********************************************************************"
+echo "   **************************************************************************"
 echo -n "${CIAN}"
-echo "               Script para Modificar MMDVMDMR2YSF.ini   "
+echo "                  Script para Modificar MMDVMDMR2YSF.ini      "
 echo -n "${ROJO}"
 echo "                             $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ********************************************************************"
+echo "   **************************************************************************"
 
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - ${VERDE}"
 ind=`grep -n -m 1 "Callsign" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -323,7 +323,8 @@ echo "  ${CIAN}10) \33[0mModificar ID          - ${VERDE}$idd1"
 
 echo ""
 echo "\33[1;36m  30)${AMARILLO} Editar listado salas TG-YSFList \33[1;33m"
-
+echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
