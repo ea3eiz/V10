@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+clear
 while true
 do
 clear
@@ -13,7 +14,7 @@ AMARILLO="\033[1;33m"
 echo "${VERDE}"
 echo "   ********************************************************************"
 echo -n "${CIAN}"
-echo "   CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ TODOS LOS .ini   "
+echo "    CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ TODOS LOS .inis   "
 echo -n "${ROJO}"
 echo "                             $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
@@ -107,7 +108,8 @@ MODULE=$(awk "NR==$numero_linea" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini)
 letra=c
 linea_sed_MODULE=$numero_linea$letra
 echo "$MODULE"
-
+echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
