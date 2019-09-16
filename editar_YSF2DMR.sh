@@ -4,7 +4,8 @@ while true
 do
 clear
 # path usuario
-usuario=/home/pi
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+
 DIRECTORIO="YSF2DMR.ini"
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
@@ -184,6 +185,8 @@ echo "$reflector"
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSF2DMR.ini para hacer cualquier cambio\33[1;33m"
 
+echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
