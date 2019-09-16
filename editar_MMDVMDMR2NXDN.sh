@@ -3,8 +3,9 @@ clear
 while true
 do
 clear
-# path usuario 
-usuario=/home/pi
+# path usuario
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 DIRECTORIO="MMDVMDMR2NXDN.ini"
 ROJO="\033[1;31m"
@@ -357,6 +358,8 @@ echo ""
 
 echo "\33[1;36m  33)${AMARILLO} Actualizar listado NXDNHosts.txt"
 
+echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
