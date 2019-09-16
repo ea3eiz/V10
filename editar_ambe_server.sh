@@ -42,7 +42,7 @@ do
                     actualizar=S
                     case $actualizar in
                     [sS]* )
-           	     read -p 'Introduce puerto ROUTER:        ' pruter
+           	     read -p 'Introduce el puerto que has abierto en el Router:        ' pruter
                     sed -i "1c $pruter" $usuario/ambe_server.ini
 			     break;;
 			     [nN]* ) echo ""
@@ -59,7 +59,7 @@ do
                     case $actualizar in
                     [sS]* )
                     echo "${CIAN}"
-                    read -p 'Introduce puerto MODEM:        ' pruter
+                    read -p 'Introduce puerto que has abierto en el Modem:        ' pruter
                     sed -i "2c $pruter" $usuario/ambe_server.ini
                     break;;
                     [nN]* ) echo ""
