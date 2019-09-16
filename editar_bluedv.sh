@@ -34,6 +34,8 @@ var1= sed -n '4p'  /home/pi/bluedv/BlueDVconfig.ini
 echo ""
 echo "\33[1;36m   5)\33[1;33m Abrir fichero .ini para hacer cualquier cambio\33[1;33m"
 echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 case $escoger_menu in
