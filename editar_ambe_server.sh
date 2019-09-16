@@ -69,14 +69,14 @@ done;;
 3) echo ""
 while true
 do
-                    echo -n "Valor actual del puerto MODEM: \33[1;33m"
+                    echo -n "Valor actual de la velocidad: \33[1;33m"
                     var1= sed -n '3p'  $usuario/ambe_server.ini
                     echo "${VERDE}ejp. Ambe 3000= 230400  dv stick 30 = 460800"
                     actualizar=S
                     case $actualizar in
                     [sS]* )
                     echo "${CIAN}"
-                    read -p 'Introduce puerto MODEM:        ' pruter
+                    read -p 'Introduce puerto la velocidad:        ' pruter
                     sed -i "3c $pruter" $usuario/ambe_server.ini
                     break;;
                     [nN]* ) echo ""
