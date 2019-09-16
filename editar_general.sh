@@ -12,13 +12,13 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 
 echo "${VERDE}"
-echo "   ***************************************************************************"
+echo "   **************************************************************************"
 echo -n "${CIAN}"
 echo "       CONFIGURA Y GRABA ESTOS PARAMETROS DE UNA SOLA VEZ TODOS LOS .inis       "
 echo -n "${ROJO}"
 echo "                             $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
-echo "   ***************************************************************************"
+echo "   **************************************************************************"
 
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - \33[1;33m"
 ind=`grep -n -m 1 "Callsign" /home/pi/MMDVMHost/TODOS_LOS_INIS.ini`
