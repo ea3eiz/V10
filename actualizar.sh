@@ -170,4 +170,3 @@ cd /home/pi
 cp RXF_NXDN.desktop /home/pi/Desktop
 rm /home/pi/RXF_NXDN.desktop
 
-rm -R /home/pi/$SCRIPTS_version/associacioader.com/
