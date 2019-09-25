@@ -187,7 +187,7 @@ clear
                         sudo ./md380-tool spiflashwrite user.bin 0x9638400
                         break;;
                         [nN]* ) echo ""
-                        echo ""
+                        read a
                         echo ""
                         echo "volver"
                         echo ""
