@@ -186,7 +186,7 @@ clear
                         #sudo wget --no-check-certificate https://radioid.net/static/user.csv
                         #sudo mv user.csv user.bin
                         #leep 10
-                        sudo ./md380-tool spiflashwrite user.bin 0x1000000
+                        sudo ./md380-tool spiflashwrite user.bin 0x9000000
                         break;;
                         [nN]* ) echo ""
                         echo ""
