@@ -8,6 +8,7 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # path usuario
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
+#Editor MMDVMBM.ini
 DIRECTORIO="MMDVMBM.ini"
 DIRECTORIO_copia="MMDVMBM.ini_copia"
 DIRECTORIO_copia2="MMDVMBM.ini_copia2"
