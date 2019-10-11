@@ -138,6 +138,23 @@ cd /home/pi
 cp RXF_DMRPLUS.desktop /home/pi/Desktop
 rm /home/pi/RXF_DMRPLUS.desktop
 
+
+
+
+
+frecuencia=$(awk "NR==5" /home/pi/INFO_RXF)
+cd /home/pi/Desktop/
+cp RXF_DSTAR.desktop /home/pi/
+sed -i "11c Name=$frecuencia" /home/pi/RXF_DSTAR.desktop
+cd /home/pi
+cp RXF_DSTAR.desktop /home/pi/Desktop
+rm /home/pi/RXF_DSTAR.desktop
+
+
+
+
+
+
 frecuencia=$(awk "NR==13" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
 cp RXF_YSF2DMR.desktop /home/pi/

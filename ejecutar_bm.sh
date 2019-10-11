@@ -19,7 +19,7 @@ sudo cp /home/pi/RXF_BM.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_BM.desktop
 
-#Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
+#Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF                        
 sed -i "1c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
@@ -42,14 +42,3 @@ echo "*            ABRIENDO BRANDMEISTER            * "
 echo "***********************************************"
 sleep 1
 sudo ./MMDVMBM MMDVMBM.ini
-
-#cd /home/pi/Desktop
-#sudo cp Abrir_MMDVMBM.desktop /home/pi
-#sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh ejecutar_bm_30.sh'" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "5c Icon=/home/pi/$SCRIPTS_version/DMR.png" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "10c Name[es_ES]=Abrir BM" /home/pi/Abrir_MMDVMBM.desktop
-#sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
-#cd /home/pi
-#sudo cp Abrir_MMDVMBM.desktop /home/pi/Desktop
-#sleep 1
-#sudo rm /home/pi/Abrir_MMDVMBM.desktop
