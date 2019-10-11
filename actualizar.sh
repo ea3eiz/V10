@@ -141,6 +141,18 @@ rm /home/pi/RXF_DMRPLUS.desktop
 
 
 
+frecuencia=$(awk "NR==4" /home/pi/INFO_RXF)
+cd /home/pi/Desktop/
+cp RXF_RADIO.desktop /home/pi/
+sed -i "11c Name=$frecuencia" /home/pi/RXF_RADIO.desktop
+cd /home/pi
+cp RXF_RADIO.desktop /home/pi/Desktop
+rm /home/pi/RXF_RADIO.desktop
+
+
+
+
+
 
 frecuencia=$(awk "NR==5" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
