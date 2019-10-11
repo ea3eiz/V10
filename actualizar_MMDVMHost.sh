@@ -47,29 +47,37 @@ GRIS="\033[0m"
 
                     cd NextionDriverInstaller
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVM.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMBM.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMPLUS.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDSTAR.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMFUSION.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMNXDN.ini
+                    sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
-
+sleep 2
 
                     # Crea los ejecutables para estas aplicaciones 
                     sudo cp MMDVMHost MMDVMBM
