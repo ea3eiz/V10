@@ -45,7 +45,7 @@ GRIS="\033[0m"
                     make clean
                     make
 
-                    cd NextionDriverInstaller
+                    cd /home/pi/NextionDriverInstaller
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVM.ini
                     sleep 2
                     sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
