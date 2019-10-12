@@ -51,32 +51,32 @@ GRIS="\033[0m"
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
                     sudo chmod 777 /home/pi/MMDVMHost/MMDVMBM.ini
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMBM.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMBM.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
                     sudo chmod 777 /home/pi/MMDVMHost/MMDVMPLUS.ini
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMPLUS.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMPLUS.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDSTAR.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDSTAR.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMFUSION.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMFUSION.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
-                    sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMNXDN.ini
+                    #sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMNXDN.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
