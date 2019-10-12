@@ -1,6 +1,6 @@
 #!/bin/bash
-#cierra Abrir_ircDDBGateway.desktop
-sudo killall Abrir_ircDDBGateway.desktop
+#cierra ircDDBGateway
+sudo killall ircddbgateway
 #cierra remotecontrol
 sudo killall remotecontrol
 #cierra D-STARRepeater
