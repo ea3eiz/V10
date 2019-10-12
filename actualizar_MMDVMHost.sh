@@ -81,7 +81,10 @@ sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
 
+                    
+                    
                     # Crea los ejecutables para estas aplicaciones 
+                    cd /home/pi/MMDVMHost
                     sudo cp MMDVMHost MMDVMBM
                     sudo cp MMDVMHost MMDVMPLUS
                     sudo cp MMDVMHost MMDVMDSTAR
