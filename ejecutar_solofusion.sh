@@ -18,6 +18,9 @@ sudo cp /home/pi/RXF_C4FM.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_C4FM.desktop
 
+#Escribe en el fichero INFO_RXF para poner los datos en el icono INFO TXF                        
+sed -i "6c $frecuencia" /home/pi/INFO_RXF
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp AbrirsoloYSF.desktop /home/pi
