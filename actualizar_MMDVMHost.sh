@@ -50,10 +50,12 @@ GRIS="\033[0m"
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
+                    sudo chmod 777 /home/pi/MMDVMHost/MMDVMBM.ini
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMBM.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
 sleep 2
+                    sudo chmod 777 /home/pi/MMDVMHost/MMDVMPLUS.ini
                     sudo ./NextionDriver_ConvertConfig /home/pi/MMDVMHost/MMDVMPLUS.ini
                     sleep 2
                     #sudo rm /home/pi/MMDVMHost/MMDVM.ini.old
