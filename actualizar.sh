@@ -138,8 +138,13 @@ cd /home/pi
 cp RXF_DMRPLUS.desktop /home/pi/Desktop
 rm /home/pi/RXF_DMRPLUS.desktop
 
-
-
+frecuencia=$(awk "NR==3" /home/pi/INFO_RXF)
+cd /home/pi/Desktop/
+cp RXF_LIBRE.desktop /home/pi/
+sed -i "11c Name=$frecuencia" /home/pi/RXF_LIBRE.desktop
+cd /home/pi
+cp RXF_LIBRE.desktop /home/pi/Desktop
+rm /home/pi/RXF_LIBRE.desktop
 
 frecuencia=$(awk "NR==4" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
@@ -149,11 +154,6 @@ cd /home/pi
 cp RXF_RADIO.desktop /home/pi/Desktop
 rm /home/pi/RXF_RADIO.desktop
 
-
-
-
-
-
 frecuencia=$(awk "NR==5" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
 cp RXF_DSTAR.desktop /home/pi/
@@ -161,11 +161,6 @@ sed -i "11c Name=$frecuencia" /home/pi/RXF_DSTAR.desktop
 cd /home/pi
 cp RXF_DSTAR.desktop /home/pi/Desktop
 rm /home/pi/RXF_DSTAR.desktop
-
-
-
-
-
 
 frecuencia=$(awk "NR==13" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
