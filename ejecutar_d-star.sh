@@ -11,7 +11,6 @@ sudo cp Abrir_ircDDBGateway.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
-sudo Abrir_ircDDBGateway.desktop -gui
-#sleep 3
-#sudo Abrir_ircDDBGateway.desktop -gui
+sudo ircddbgateway -gui
+
 
