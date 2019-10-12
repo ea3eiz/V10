@@ -21,7 +21,7 @@ sudo rm /home/pi/RXF_LIBRE.desktop
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_LIBRE /home/pi
-sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh cerrar_mmdvmLIBRE_30.sh'" /home/pi/Abrir_LIBRE
+sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh cerrar_LIBRE.sh'" /home/pi/Abrir_LIBRE
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/LIBRE_ON.png" /home/pi/Abrir_LIBRE
 sed -i "10c Name[es_ES]=Cerrar LIBRE" /home/pi/Abrir_LIBRE
 sed -i "10c MMDVMLIBRE=ON" /home/pi/status.ini
