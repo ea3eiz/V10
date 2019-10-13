@@ -4,7 +4,7 @@ Type=Application
 Name=Editar solo D-STAR
 Comment=
 Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=85x52 -e sudo sh  editar_MMDVMDSTAR.sh"
-Icon=/home/pi/V10/SOLO_D-STAR.png
+Icon=/home/pi/V10/ICONO_EDITAR_SOLODSTAR.png
 Path=/home/pi/MMDVMHost
 Terminal=false
 StartupNotify=false
