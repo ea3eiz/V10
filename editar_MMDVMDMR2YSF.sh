@@ -38,10 +38,17 @@ txf=`grep -n "TXFrequency" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
 txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
-echo -n "\33[1;36m   4)\33[0m Modificar Location    - \33[1;33m"
-loca=`grep -n "Locatio" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
-loca1=`expr substr $loca 4 30`
-echo "$loca1"
+echo -n "${CIAN}   4)${GRIS} Modificar Location    - ${AMARILLO}"
+loc=`grep -n "^Location=" $usuario/MMDVMHost/$DIRECTORIO`
+loc1=`echo "$loc" | tr -d '[[:space:]]'`
+buscar=":"
+largo_linea=`expr index $loc1 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $loc1 1 $largo_linea`
+letrac=c
+numero_linea_letrac=$numero_linea$letrac
+contenido_location=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
+echo "$contenido_location"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
 url=`grep -n "URL" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
@@ -213,13 +220,12 @@ Display1=`expr substr $Display 3 30`
 echo -n "$Display1"
 fi
 
-var=`grep -n -m 1 "\[Nextion\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
-#var1=`grep -m 1 "\[Nextion\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[NextionDriver\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
+numero_linea=`expr $numero_linea + 1` # y le suma uno qudando coomo: (75)
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
 letra=c
 linea_sed_MN=$numero_linea$letra
@@ -422,26 +428,15 @@ done;;
 4) echo ""
 while true
 do
-buscar=":"
-largo=`expr index $loca $buscar`
-echo "Valor de la Ciudad: \33[1;33m${loca#*=}\33[1;37m"
-           	          read -p 'Introduce tu Ciudad ' loc1
-                          letra=c
-                          if [ $largo = 3 ]
-                          then
-                          linea=`expr substr $loca 1 2`
-                          else
-                          linea=`expr substr $loca 1 3`
-                          fi
-                          linea=$linea$letra
+                          echo "Valor de la Ciudad: ${AMARILLO}${contenido_location#*=}\33[1;37m"
+                          read -p 'Introduce tu Ciudad ' loc1
                           actualizar=S 
                           case $actualizar in
-			  [sS]* ) echo ""
-			  loc1=`echo "$loc1" | tr -d '[[:space:]]'`
-              sed -i "$linea Location=$loc1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
-			  break;;
-			  [nN]* ) echo ""
-			  break;;
+                          [sS]* ) echo ""
+                          sed -i "$numero_linea_letrac Location=$loc1" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 5) echo ""
