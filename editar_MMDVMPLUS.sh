@@ -351,7 +351,7 @@ modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
 echo -n "$modu1"
 
-# k) Jitter=
+# k) Jitter= 
 Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $Jitter $buscar`
