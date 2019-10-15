@@ -286,7 +286,7 @@ numero_linea=`expr $numero_linea + 1`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}  h) ${GRIS}Port Nextion          - ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}  h) ${GRIS}Port [NextionDriver]  - ${AMARILLO}$MODEMNEXTION"
 
 echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
