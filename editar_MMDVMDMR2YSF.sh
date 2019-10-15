@@ -7,6 +7,10 @@ clear
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
+
+#MMDVMFUSION.ini
+DIRECTORIO="MMDVMDMR2YSF.ini"
+
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
