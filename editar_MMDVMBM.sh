@@ -350,7 +350,7 @@ echo "$long1"
 echo -n "${CIAN}  26)${GRIS} Modulo D-STAR         - ${AMARILLO}"
 modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
-echo  "$modu1"
+echo -n "$modu1"
 
 # k) Jitter=
 Jitter=`grep -n "Jitter" $usuario/MMDVMHost/$DIRECTORIO`
