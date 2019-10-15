@@ -277,7 +277,7 @@ Display1=`expr substr $Display 3 30`
 echo "$Display1"
 fi
 
-var=`grep -n -m 1 "\[Nextion\]" $usuario/MMDVMHost/$DIRECTORIO`
+var=`grep -n -m 1 "\[NextionDriver\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
