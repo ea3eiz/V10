@@ -286,7 +286,7 @@ numero_linea=`expr $numero_linea + 1`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
-echo " ${CIAN}  h) ${GRIS}[NextionDriver]- ${AMARILLO}$MODEMNEXTION"
+echo " ${CIAN}  h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "${CIAN}  22)${GRIS} Version Display       - ${AMARILLO}"
 ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
@@ -407,7 +407,7 @@ memoria3=$(awk "NR==$tercer1" $usuario/info_panel_control.ini)
 echo " - $memoria3"
 
 echo ""
-echo "${CIAN}  35)\33[1;31m Recuperar el fichero original $DIRECTORIO${AMARILLO}"
+echo "${CIAN}  35)\33[1;31m Recuperar el fichero original MMDVM.ini${AMARILLO}"
 
 echo ""
 echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
@@ -1298,7 +1298,7 @@ done;;
 while true
 do
           	        
-           	            read -p 'Quieres restaurar el fichero original $DIRECTORIO? S/N ' restaurar1   
+           	            read -p 'Quieres restaurar el fichero original MMDVM.ini ? S/N ' restaurar1   
                         case $restaurar1 in
 			                  [sS]* ) echo ""
                         clear
