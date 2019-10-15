@@ -386,7 +386,7 @@ memoria3=$(awk "NR==$tercer1" $usuario/info_panel_control.ini)
 echo " - $memoria3"
 
 echo ""
-echo "${CIAN}  35)\33[1;31m Recuperar el fichero original $DIRECTORIO${AMARILLO}"
+echo "${CIAN}  35)\33[1;31m Recuperar el fichero original MMDVM.ini${AMARILLO}"
 
 echo ""
 echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
@@ -1278,7 +1278,7 @@ done;;
 while true
 do
           	        
-           	            read -p 'Quieres restaurar el fichero original $DIRECTORIO? S/N ' restaurar1   
+           	            read -p 'Quieres restaurar el fichero original MMDVM.ini ? S/N ' restaurar1   
                         case $restaurar1 in
 			                  [sS]* ) echo ""
                         clear

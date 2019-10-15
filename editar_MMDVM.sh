@@ -278,12 +278,12 @@ Display1=`expr substr $Display 3 30`
 echo -n "$Display1"
 fi
 
-var=`grep -n -m 1 "\[Nextion\]" $usuario/MMDVMHost/$DIRECTORIO`
+var=`grep -n -m 1 "\[NextionDriver\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea + 2`
+numero_linea=`expr $numero_linea + 1`
 MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
@@ -408,7 +408,7 @@ memoria3=$(awk "NR==$tercer1" $usuario/info_panel_control.ini)
 echo " - $memoria3"
 
 echo ""
-echo "${CIAN}  35)\33[1;31m Recuperar el fichero original $DIRECTORIO${AMARILLO}"
+echo "${CIAN}  35)\33[1;31m Recuperar el fichero original MMDVM.ini${AMARILLO}"
 
 echo ""
 echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
