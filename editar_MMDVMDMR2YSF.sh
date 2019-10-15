@@ -21,24 +21,24 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   ****************************************************************************"
 echo -n "${CIAN}"
-echo "                     Script para Modificar MMDVMDMR2YSF.ini       "
+echo "                     Script para Modificar $DIRECTORIO       "
 echo -n "${ROJO}"
 echo "                             $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ****************************************************************************"
 
 echo -n "\33[1;36m   1)\33[0m Modificar indicativo  - ${VERDE}"
-ind=`grep -n -m 1 "Callsign" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+ind=`grep -n -m 1 "Callsign" $usuario/MMDVMHost/$DIRECTORIO`
 ind1=`expr substr $ind 3 30`
 echo "$ind1"
 
 echo -n "\33[1;36m   2)\33[0m Modificar RXFrequency - ${VERDE}"
-rxf=`grep -n "RXFrequency" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+rxf=`grep -n "RXFrequency" $usuario/MMDVMHost/$DIRECTORIO`
 rxf1=`expr substr $rxf 4 30`
 echo "$rxf1"
 
 echo -n "\33[1;36m   3)\33[0m Modificar TXFrequency - ${VERDE}"
-txf=`grep -n "TXFrequency" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+txf=`grep -n "TXFrequency" $usuario/MMDVMHost/$DIRECTORIO`
 txf1=`expr substr $txf 4 30`
 echo "$txf1"
 
@@ -55,7 +55,7 @@ contenido_location=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$contenido_location"
 
 echo -n "\33[1;36m   5)\33[0m Modificar URL         - \33[1;33m"
-url=`grep -n "URL" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+url=`grep -n "URL" $usuario/MMDVMHost/$DIRECTORIO`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
@@ -65,21 +65,21 @@ echo "\33[1;36m   8)\33[0m Puerto para placa NTH/ZUM en arduino y Pincho Low Cos
 echo "\33[1;36m   9)\33[0m Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)\33[1;33m"
 echo -n "                            - "
 
-mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 caracteres=`expr index $mode $buscar`
 caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
-mode=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+mode=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$mode"
 
 echo -n "\33[1;36m  10)\33[0m Modificar ID          - ${VERDE}"
-idd=`grep -n "Id=" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+idd=`grep -n "Id=" $usuario/MMDVMHost/$DIRECTORIO`
 idd1=`expr substr $idd 3 30`
 echo "$idd1"
 
 echo -n "\33[1;36m  11)\33[0m Modificar Address     - ${VERDE}"
-master=`grep -n -m 1 "^Address=" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+master=`grep -n -m 1 "^Address=" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo=`expr index $master $buscar`
 largo=`expr $largo + 1`
@@ -96,20 +96,20 @@ lineaport=`expr $lineaport + 1`
 linea3port=$lineaport
 letra=p
 linea2port=$lineaport$letra
-var100port= sed -n $linea2port  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+var100port= sed -n $linea2port  $usuario/MMDVMHost/$DIRECTORIO;
 
 echo -n "\33[1;36m  13)\33[0m Modificar Password    - \33[1;33m"
-pas=`grep -n '\<Password\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+pas=`grep -n '\<Password\>' $usuario/MMDVMHost/$DIRECTORIO`
 pas1=`expr substr $pas 5 30`
 echo "$pas1"
 
 echo -n "\33[1;36m  14)\33[0m Modificar TXInvert    - \33[1;33m"
-txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+txinv=`grep -n '\<TXInvert\>' $usuario/MMDVMHost/$DIRECTORIO`
 txinv1=`expr substr $txinv 4 30`
 echo -n "$txinv1"
 
 echo -n "\33[1;36m      a)\33[0m D-STAR      - \33[1;33m"
-dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+dstar=`grep -n "\[D-Star\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dstar $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -119,15 +119,15 @@ letra=p
 numero_linea_dstar_letrap=$numero_linea_dstar$letra #crea 74p
 letrac=c
 numero_linea_dstar_letrac=$numero_linea_dstar$letrac #crea 74c
-presentar_valo= sed -n $numero_linea_dstar_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valo= sed -n $numero_linea_dstar_letrap  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  15)\33[0m Modificar RXLevel     - \33[1;33m"
-rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+rx=`grep -n '\<RXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 rx1=`expr substr $rx 4 30`
 echo -n "$rx1"
 
 echo -n "\33[1;36m      b)\33[0m DMR         - \33[1;33m"
-dmr=`grep -n "\[DMR\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+dmr=`grep -n "\[DMR\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $dmr $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -137,15 +137,15 @@ letra=p
 numero_linea_dmr_letrap=$numero_linea_dmr$letra #crea 74p
 letrac=c
 numero_linea_dmr_letrac=$numero_linea_dmr$letrac #crea 74c
-presentar_valor= sed -n $numero_linea_dmr_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_dmr_letrap  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  16)\33[0m Modificar TXLevel     - \33[1;33m"
-tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+tx=`grep -n -m 1 '\<TXLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 tx1=`expr substr $tx 4 30`
 echo -n "$tx1"
 
 echo -n "\33[1;36m      c)\33[0m FUSION      - \33[1;33m"
-fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+fusion=`grep -n "LowDeviation" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $fusion $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -155,16 +155,16 @@ letra=p
 numero_linea_fusion_letrap=$numero_linea_fusion$letra #crea 74p
 letrac=c
 numero_linea_fusion_letrac=$numero_linea_fusion$letrac #crea 74c
-presentar_valor= sed -n $numero_linea_fusion_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_fusion_letrap  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  17)\33[0m Modificar Duplex      - \33[1;33m"
-dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+dup=`grep -n -m 1 '\<Duplex\>' $usuario/MMDVMHost/$DIRECTORIO`
 dup1=`expr substr $dup 3 30`
 echo -n "$dup1"
 
 
 echo -n "\33[1;36m        d)\33[0m P25         - \33[1;33m"
-p25=`grep -n "\[P25\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 74:Enable=1
+p25=`grep -n "\[P25\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 74:Enable=1
 buscar=":"
 largo_linea=`expr index $p25 $buscar` #comprueba el largo incluyendo los dos puntos (:)
 largo_linea=`expr $largo_linea - 1` #comprueba el largo quitando los dos puntos (:)
@@ -174,122 +174,122 @@ letra=p
 numero_linea_p25_letrap=$numero_linea_p25$letra #crea 74p
 letrac=c
 numero_linea_p25_letrac=$numero_linea_p25$letrac #crea 74c
-presentar_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  18)\33[0m Modificar TXHang      - \33[1;33m"
-txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+txh=`grep -n -m 1 '\<TXHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 txh1=`expr substr $txh 5 30`
 echo -n "$txh1"
 
 echo -n "\33[1;36m        e)\33[0m Baliza      - \33[1;33m"
-cw= sed -n "31p"  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+cw= sed -n "31p"  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 
 echo -n "\33[1;36m  19)\33[0m Modificar Tramas      - \33[1;33m"
-lg=`grep -n -m 1 '\<DisplayLevel\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+lg=`grep -n -m 1 '\<DisplayLevel\>' $usuario/MMDVMHost/$DIRECTORIO`
 lg1=`expr substr $lg 4 30`
 echo -n "$lg1"
 
 echo -n "\33[1;36m  f)\33[0m RFModeHang  - \33[1;33m"
-modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $modehang = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-modehang=`grep -n -m 1 '\<RFModeHang\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 modehang1=`expr substr $modehang 3 30`
 echo "$modehang1"
 fi
 
 echo -n "\33[1;36m  20)\33[0m Modificar Slot1       - \33[1;33m"
-sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo -n "$sl1"
 
 echo -n "\33[1;36m         g)\33[0m Timeout     - \33[1;33m"
-timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-timeo=`grep -n -m 1 '\<Timeout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 timeo1=`expr substr $timeo 3 30`
 echo "$timeo1"
 fi
 
 echo -n "\33[1;36m  21)\33[0m Tipo Pantalla Display - \33[1;33m"
-Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $Display = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-Display=`grep -n -m 1 '\<Display\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
 Display1=`expr substr $Display 3 30`
 echo -n "$Display1"
 fi
 
-var=`grep -n -m 1 "\[NextionDriver\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[NextionDriver\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # y le suma uno qudando coomo: (75)
-MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+MODEMNEXTION=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_MN=$numero_linea$letra
 echo " ${CIAN}h) ${GRIS}Port Nextion- ${AMARILLO}$MODEMNEXTION"
 
 echo -n "\33[1;36m  22)\33[0m Version Display       - \33[1;33m"
-ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $ScreenLayout = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 ScreenLayout1=`expr substr $ScreenLayout 5 30`
 echo -n "$ScreenLayout1"
 fi
 
-var=`grep -n -m 1 "\[NXDN\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[NXDN\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
-NXDN=$(awk "NR==$numero_linea" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+NXDN=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_NXDN=$numero_linea$letra
 echo "  ${CIAN}i) ${GRIS}NXDN        - ${AMARILLO}$NXDN"
 
 echo -n "\33[1;36m  23)\33[0m Brillo Display Nextion- \33[1;33m"
-Brightness=`grep -n -m 1 -c '\<Brightness\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 -c '\<Brightness\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $Brightness = 0 ]; then
 echo "\33[1;31mEsta versión MMDVMHost no trae este parámetro"
 else
-Brightness=`grep -n -m 1 '\<Brightness\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 '\<Brightness\>' $usuario/MMDVMHost/$DIRECTORIO`
 Brightness1=`expr substr $Brightness 5 30`
 echo -n "$Brightness1"
 fi
 
 # j) POCSAG Enable=
-var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+var=`grep -n -m 1 "\[POCSAG\]" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
 numero_linea=`expr $numero_linea + 1` # Se le suma 1 al número de linea
-POCSAG=$(awk "NR==$numero_linea" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+POCSAG=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letra=c
 linea_sed_POCSAG=$numero_linea$letra
 echo "  ${CIAN} j) ${GRIS}POCSAG      - ${AMARILLO}$POCSAG"
 
 echo -n "\33[1;36m  24)\33[0m Coordenada Latitud    - \33[1;33m"
-lat=`grep -n "Latitude" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+lat=`grep -n "Latitude" $usuario/MMDVMHost/$DIRECTORIO`
 lat1=`expr substr $lat 4 30`
 echo "$lat1"
 
 echo -n "\33[1;36m  25)\33[0m Coordenada Longitud   - \33[1;33m"
-long=`grep -n "Longitude" $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+long=`grep -n "Longitude" $usuario/MMDVMHost/$DIRECTORIO`
 long1=`expr substr $long 4 30`
 echo "$long1"
 
 echo -n "\33[1;36m  26)\33[0m Modulo D-STAR         - \33[1;33m"
-modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+modu=`grep -n -m 1 '\<Module\>' $usuario/MMDVMHost/$DIRECTORIO`
 modu1=`expr substr $modu 4 30`
 echo "$modu1"
 
@@ -299,13 +299,13 @@ OPCION=`expr $OPCION + 1`
 linea33port=$OPCION
 letra=p
 linea22port=$OPCION$letra
-var300port= sed -n $linea22port  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+var300port= sed -n $linea22port  $usuario/MMDVMHost/$DIRECTORIO;
 
 echo ""
-echo "\33[1;36m  28)\33[1;33m Abrir fichero MMDVMDMR2YSF.ini para hacer cualquier cambio\33[1;33m"
+echo "\33[1;36m  28)\33[1;33m Abrir fichero $DIRECTORIO para hacer cualquier cambio\33[1;33m"
 
 echo ""
-var1=`grep -n "\[DMR Network\]" $usuario/MMDVMHost/MMDVMDMR2YSF.ini` # devuelve ejem: 138:Enable=1
+var1=`grep -n "\[DMR Network\]" $usuario/MMDVMHost/$DIRECTORIO` # devuelve ejem: 138:Enable=1
 var2=`echo "$var1" | tr -d '[[:space:]]'`
 buscar=":"
 largo_linea=`expr index $var2 $buscar` #comprueba el largo incluyendo los dos puntos (:)
@@ -315,7 +315,7 @@ numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (143)
 letra=p
 numero_linea_p=$numero_linea$letra #crea 143p
 echo -n "\33[1;36m  29)\33[0m Local port            - ${VERDE}"
-presentar_valor= sed -n $numero_linea_p  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+presentar_valor= sed -n $numero_linea_p  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
 echo ""
 
 indicativo=$(awk "NR==2" $usuario/DMR2YSF/DMR2YSF.ini)
@@ -362,11 +362,11 @@ echo "Valor actual Indicativo: \33[1;33m${ind#*=}\33[1;37m"
 indicativo=`echo "$indicativo" | tr [:lower:] [:upper:]`
 
 			              indicativo=`echo "$indicativo" | tr -d '[[:space:]]'`
-                    sed -i "$linea Callsign=$indicativo" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                    sed -i "$linea Callsign=$indicativo" $usuario/MMDVMHost/$DIRECTORIO
 
                     sed -i "$linea Callsign=$indicativo" $usuario/DMR2YSF/DMR2YSF.ini
 
-indi=$(awk "NR==2" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "1c $indi" $usuario/info_panel_control.ini
 sed -i "40c $indicativo" $usuario/info_panel_control.ini #escribe solo el indicativ
 			  break;;
@@ -393,9 +393,9 @@ echo "Valor actual del RXFrequency: \33[1;33m${rxf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                              sed -i "$linea RXFrequency=$var2" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                              sed -i "$linea RXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
 
-frec=$(awk "NR==13" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+frec=$(awk "NR==13" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "3c $frec" $usuario/info_panel_control.ini
 
 
@@ -423,7 +423,7 @@ echo "Valor actual del TXFrequency: \33[1;33m${txf#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXFrequency=$var2" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXFrequency=$var2" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -462,7 +462,7 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
                           case $actualizar in
 			  [sS]* ) echo ""
 			  ur1=`echo "$ur1" | tr -d '[[:space:]]'`
-                          sed -i "$linea URL=$ur1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea URL=$ur1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -476,7 +476,7 @@ do
 			  [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyAMA0" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyAMA0" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -490,7 +490,7 @@ do
 			  [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyACM0" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyACM0" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -504,7 +504,7 @@ do
 			  [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyACM1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyACM1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -518,7 +518,7 @@ do
 			  [sS]* ) echo ""
                           letra1=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -545,10 +545,10 @@ echo "Valor  actual  del Id: \33[1;33m${idd#*=}\33[1;37m"
 
                           numero_linea_idd=$numero_linea_idd$letra
 
-                          sed -i "3c Id=$miid" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "3c Id=$miid" $usuario/MMDVMHost/$DIRECTORIO
                           sed -i "$numero_linea_idd Id=$miid" $usuario/DMR2YSF/DMR2YSF.ini
 
-                          ide=$(awk "NR==3" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+                          ide=$(awk "NR==3" $usuario/MMDVMHost/$DIRECTORIO)
                           sed -i "2c $ide" $usuario/info_panel_control.ini
                         
 			                    break;;
@@ -572,9 +572,9 @@ echo "Valor actual del Master: \33[1;33m${master#*=}\33[1;37m"
 #Convierte mayusculas en minúsculas
 master1=`echo "$master1" | tr [:upper:] [:lower:]`
 
-                          sed -i "$linea_master Address=$master1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_master Address=$master1" $usuario/MMDVMHost/$DIRECTORIO
 
-master=$(awk "NR==139" $usuario/MMDVMHost/MMDVMDMR2YSF.ini)
+master=$(awk "NR==139" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "4c $master" $usuario/info_panel_control.ini
 
         break;;
@@ -586,14 +586,14 @@ done;;
 while true
 do
                           echo -n "Valor actual del \33[1;37m${var100port#*=}\33[1;37m"
-                          var100port= sed -n $linea2port  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+                          var100port= sed -n $linea2port  $usuario/MMDVMHost/$DIRECTORIO;
                       read -p 'Introducir el Puerto: 62031 ' miid
                           actualizar=S 
                           case $actualizar in
         [sS]* ) echo ""
                           letra1=c
                           linea4=$linea3port$letra1
-                          sed -i "$linea4 Port=$miid" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea4 Port=$miid" $usuario/MMDVMHost/$DIRECTORIO
         break;;
         [nN]* ) echo ""
         break;;
@@ -618,7 +618,7 @@ echo "   Valor actual del Password: \33[1;33m${pas#*=}\33[1;37m"
                           case $actualizar in
 			              [sS]* ) echo ""
 			              pas1=`echo "$pas1" | tr -d '[[:space:]]'`
-                          sed -i "$linea Password=$pas1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Password=$pas1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -642,7 +642,7 @@ echo "Valor  actual del  TXInvert: \33[1;33m${txinv#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXInvert=$txinv1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXInvert=$txinv1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -666,7 +666,7 @@ echo "Valor  actual  del  RXLevel : \33[1;33m${rx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea RXLevel=$var2" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea RXLevel=$var2" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -690,7 +690,7 @@ echo "Valor  actual  del  TXLevel : \33[1;33m${tx#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXLevel=$var2" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXLevel=$var2" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -714,7 +714,7 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Duplex=$dup1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Duplex=$dup1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -738,7 +738,7 @@ echo "Valor actual del TXHang: \33[1;33m${txh#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea TXHang=$txh1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea TXHang=$txh1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -762,7 +762,7 @@ echo "Valor actual del DisplayLevel: \33[1;33m${lg#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea DisplayLevel=$lg1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea DisplayLevel=$lg1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -771,11 +771,11 @@ done;;
 20) echo ""
 while true
 do
-sl=`grep -n -m 1 -c '\<Slot1\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+sl=`grep -n -m 1 -c '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $sl = 0 ]; then
 echo "no existe este comando"
 else
-sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+sl=`grep -n -m 1 '\<Slot1\>' $usuario/MMDVMHost/$DIRECTORIO`
 sl1=`expr substr $sl 5 30`
 echo "$sl1"
 fi
@@ -795,7 +795,7 @@ echo "Valor actual del Slot1=: \33[1;33m${sl#*=}\33[1;37m"
                           case $actualizar in                                            
 			              [sS]* ) echo ""
 			              V=`echo "$V" | tr -d '[[:space:]]'`			  
-                          sed -i "$linea Slot1=$V" $usuario/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Slot1=$V" $usuario/MMDVMHost/$DIRECTORIO             
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -804,11 +804,11 @@ done;;
 21) echo ""
 while true
 do
-Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 -c '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $Display = 0 ]; then
 echo "no existe este comando"
 else
-Display=`grep -n -m 1 '\<Display\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Display=`grep -n -m 1 '\<Display\>' $usuario/MMDVMHost/$DIRECTORIO`
 Display1=`expr substr $Display 5 30`
 #echo "$Display1"
 fi
@@ -828,7 +828,7 @@ echo "Valor actual del Display=: \33[1;33m${Display1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Display=$V" $usuario/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Display=$V" $usuario/MMDVMHost/$DIRECTORIO             
         break;;
         [nN]* ) echo ""
         break;;
@@ -837,11 +837,11 @@ done;;
 22) echo ""
 while true
 do
-ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 -c '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $ScreenLayout = 0 ]; then
 echo "no existe este comando"
 else
-ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+ScreenLayout=`grep -n -m 1 '\<ScreenLayout\>' $usuario/MMDVMHost/$DIRECTORIO`
 ScreenLayout1=`expr substr $ScreenLayout 5 30`
 #echo "$ScreenLayout1"
 fi
@@ -861,7 +861,7 @@ echo "Valor actual del ScreenLayout=: \33[1;33m${ScreenLayout1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea ScreenLayout=$V" $usuario/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea ScreenLayout=$V" $usuario/MMDVMHost/$DIRECTORIO             
         break;;
         [nN]* ) echo ""
         break;;
@@ -870,11 +870,11 @@ done;;
 23) echo ""
 while true
 do
-Brightness=`grep -n -m 1 -c '\<Brightness\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 -c '\<Brightness\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $Brightness = 0 ]; then
 echo "no existe este comando"
 else
-Brightness=`grep -n -m 1 '\<Brightness\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+Brightness=`grep -n -m 1 '\<Brightness\>' $usuario/MMDVMHost/$DIRECTORIO`
 Brightness1=`expr substr $Brightness 5 30`
 #echo "$Brightness1"
 fi
@@ -894,7 +894,7 @@ echo "Valor  actual  del Brightness : \33[1;33m${Brightness1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Brightness=$V" $usuario/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Brightness=$V" $usuario/MMDVMHost/$DIRECTORIO             
         break;;
         [nN]* ) echo ""
         break;;
@@ -922,7 +922,7 @@ echo "Valor  actual  del  Module: \33[1;33m${modu#*=}\33[1;37m"
 #Convierte indicativo si se introduce en minúsculas a Mayúsculas
 modu1=`echo "$modu1" | tr [:lower:] [:upper:]`
 
-                          sed -i "$linea Module=$modu1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Module=$modu1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -932,12 +932,12 @@ a) echo ""
 while true
 do
                           echo -n "Valor actual D-STAR \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_dstar_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_dstar_letrap  $usuario/MMDVMHost/$DIRECTORIO;
                           read -p 'Desactivado=0 Activado=1:  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_dstar_letrac Enable=$dmrac1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_dstar_letrac Enable=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -947,12 +947,12 @@ b) echo ""
 while true
 do
                           echo -n "Valor  actual  DMR \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_dmr_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_dmr_letrap  $usuario/MMDVMHost/$DIRECTORIO;
            	              read -p 'Desactivado=0 Activado=1: '   dmrac1
                           actualizar=S 
                           case $actualizar in
 			                    [sS]* ) echo ""
-                          sed -i "$numero_linea_dmr_letrac Enable=$dmrac1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_dmr_letrac Enable=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
@@ -962,12 +962,12 @@ c) echo ""
 while true
 do
                           echo -n "Valor actual FUSION \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_fusion_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_fusion_letrap  $usuario/MMDVMHost/$DIRECTORIO;
                           read -p 'Desactivado=0 Activado=1:  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_fusion_letrac Enable=$dmrac1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_fusion_letrac Enable=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -977,12 +977,12 @@ d) echo ""
 while true
 do
                           echo -n "Valor  actual  P25 \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presenta_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/MMDVMDMR2YSF.ini;
+                          presenta_valor= sed -n $numero_linea_p25_letrap  $usuario/MMDVMHost/$DIRECTORIO;
                           read -p 'Desactivado=0 Activado=1: '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$numero_linea_p25_letrac Enable=$dmrac1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$numero_linea_p25_letrac Enable=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -995,7 +995,7 @@ do
                       actualizar=S 
                       case $actualizar in
                       [sS]* ) echo ""
-                      sed -i "31c Enable=$baliza" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                      sed -i "31c Enable=$baliza" $usuario/MMDVMHost/$DIRECTORIO
                       break;;
                       [nN]* ) echo ""
                       break;;
@@ -1004,11 +1004,11 @@ done;;
 f) echo ""
 while true
 do
-modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 -c '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $modehang = 0 ]; then
 echo "no existe este comando"
 else
-modehang=`grep -n -m 1 '\<RFModeHang\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+modehang=`grep -n -m 1 '\<RFModeHang\>' $usuario/MMDVMHost/$DIRECTORIO`
 modehang1=`expr substr $modehang 5 30`
 fi
 buscar=":"
@@ -1027,7 +1027,7 @@ echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea RFModeHang=$V" $usuario/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea RFModeHang=$V" $usuario/MMDVMHost/$DIRECTORIO             
         break;;
         [nN]* ) echo ""
         break;;
@@ -1036,11 +1036,11 @@ done;;
 g) echo ""
 while true
 do
-timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 -c '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 if [ $timeo = 0 ]; then
 echo "no existe este comando"
 else
-timeo=`grep -n -m 1 '\<Timeout\>' $usuario/MMDVMHost/MMDVMDMR2YSF.ini`
+timeo=`grep -n -m 1 '\<Timeout\>' $usuario/MMDVMHost/$DIRECTORIO`
 timeo1=`expr substr $timeo 5 30`
 fi
 buscar=":"
@@ -1059,7 +1059,7 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
                           case $actualizar in                                            
                     [sS]* ) echo ""
                     V=`echo "$V" | tr -d '[[:space:]]'`       
-                          sed -i "$linea Timeout=$V" $usuario/MMDVMHost/MMDVMDMR2YSF.ini             
+                          sed -i "$linea Timeout=$V" $usuario/MMDVMHost/$DIRECTORIO             
         break;;
         [nN]* ) echo ""
         break;;
@@ -1073,7 +1073,7 @@ echo "Valor del Port: \33[1;33m$MODEMNEXTION"
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_MN Port=$lat1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_sed_MN Port=$lat1" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1087,7 +1087,7 @@ echo "Valor actual NXDN: \33[1;33m$NXDN"
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_NXDN Enable=$NXDN1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_sed_NXDN Enable=$NXDN1" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1101,7 +1101,7 @@ do
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
-                          sed -i "$linea_sed_POCSAG Enable=$POCSAG1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea_sed_POCSAG Enable=$POCSAG1" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
@@ -1125,7 +1125,7 @@ echo "Valor de la Latitud: \33[1;33m${lat#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Latitude=$lat1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Latitude=$lat1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -1150,7 +1150,7 @@ echo "Valor de la Longitud: \33[1;33m${long#*=}\33[1;37m"
                           actualizar=S 
                           case $actualizar in
 			  [sS]* ) echo ""
-                          sed -i "$linea Longitude=$long1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Longitude=$long1" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  break;;
@@ -1167,12 +1167,12 @@ do
 			   read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 			  [nN]* ) echo ""
 			  letra1=c
                           linea4=$linea33port$letra1
-			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+			  sed -i "$linea4 #Options=StartRef=4370;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
 			  break;;
 esac
 done;;
@@ -1182,7 +1182,7 @@ do
                               actualizar=S 
                               case $actualizar in
 			                        [sS]* ) echo ""
-                              geany $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                              geany $usuario/MMDVMHost/$DIRECTORIO
 			                        break;;
 			                        [nN]* ) echo ""
 			                        break;;
@@ -1195,14 +1195,14 @@ done;;
 while true
 do
                           echo -n "Valor actual Local \33[1;33m${presentar_valor#*=}\33[1;37m"
-                          presentar_valor= sed -n $numero_linea_p  $usuario/MMDVMHost/MMDVMDMR2YSF.ini; #presenta el valor en pantalla
+                          presentar_valor= sed -n $numero_linea_p  $usuario/MMDVMHost/$DIRECTORIO; #presenta el valor en pantalla
                           read -p 'Introducir el puerto: 62032  '   dmrac1
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
                           letrac=c
                           linea=$numero_linea$letrac
-                          sed -i "$linea Local=$dmrac1" $usuario/MMDVMHost/MMDVMDMR2YSF.ini
+                          sed -i "$linea Local=$dmrac1" $usuario/MMDVMHost/$DIRECTORIO
 
                           break;;
                           [nN]* ) echo ""
