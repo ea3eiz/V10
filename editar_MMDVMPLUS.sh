@@ -360,7 +360,7 @@ numero_linea=`expr substr $Jitter 1 $largo_linea`
 Jitter=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 letrac=c
 numero_linea_jiter_letrac=$numero_linea$letrac
-echo "  ${CIAN}      k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
+echo "  ${CIAN}         k) ${GRIS}Jitter      - ${AMARILLO}$Jitter"
 
 echo -n "${CIAN}  27)${GRIS} Entra reflector DMR+  - ${AMARILLO}"
 OPCION=`expr substr $pas 1 $largo1`
