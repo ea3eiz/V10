@@ -1,5 +1,5 @@
 #!/bin/bash
-# script para instalar md380tools
+clear
 while true
 do
 clear
@@ -68,7 +68,7 @@ echo "   =======================================================================
 echo ""
 echo "\33[1;36m   26)\33[1;33m Abrir control de audio. [Esc] para cerrarlo \33[1;33m"
 echo ""
-echo "\33[1;36m    0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción: \33[1;33m " 
 read escoger_menu
