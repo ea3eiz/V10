@@ -347,7 +347,7 @@ sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/YSFClients/YSFG
 
             #NXDNGateway.ini
             sed -i "12c TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
-            
+
             #MMDVMNXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
@@ -998,7 +998,6 @@ do
             #MMDVMDMR2YSF
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
 
-            
             #MMDVMNXDN.ini
             sed -i "86c Module=$module" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
