@@ -2,7 +2,7 @@
 Encoding=UTF-8
 TryExec=lxterminal
 Exec=sudo geany /usr/local/share/opendv/DExtra_Hosts.txt
-Icon=/home/pi/V10/EDITAR.png
+Icon=/home/pi/V10/ICONO_EDITAR_SOLODSTAR.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
