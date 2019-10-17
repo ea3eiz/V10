@@ -183,6 +183,10 @@ sed -i "$numero_linea_letrac Callsign=$tu_indicativo" /home/pi/YSFClients/YSFGat
                         #MMDVMDMR2NXDN.ini
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
+
+                        #MMDVMNXDN.ini
+                        sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMNXDN.ini
+
                         #NXDNGateway.ini
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
@@ -262,6 +266,8 @@ sed -i "$numero_linea_letrac RXFrequency=$frecuenciarx" /home/pi/YSFClients/YSFG
             #MMDVMDMR2NXDN.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
+            #MMDVMNXDN.ini
+            sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #SOLODSTAR
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -336,6 +342,9 @@ sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/YSFClients/YSFG
             #MMDVMDMR2NXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
+            #MMDVMNXDN.ini
+            sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMNXDN.ini
+
             #SOLODSTAR
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMDSTAR.ini   
             #SOLOFUSION
@@ -399,6 +408,9 @@ sed -i "$numero_linea_letrac Name=$tu_ciudad" /home/pi/YSFClients/YSFGateway/YSF
             #MMDVMDMR2NXDN.ini
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
+            #MMDVMNXDN.ini
+            sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMNXDN.ini
+
             #SOLODSTAR
             sed -i "19c Location=$tu_ciudad" /home/pi/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
@@ -459,6 +471,9 @@ echo "Valor de  la  URL   Web: \33[1;33m${url#*=}\33[1;37m"
 
             #MMDVMDMR2NXDN.ini
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #MMDVMNXDN.ini
+            sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #SOLODSTAR
             sed -i "21c URL=$tu_url" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -545,6 +560,9 @@ sed -i "$numero_linea_letrac Id=$tu_id" /home/pi/YSFClients/YSFGateway/YSFGatewa
             #DMR2NXDN.ini
             sed -i "10c Id=$tu_id" /home/pi/DMR2NXDN/DMR2NXDN.ini
 
+            #MMDVMNXDN.ini
+            sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMNXDN.ini
+
             #DMR2YSF.ini
             sed -i "12c Id=$tu_id" /home/pi/DMR2YSF/DMR2YSF.ini
 
@@ -590,6 +608,9 @@ do
 
             #MMDVMDMR2NXDN.ini
             sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #MMDVMNXDN.ini
+            sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #SOLODSTAR
             sed -i "31c Enable=$baliza" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -648,6 +669,9 @@ echo "Valor actual del RFModeHang = : \33[1;33m${modehang1#*=}\33[1;37m"
 
             #MMDVMDMR2NXDN.ini
             sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #MMDVMNXDN.ini
+            sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #SOLODSTAR
             sed -i "7c RFModeHang=$rfmodehang" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -711,6 +735,9 @@ echo "Valor actual del Timeout = : \33[1;33m${timeo1#*=}\33[1;37m"
             #MMDVMDMR2NXDN.ini
             sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
+            #MMDVMNXDN.ini
+            sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMNXDN.ini
+
             #SOLODSTAR
             sed -i "4c Timeout=$timeou" /home/pi/MMDVMHost/MMDVMDSTAR.ini
             #SOLOFUSION
@@ -765,6 +792,9 @@ echo "Valor actual del Duplex: \33[1;33m${dup#*=}\33[1;37m"
 
             #MMDVMDMR2NXDN.ini
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #MMDVMNXDN.ini
+            sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #SOLODSTAR
             sed -i "5c Duplex=$duplex" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -835,6 +865,9 @@ sed -i "$numero_linea_letrac Latitude=$tu_latitud" /home/pi/YSFClients/YSFGatewa
 
             #MMDVMDMR2NXDN.ini
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #MMDVMNXDN.ini
+            sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #SOLODSTAR
             sed -i "16c Latitude=$tu_latitud" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -907,7 +940,10 @@ sed -i "$numero_linea_letrac Longitude=$tu_longitud" /home/pi/YSFClients/YSFGate
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
 
             #MMDVMDMR2NXDN.ini
-            sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini         
+            sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #MMDVMNXDN.ini
+            sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMNXDN.ini          
 
             #SOLODSTAR
             sed -i "17c Longitude=$tu_longitud" /home/pi/MMDVMHost/MMDVMDSTAR.ini
@@ -957,8 +993,11 @@ do
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini
 
             
+            #MMDVMNXDN.ini
+            sed -i "86 Module=$module" /home/pi/MMDVMHost/MMDVMNXDN.ini
+
             #MMDVMDMR2NXDN.ini
-            sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini 
+            sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini  
             
             #SOLODSTAR
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDSTAR.ini
