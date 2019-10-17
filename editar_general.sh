@@ -269,6 +269,9 @@ sed -i "$numero_linea_letrac RXFrequency=$frecuenciarx" /home/pi/YSFClients/YSFG
             #MMDVMNXDN.ini
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
+            #NXDNGateway.ini
+            sed -i "11c RXFrequency=$frecuenciarx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+
             #SOLODSTAR
             sed -i "13c RXFrequency=$frecuenciarx" /home/pi/MMDVMHost/MMDVMDSTAR.ini
             #SOLO FUSION
@@ -341,6 +344,9 @@ sed -i "$numero_linea_letrac TXFrequency=$frecuenciatx" /home/pi/YSFClients/YSFG
 
             #MMDVMDMR2NXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #NXDNGateway.ini
+            sed -i "12c TXFrequency=$frecuenciatx" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
 
             #MMDVMNXDN.ini
             sed -i "14c TXFrequency=$frecuenciatx" /home/pi/MMDVMHost/MMDVMNXDN.ini
@@ -994,7 +1000,7 @@ do
 
             
             #MMDVMNXDN.ini
-            sed -i "86 Module=$module" /home/pi/MMDVMHost/MMDVMNXDN.ini
+            sed -i "86c Module=$module" /home/pi/MMDVMHost/MMDVMNXDN.ini
 
             #MMDVMDMR2NXDN.ini
             sed -i "$linea_sed_MODULE Module=$module" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini  
