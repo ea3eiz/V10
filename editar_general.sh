@@ -183,6 +183,9 @@ sed -i "$numero_linea_letrac Callsign=$tu_indicativo" /home/pi/YSFClients/YSFGat
                         #MMDVMDMR2NXDN.ini
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
 
+                        #NXDNGateway.ini
+                        sed -i "2c Callsign=$tu_indicativo" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+
                         #iNDICATIVO SOLODSTAR
                         sed -i "2c Callsign=$tu_indicativo" /home/pi/MMDVMHost/MMDVMDSTAR.ini
                         #iNDICATIVO SOLOFUSION
@@ -535,6 +538,9 @@ sed -i "$numero_linea_letrac Id=$tu_id" /home/pi/YSFClients/YSFGateway/YSFGatewa
 
             #MMDVMDMR2NXDN.ini
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini
+
+            #DMR2NXDN.ini
+            sed -i "10c Id=$tu_id" /home/pi/DMR2NXDN/DMR2NXDN.ini
 
             #SOLODSTAR
             sed -i "3c Id=$tu_id" /home/pi/MMDVMHost/MMDVMDSTAR.ini
