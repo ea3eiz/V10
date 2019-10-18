@@ -13,18 +13,18 @@ DIRECTORIO_copia="MMDVMPLUS.ini_copia"
 DIRECTORIO_copia2="MMDVMPLUS.ini_copia2"
 DIRECTORIO_copia3="MMDVMPLUS.ini_copia3"
   #Escribe datos en el fichero $usuario/info_panel_control.ini para leer desde el panel de control
-primero="1c"
-segundo="2c"
-tercero="3c"
-cuarto="4c"
+primero="11c"
+segundo="12c"
+tercero="13c"
+cuarto="14c"
   #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer="34c"
-segun="35c"
-tercer="36c"
-  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
-primer1="34c"
-segun1="35c"
-tercer1="36c"
+primer="31c"
+segun="32c"
+tercer="33c"
+  #Lee los datos del fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3 
+primer1="31c"
+segun1="32c"
+tercer1="33c"
 # Recoge datos para leer desde el panel de control
 indi=$(awk "NR==2" $usuario/MMDVMHost/$DIRECTORIO)
 sed -i "$primero $indi" $usuario/info_panel_control.ini
