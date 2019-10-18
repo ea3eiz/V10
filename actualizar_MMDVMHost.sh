@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+﻿E567U-   452#!/bin/bash
 # -*- ENCODING: UTF-8 -*-
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
@@ -111,6 +111,74 @@ sudo cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
                     cp MMDVM.ini MMDVMDMR2NXDN.ini
 
                     cp MMDVM.ini MMDVMNXDN.ini
+
+
+            #YSF2DMR
+            sed -i "2c RXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "2c RXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01            
+            sed -i "2c RXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "2c RXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "2c RXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "3c TXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "3c TXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01            
+            sed -i "3c TXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "3c TXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "3c TXFrequency=435000000" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "13c Callsign=G9BF" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "13c Callsign=G9BF" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "13c Callsign=G9BF" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "13c Callsign=G9BF" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "13c Callsign=G9BF" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "8c Location=Nowhere" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "8c Location=Nowhere" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "8c Location=Nowhere" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "8c Location=Nowhere" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "8c Location=Nowhere" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "5c Latitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            sed -i "6c Longitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini
+            sed -i "6c Longitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
+            sed -i "6c Longitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
+            sed -i "6c Longitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
+            sed -i "6c Longitude=0.0" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04 
+
+            #DMR2NXDN.ini
+            sed -i "10c Id=1234567" /home/pi/DMR2NXDN/DMR2NXDN.ini
+
+            #NXDNGateway.ini
+            sed -i "11c RXFrequency=435000000" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+
+            sed -i "12c TXFrequency=435000000" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+
+            sed -i "2c Callsign=G9BF" /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini
+
+            #DMR2YSF.ini
+            sed -i "2c Callsign=G9BF" /home/pi/DMR2YSF/DMR2YSF.ini
+
+            sed -i "12c Id=1234567" /home/pi/DMR2YSF/DMR2YSF.ini
+
+
+
 
                     #=================================================
 
