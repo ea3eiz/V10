@@ -27,6 +27,7 @@ cd /home/pi/$SCRIPTS_version
 git pull 
 #=================================================================================
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
+
 #BM
 indi=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMBM.ini)
 ide=$(awk "NR==3" /home/pi/MMDVMHost/MMDVMBM.ini)
@@ -44,6 +45,7 @@ sed -i "1c $indi" /home/pi/info_panel_control.ini
 sed -i "2c $ide" /home/pi/info_panel_control.ini
 sed -i "3c $frec" /home/pi/info_panel_control.ini
 sed -i "4c $master" /home/pi/info_panel_control.ini
+
 #PLUS
 indi=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMPLUS.ini)
 ide=$(awk "NR==3" /home/pi/MMDVMHost/MMDVMPLUS.ini)
@@ -61,6 +63,7 @@ sed -i "11c $indi" /home/pi/info_panel_control.ini
 sed -i "12c $ide" /home/pi/info_panel_control.ini
 sed -i "13c $frec" /home/pi/info_panel_control.ini
 sed -i "14c $master" /home/pi/info_panel_control.ini
+
 #Radio
 indi=$(awk "NR==2" /home/pi/MMDVMHost/MMDVM.ini)
 ide=$(awk "NR==3" /home/pi/MMDVMHost/MMDVM.ini)
@@ -73,18 +76,18 @@ largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 letra=c            
 linea_master=$largo$letra
-masterradio=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVM.ini)
+master=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVM.ini)
 sed -i "6c $indi" /home/pi/info_panel_control.ini
 sed -i "7c $ide" /home/pi/info_panel_control.ini
 sed -i "8c $frec" /home/pi/info_panel_control.ini
 sed -i "9c $master" /home/pi/info_panel_control.ini
+
 #YSF
 master=$(awk "NR==39" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
 sed -i "21c $master" /home/pi/info_panel_control.ini
 #SVXLINK
 svxlink=$(awk "NR==16" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf)
 sed -i "27c $svxlink" /home/pi/info_panel_control.ini
-
 
 #YSF2DMR
 frec=$(awk "NR==2" /home/pi/YSF2DMR/YSF2DMR.ini)
@@ -93,8 +96,6 @@ tg=$(awk "NR==30" /home/pi/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" /home/pi/info_panel_control.ini
 sed -i "25c $master" /home/pi/info_panel_control.ini
 sed -i "26c $tg" /home/pi/info_panel_control.ini
-
-
 
 #DMR2YSF busca el Address DMR2YSF
 master=`grep -n -m 1 "^Address=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
