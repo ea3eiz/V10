@@ -866,7 +866,7 @@ fi
 buscar=":"
 largo=`expr index $ScreenLayout $buscar`
 echo "Valor actual del ScreenLayout=: \33[1;33m${ScreenLayout1#*=}\33[1;37m"
-                      read -p 'Screen Layout: 0=G4KLX 2=ON7LDS: ' V
+                      read -p 'Este parametro debe ser 3: ' V
                           letra=c
                           if [ $largo = 3 ]
                           then
