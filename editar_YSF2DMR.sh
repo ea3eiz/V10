@@ -12,9 +12,9 @@ SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
                     # Datos para el panel de control
                     frec=$(awk "NR==2" $usuario/YSF2DMR/YSF2DMR.ini)
                     sed -i "24c $frec" $usuario/info_panel_control.ini
-                    tg=$(awk "NR==28" $usuario/YSF2DMR/YSF2DMR.ini)
+                    tg=$(awk "NR==30" $usuario/YSF2DMR/YSF2DMR.ini)
                     sed -i "26c $tg" $usuario/info_panel_control.ini
-                    master=$(awk "NR==31" $usuario/YSF2DMR/YSF2DMR.ini)
+                    master=$(awk "NR==33" $usuario/YSF2DMR/YSF2DMR.ini)
                     sed -i "25c $master" $usuario/info_panel_control.ini
 
 #Colores

@@ -84,13 +84,18 @@ sed -i "21c $master" /home/pi/info_panel_control.ini
 #SVXLINK
 svxlink=$(awk "NR==16" /usr/local/etc/svxlink/svxlink.d/ModuleEchoLink.conf)
 sed -i "27c $svxlink" /home/pi/info_panel_control.ini
+
+
 #YSF2DMR
 frec=$(awk "NR==2" /home/pi/YSF2DMR/YSF2DMR.ini)
 master=$(awk "NR==33" /home/pi/YSF2DMR/YSF2DMR.ini)
-tg=$(awk "NR==28" /home/pi/YSF2DMR/YSF2DMR.ini)
+tg=$(awk "NR==30" /home/pi/YSF2DMR/YSF2DMR.ini)
 sed -i "24c $frec" /home/pi/info_panel_control.ini
 sed -i "25c $master" /home/pi/info_panel_control.ini
 sed -i "26c $tg" /home/pi/info_panel_control.ini
+
+
+
 #DMR2YSF busca el Address DMR2YSF
 master=`grep -n -m 1 "^Address=" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini`
 buscar=":"
