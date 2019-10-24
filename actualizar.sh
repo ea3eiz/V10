@@ -1,23 +1,23 @@
 ﻿#!/bin/bash
 SCRIPTS_version="V10"
 #pone todos los status de inicio en OFF
-sed -i "1c D-STAR=OFF" /home/pi/status.ini
-sed -i "2c BlueDV=OFF" /home/pi/status.ini
-sed -i "3c YSF=OFF" /home/pi/status.ini
-sed -i "4c DV4mini=OFF" /home/pi/status.ini
-sed -i "5c MMDVM=OFF" /home/pi/status.ini
-sed -i "6c MMDVMPLUS=OFF" /home/pi/status.ini
-sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
-sed -i "8c SVXLINK=OFF" /home/pi/status.ini
-sed -i "9c dstarrepeater=OFF" /home/pi/status.ini
-sed -i "10c MMDVMLIBRE=OFF" /home/pi/status.ini
-sed -i "11c AMBE_SERVER=OFF" /home/pi/status.ini
-sed -i "12c SOLOFUSION=OFF" /home/pi/status.ini
-sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
-sed -i "14c YSF2DMR=OFF" /home/pi/status.ini
-sed -i "15c DMR2YSF=OFF" /home/pi/status.ini
-sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
-sed -i "17c NXDN=OFF" /home/pi/status.ini
+#sed -i "1c D-STAR=OFF" /home/pi/status.ini
+#sed -i "2c BlueDV=OFF" /home/pi/status.ini
+#sed -i "3c YSF=OFF" /home/pi/status.ini
+#sed -i "4c DV4mini=OFF" /home/pi/status.ini
+#sed -i "5c MMDVM=OFF" /home/pi/status.ini
+#sed -i "6c MMDVMPLUS=OFF" /home/pi/status.ini
+#sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
+#sed -i "8c SVXLINK=OFF" /home/pi/status.ini
+#sed -i "9c dstarrepeater=OFF" /home/pi/status.ini
+#sed -i "10c MMDVMLIBRE=OFF" /home/pi/status.ini
+#sed -i "11c AMBE_SERVER=OFF" /home/pi/status.ini
+#sed -i "12c SOLOFUSION=OFF" /home/pi/status.ini
+#sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
+#sed -i "14c YSF2DMR=OFF" /home/pi/status.ini
+#sed -i "15c DMR2YSF=OFF" /home/pi/status.ini
+#sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
+#sed -i "17c NXDN=OFF" /home/pi/status.ini
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 cd /home/pi/$SCRIPTS_version/Desktop
 cp * /home/pi/Desktop
