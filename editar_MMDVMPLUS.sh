@@ -1174,7 +1174,7 @@ do
 			                    read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
-                          if [ $option = "21465" ]
+                          if [ $opcion = 21465 ]
                           then
                           sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
                           else
