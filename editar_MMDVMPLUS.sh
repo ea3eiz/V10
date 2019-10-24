@@ -1179,7 +1179,8 @@ do
                           sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
                           else
                           sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
-			                    break;;
+			                    fi
+                          break;;
 			                    [nN]* ) echo ""
 			                    letra1=c
                           linea4=$linea33port$letra1
