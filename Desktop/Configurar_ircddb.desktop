@@ -1,6 +1,6 @@
 [Desktop Entry]
 Comment=EA3EIZ
-Exec=sudo ircddbgatewayconfig
+Exec=sh -c "cd /home/pi/V10; lxterminal --geometry=78x18 -e sudo sh popus_editar_ircddb.sh"
 Type=Application
 Terminal=false
 Comment[es_ES]=
