@@ -1,11 +1,4 @@
 ﻿#!/bin/bash
-clear
-while true
-do
-clear
-
-#abre el editor ircDDB
-sudo ircddbgatewayconfig
 
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
@@ -24,20 +17,14 @@ echo "   ***********************************************************************
 echo ""
 echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
-read escoger_menu
 
-case $escoger_menu in
+#abre el editor ircDDB
+#sudo ircddbgatewayconfig
+slepp 2
 
-0) echo ""
-clear
-echo "\33[1;33m   **************************************************"
-echo "   *                                                *"
-echo "   *     CERRANDO SCRIPT                            *"
-echo "   *                                                *"
-echo "   **************************************************"
-sleep 1
-clear
-exit;;	
-esac
-done
+
+
+
+
+
 
