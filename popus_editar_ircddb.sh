@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+clear
 while true
 do
 clear
@@ -11,35 +12,18 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   *************************************************************************"
 echo "   *                                                                       *"
-echo "   *${AMARILLO}                HAY UNA NUEVA VERSION V.02.07.04${VERDE}                       *"
+echo "   *       El editor ircDDb tardará entre 1/2 y 2 minuto en abrir          *"
+echo "   *           dependiendo de la velocidad de tu raspberry pi              *"
+echo "   *             Por favor sea paciente y espere que se abra               *"
 echo "   *                                                                       *"
 echo "   *************************************************************************"
-echo "${BLANCO}"
-echo "   La podeis descargar desde la web:"
-echo "   http://www.associacioader.com"
 echo ""
-echo "${CIAN}   1)${VERDE} No volver a mostrar esta pantalla"
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
-echo "\33[1;36m   0)\33[1;34m Salir del script \33[1;31m OJO!! no salir con ctrl+c ni con la x"
-echo ""
-echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 
 case $escoger_menu in
 
-1) echo ""
-while true
-do
-                           actualizar=S 
-                           case $actualizar in
-			                     [sS]* ) echo ""
-                           sed -i "3c Exec=sh -c 'cd /home/pi/V30;lxterminal --geometry=80x25 -e sudo sh popus_02_07_04_NO.sh'" /home/pi/.config/autostart/popus_02_07_04.desktop
-                           exit;
-			                     break;;
-			                     [nN]* ) echo ""
-			                     break;;
-esac
-done;;
 0) echo ""
 clear
 echo "\33[1;33m   **************************************************"
