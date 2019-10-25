@@ -14,7 +14,6 @@ echo "   *           dependiendo de la velocidad de tu raspberry pi             
 echo "   *             Por favor sea paciente y espere que se abra               *"
 echo "   *                                                                       *"
 echo "   *************************************************************************"
-echo ""
 echo "${VERDE}"
 echo "   *************************************************************************"
 echo "   *                                                                       *"
@@ -26,8 +25,8 @@ echo "   ***********************************************************************
 echo ""
 
 #abre el editor ircDDB
-#sudo ircddbgatewayconfig
-sleep 5
+sudo ircddbgatewayconfig
+
 
 
 
