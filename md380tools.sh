@@ -36,9 +36,8 @@ echo "\33[0m "
 echo "\33[1;36m  8)\33[1;33m Introducir firmware original D03.020 (Old vocoder)"
 echo "\33[1;36m  9)\33[1;33m Introducir firmware original D13.020 (new vocoder)"
 echo ""
-echo "\33[1;36m  0)\33[1;34m Salir del script"
-echo ""
-echo -n "\33[1;36m   Elige una opción del 0 al 9: " 
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo ""  
 read escoger_menu
 echo ""
 
