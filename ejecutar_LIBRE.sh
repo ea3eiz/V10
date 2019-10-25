@@ -37,7 +37,7 @@ cd /home/pi/MMDVMHost
 clear
 echo "\33[38;5;209m"
 echo "***********************************************"
-echo "*            ABRIENDO MODO LIBRE              * "
+echo "*            ABRIENDO MODO LIBRE xxx             * "
 echo "***********************************************"
 sleep 1
 sudo ./MMDVMHostLIBRE MMDVMLIBRE.ini
