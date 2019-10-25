@@ -17,7 +17,7 @@ echo "   ***********************************************************************
 echo "${ROJO}"
 echo "   *************************************************************************"
 echo "   *                                                                       *"
-echo "   *       Esta ventana se cerrará cuando termine de editar el ircDDB      *"
+echo "   *    Esta ventana se cerrará sola cuando termine de editar el ircDDB    *"
 echo "   *                                                                       *"
 echo "   *                   IMPORTANTE!!! NO LA CIERRE ANTES                    *"
 echo "   *                                                                       *"
