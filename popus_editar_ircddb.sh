@@ -15,7 +15,15 @@ echo "   *             Por favor sea paciente y espere que se abra              
 echo "   *                                                                       *"
 echo "   *************************************************************************"
 echo ""
-
+echo "${VERDE}"
+echo "   *************************************************************************"
+echo "   *                                                                       *"
+echo "   *       Esta ventana se cerrará cuando termine de editar el EL ircDDB   *"
+echo "${ROJO}"
+echo "   *                   IMPORTANTE!!! NO LA CIERRE ANTES                    *"
+echo "   *                                                                       *"
+echo "   *************************************************************************"
+echo ""
 
 #abre el editor ircDDB
 #sudo ircddbgatewayconfig
