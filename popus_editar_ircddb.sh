@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-
+clear
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -15,12 +15,11 @@ echo "   *             Por favor sea paciente y espere que se abra              
 echo "   *                                                                       *"
 echo "   *************************************************************************"
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
-echo ""
+
 
 #abre el editor ircDDB
 #sudo ircddbgatewayconfig
-slepp 2
+sleep 5
 
 
 
