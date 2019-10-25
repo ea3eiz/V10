@@ -64,10 +64,14 @@ sudo rm $usuario/RXF_NXDN.desktop
 
 clear
 echo "${AMARILLO}"
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
 echo "   *****************************************************"
 echo "   *                                                   *"
 echo "   *          <<<<< IMAGEN ACTUALIZADA >>>>>           *"
 echo "   *                                                   *"
 echo "   *****************************************************"
-read a
 sleep 3
