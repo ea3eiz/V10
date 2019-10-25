@@ -27,7 +27,7 @@ sleep 2
 #Actualiza IMAGEN
                         cd $usuario/$SCRIPTS_version
                         git pull
-                        sleep 2
+                        sleep 3
 
 #Lee el fichero INFO_RXF para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" $usuario/INFO_RXF)
