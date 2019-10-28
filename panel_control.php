@@ -124,6 +124,29 @@ $tg = " TG: " . substr($tg, 13, 10);
                 </div>
 
 <!-- ============================================================================================= -->
+
+
+
+
+    <div class="row">
+ 
+<div class="col-md-4"></div>
+
+            <div class="col-md-4 text-center thumbnail"><br>
+                <img src="../img/DVSWITCH.png" width="195" ></img><br>
+                <a href="../panel_configuracion.php" class="btn btn-success btn-sm">IR AL PANEL DVSWITCH MOBILE</a>
+            </div>        
+
+    </div><!--row--> 
+
+
+
+
+
+
+
+
+
  <div class="row">                  
 
                     <div  class="col-md-4 text-center thumbnail"><br>
