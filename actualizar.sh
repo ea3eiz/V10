@@ -18,6 +18,8 @@ sed -i "14c YSF2DMR=OFF" /home/pi/status.ini
 sed -i "15c DMR2YSF=OFF" /home/pi/status.ini
 sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
 sed -i "17c NXDN=OFF" /home/pi/status.ini
+#=================================================================================
+
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 cd /home/pi/$SCRIPTS_version/Desktop
 cp * /home/pi/Desktop
@@ -26,6 +28,7 @@ sleep 1
 cd /home/pi/$SCRIPTS_version
 git pull 
 #=================================================================================
+
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
 
 #BM
@@ -105,6 +108,7 @@ largo=`expr $largo + 1`
 largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 masterDMR2YSF=$(awk "NR==$largo" /home/pi/MMDVMHost/MMDVMDMR2YSF.ini)
+
 #YSFGateway.ini
 master=`grep -n -m 1 "^Startup=" /home/pi/YSFClients/YSFGateway/YSFGateway.ini`
 #Quita los espacios
@@ -118,6 +122,7 @@ masterYSFGateway=$(awk "NR==$linea_YSFGateway" /home/pi/YSFClients/YSFGateway/YS
 #Quita los espacios
 masterYSFGateway=`echo "$masterYSFGateway" | tr -d '[[:space:]]'`
 #=================================================================================
+
 #ACTUALIZA EL  PANEL DE CONTROL"
 cp /home/pi/$SCRIPTS_version/panel_control.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/conectar_Radio.php /var/www/html/panel_control
@@ -126,6 +131,7 @@ cp /home/pi/$SCRIPTS_version/conectar_MMDVMBM.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/desconectar_MMDVMBM.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/conectar_MMDVMPLUS.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/desconectar_MMDVMPLUS.php /var/www/html/panel_control
+#=================================================================================
 
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
@@ -207,4 +213,4 @@ sed -i "11c Name=$frecuencia" /home/pi/RXF_NXDN.desktop
 cd /home/pi
 cp RXF_NXDN.desktop /home/pi/Desktop
 rm /home/pi/RXF_NXDN.desktop
-
+#=================================================================================
