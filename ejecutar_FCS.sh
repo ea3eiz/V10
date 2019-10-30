@@ -34,10 +34,10 @@ sleep 1
 sudo rm /home/pi/Abrir_DMR2YSF.desktop
 
 cd /home/pi/DMR2YSF
-sudo ./DMR2YSF DMR2YSF.ini & 
+sudo ./DMR2YSF DMR2YSF.ini
 
 cd /home/pi/MMDVMHost
-sudo ./DMR2YSF MMDVMDMR2YSF.ini &
+sudo ./DMR2YSF MMDVMDMR2YSF.ini
 
 cd /home/pi/YSFClients/YSFGateway
 sudo ./YSFGateway YSFGateway.ini
