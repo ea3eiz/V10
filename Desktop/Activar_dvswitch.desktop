@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=sh -c 'cd /home/pi/V10;lxterminal --geometry=72x15 -e sudo sh activar_dvswitch.sh'
+Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_dvswitch.sh'
 Icon=/home/pi/V10/ICONO_AMBE_SERVER_OFF.png
 Type=Application
 StartupNotify=false
