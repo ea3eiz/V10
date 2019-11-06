@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
-sudo systemctl start analog_bridge.service
-sudo systemctl start ircddbgateway.service
-sudo systemctl start md380-emu.service
-sudo systemctl start mmdvm_bridge.service
-sudo systemctl start nxdngateway.service
+sudo systemctl restart analog_bridge.service
+sudo systemctl restart ircddbgateway.service
+sudo systemctl restart md380-emu.service
+sudo systemctl restart mmdvm_bridge.service
+sudo systemctl restart nxdngateway.service
