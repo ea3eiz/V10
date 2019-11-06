@@ -11,6 +11,9 @@ sudo cp Activar_dvswitch.desktop /home/pi/Desktop
 sleep 2
 sudo rm /home/pi/Activar_dvswitch.desktop
 
+sudo systemctl restart ysfgateway.service
+sudo systemctl restart dmr2ysf.service
+
 sudo systemctl restart analog_bridge.service
 sudo systemctl restart ircddbgateway.service
 sudo systemctl restart md380-emu.service

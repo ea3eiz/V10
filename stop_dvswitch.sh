@@ -11,6 +11,8 @@ sudo cp Activar_dvswitch.desktop /home/pi/Desktop
 sleep 2
 sudo rm /home/pi/Activar_dvswitch.desktop
 
+sudo systemctl stop ysfgateway.service
+sudo systemctl stop dmr2ysf.service
 
 sudo systemctl stop analog_bridge.service
 sudo systemctl stop ircddbgateway.service
