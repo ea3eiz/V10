@@ -9,7 +9,7 @@ sed -i "10c Name[es_ES]=Parar Dvswitch" /home/pi/Activar_dvswitch.desktop
 cd /home/pi
 sudo cp Activar_dvswitch.desktop /home/pi/Desktop
 sleep 2
-sudo rm /home/pi/Activar_dvswitch.desktop
+#sudo rm /home/pi/Activar_dvswitch.desktop
 
 cd /home/pi/$SCRIPTS_version
 sudo sh Activar_dvswitch.sh
