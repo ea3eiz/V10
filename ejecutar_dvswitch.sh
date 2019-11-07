@@ -31,7 +31,7 @@ echo ""
 echo "SI ESTAN ABIERTOS"
 
 						read -p 'Quieres Seguir? S/N ' seguir   
-                        if [ "$seguir" = 'S' ];then 
+                        if [ "$seguir" = 'S' -o 's'];then 
 			            
                           
 
