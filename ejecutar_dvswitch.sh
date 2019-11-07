@@ -19,7 +19,6 @@ then
 sudo sh cerrar_bm.sh
 clear
 echo "CERRANDO BM"
-else
 fi
 
 #sudo sh cerrar_d-star.sh
