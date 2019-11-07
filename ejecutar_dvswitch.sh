@@ -31,8 +31,8 @@ echo ""
 echo "SI ESTAN ABIERTOS"
 
 						read -p 'Quieres Seguir? S/N ' seguir   
-                        case $seguir in 
-			            sS]* ) echo ""
+                        if [ "$seguir" = 'S' ];then 
+			            
                           
 
 cd /home/pi/$SCRIPTS_version
@@ -176,10 +176,6 @@ sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
-								break;;
-			                    [nN]* ) echo ""
-			                    break;;
-esac
-done;;				
+fi
 						
 						
