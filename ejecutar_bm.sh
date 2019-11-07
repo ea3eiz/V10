@@ -1,4 +1,7 @@
 #!/bin/bash
+
+sudo sh stop_dvswitch.sh
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
