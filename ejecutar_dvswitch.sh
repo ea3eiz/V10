@@ -73,6 +73,14 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO solo D-STAR +++++++++++"
 fi
 
+solofusion=$(awk "NR==12" /home/pi/status.ini)
+if [ "$solofusion" = 'SOLOFUSION=ON' ];then
+sudo sh cerrar_solofusion.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO solo FUSION +++++++++++"
+fi
+
 #01-D-STAR=OFF
 #02-BlueDV=OFF
 #03-YSF=OFF
