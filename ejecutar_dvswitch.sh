@@ -2,17 +2,11 @@
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
-
-echo "CERRANDO TODOS LOS SISTEMAS"
-
-
 cd /home/pi/$SCRIPTS_version
-
 
 bm=$(awk "NR==7" /home/pi/status.ini)
 
 echo "$bm"
-read a
 
 if [ "$bm" == "MMDVMBM=ON" ];
 then
