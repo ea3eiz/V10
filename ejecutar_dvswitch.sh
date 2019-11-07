@@ -30,7 +30,13 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO DMRPLUS +++++++++++"
 fi
 
-
+libre=$(awk "NR==10" /home/pi/status.ini)
+if [ "$libre" = 'MMDVMLIBRE=ON' ];then
+sudo sh cerrar_LIBRE.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO LIBRE +++++++++++"
+fi
 
 #01-D-STAR=OFF
 #02-BlueDV=OFF
