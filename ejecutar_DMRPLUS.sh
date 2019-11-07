@@ -41,6 +41,7 @@ sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
 
 cd /home/pi/MMDVMHost
 echo "\33[1;37m"
+clear
 echo "***********************************************"
 echo "*               ABRIENDO DMR+                 * "
 echo "***********************************************"
