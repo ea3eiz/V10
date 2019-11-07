@@ -38,6 +38,13 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO LIBRE +++++++++++"
 fi
 
+radio=$(awk "NR==5" /home/pi/status.ini)
+if [ "$radio" = 'MMDVM=ON' ];then
+sudo sh cerrar_radio.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO RADIO +++++++++++"
+fi
 #01-D-STAR=OFF
 #02-BlueDV=OFF
 #03-YSF=OFF
