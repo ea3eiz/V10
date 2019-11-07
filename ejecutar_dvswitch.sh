@@ -2,6 +2,10 @@
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
+
+echo "CERRANDO TODOS LOS SISTEMAS"
+
+
 cd /home/pi/$SCRIPTS_version
 sudo sh cerrar_ambe_server.sh
 sudo sh cerrar_bluedv.sh
@@ -21,7 +25,7 @@ sudo sh cerrar_solofusion.sh
 sudo sh cerrar_ysf.sh
 sudo sh cerrar_YSF2DMR.sh
 
-echo "CERRANDO TODOS LOS SISTEMAS"
+
 
 
 sleep 2
