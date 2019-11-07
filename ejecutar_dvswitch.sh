@@ -29,9 +29,14 @@ echo "NXDN"
 echo "${BLANCO}"
 echo ""
 echo "SI ESTAN ABIERTOS"
+
+						read -p 'Quieres Seguir? S/N ' seguir   
+                        case $seguir in 
+			            sS]* ) echo ""
+                          
+
 cd /home/pi/$SCRIPTS_version
 
-sleep 5
 
 bm=$(awk "NR==7" /home/pi/status.ini)
 if [ "$bm" = 'MMDVMBM=ON' ];then
@@ -171,6 +176,10 @@ sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
-				
+								break;;
+			                    [nN]* ) echo ""
+			                    break;;
+esac
+done;;				
 						
 						
