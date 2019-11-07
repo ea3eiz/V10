@@ -11,7 +11,7 @@ cd /home/pi/$SCRIPTS_version
 
 bm=$(awk "NR==7" /home/pi/status.ini)
 
-if [ $bm = "MMDVMBM=ON" ]
+if [ $bm = MMDVMBM=ON ]
 then
 sudo sh cerrar_bm.sh
 clear
