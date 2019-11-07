@@ -20,6 +20,13 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO BM +++++++++++"
 fi
 
+plus=$(awk "NR==6" /home/pi/status.ini)
+if [ "$plus" = 'MMDVMPLUS=ON' ];then
+sudo sh cerrar_DMRPLUS.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO DMRPLUS +++++++++++"
+fi
 
 #sudo sh cerrar_d-star.sh
 #clear
