@@ -21,6 +21,9 @@ sudo sh cerrar_solofusion.sh
 sudo sh cerrar_ysf.sh
 sudo sh cerrar_YSF2DMR.sh
 
+echo "CERRANDO TODOS LOS SISTEMAS"
+
+
 sleep 2
 
 cd /home/pi/Desktop
