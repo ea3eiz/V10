@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+﻿#!/bin/
 
 cd /home/pi/Desktop
 sudo cp Activar_dvswitch.desktop /home/pi
