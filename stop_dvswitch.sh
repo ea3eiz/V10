@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-
+clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Activar_dvswitch.desktop /home/pi
