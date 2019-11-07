@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 sudo sh stop_dvswitch.sh
 echo "***********************************************"
 echo "*            ABRIENDO BRANDMEISTER            * "

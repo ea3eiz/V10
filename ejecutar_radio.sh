@@ -1,4 +1,10 @@
 #!/bin/bash
+
+sudo sh stop_dvswitch.sh
+echo "***********************************************"
+echo "*             ABRIENDO RADIO                  * "
+echo "***********************************************"
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVM.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -36,6 +42,7 @@ sudo rm /home/pi/Abrir_Radio.desktop
 cd /home/pi/MMDVMHost
 clear
 echo "\33[1;36m"
+clear
 echo "***********************************************"
 echo "*             ABRIENDO RADIO                  * "
 echo "***********************************************"

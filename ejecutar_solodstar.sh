@@ -1,4 +1,10 @@
 #!/bin/bash
+
+sudo sh stop_dvswitch.sh
+echo "***********************************************"
+echo "*             ABRIENDO SOLO D-STAR            * "
+echo "***********************************************"
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -35,6 +41,7 @@ sudo rm /home/pi/AbrirsoloDstar.desktop
 
 cd /home/pi/MMDVMHost
 echo "\33[1;32m"
+clear
 echo "***********************************************"
 echo "*             ABRIENDO SOLO D-STAR            * "
 echo "***********************************************"

@@ -1,4 +1,10 @@
 #!/bin/bash
+
+sudo sh stop_dvswitch.sh
+echo "***********************************************"
+echo "*            ABRIENDO MODO LIBRE              * "
+echo "***********************************************"
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMLIBRE.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -36,6 +42,7 @@ sudo rm /home/pi/Abrir_LIBRE.desktop
 cd /home/pi/MMDVMHost
 clear
 echo "\33[38;5;209m"
+clear
 echo "***********************************************"
 echo "*            ABRIENDO MODO LIBRE              * "
 echo "***********************************************"

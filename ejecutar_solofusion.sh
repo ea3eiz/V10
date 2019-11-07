@@ -1,4 +1,10 @@
 #!/bin/bash
+
+sudo sh stop_dvswitch.sh
+echo "***********************************************"
+echo "*             ABRIENDO SOLO FUSION            * "
+echo "***********************************************"
+
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMFUSION.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -34,6 +40,7 @@ sleep 1
 sudo rm /home/pi/AbrirsoloYSF.desktop
 
 echo "\33[38;5;138m"
+clear
 echo "***********************************************"
 echo "*             ABRIENDO SOLO FUSION            * "
 echo "***********************************************"

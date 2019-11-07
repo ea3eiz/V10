@@ -1,4 +1,10 @@
 #!/bin/bash
+
+sudo sh stop_dvswitch.sh
+echo "***********************************************"
+echo "*             ABRIENDO YSF                    * "
+echo "***********************************************"
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_YSF.desktop /home/pi
@@ -14,7 +20,6 @@ sudo rm /home/pi/Abrir_YSF.desktop
 cd /home/pi/YSFClients/YSFGateway
 echo "\33[1;32m"
 clear
-
 echo "***********************************************"
 echo "*             ABRIENDO YSF                    * "
 echo "***********************************************"
