@@ -8,8 +8,8 @@ bm=$(awk "NR==7" /home/pi/status.ini)
 
 echo "$bm"
 
-if [ "$bm" == 'MMDVMBM=ON' ];
-then
+if [ "$bm" = 'MMDVMBM=ON' ];then
+
 sudo sh cerrar_bm.sh
 clear
 echo "CERRANDO BM"
