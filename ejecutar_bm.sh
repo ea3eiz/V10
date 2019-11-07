@@ -1,11 +1,11 @@
 #!/bin/bash
 
+
+
+sudo sh stop_dvswitch.sh
 echo "***********************************************"
 echo "*            ABRIENDO BRANDMEISTER            * "
 echo "***********************************************"
-
-sudo sh stop_dvswitch.sh
-
 
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
 buscar=":"
