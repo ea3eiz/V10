@@ -20,7 +20,7 @@ sudo sh cerrar_bm.sh
 clear
 echo "CERRANDO BM"
 else
-fi
+
 
 #sudo sh cerrar_d-star.sh
 #clear
@@ -92,6 +92,6 @@ sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
-				
+fi				
 						
 						
