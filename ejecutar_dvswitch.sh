@@ -64,6 +64,15 @@ clear
 echo "${VERDE}"
 echo "+++++++ CERRANDO RADIO +++++++++++"
 fi
+
+solodstar=$(awk "NR==13" /home/pi/status.ini)
+if [ "$solodstar" = 'SOLODSTAR=ON' ];then
+sudo sh cerrar_solodstar.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO solo D-STAR +++++++++++"
+fi
+
 #01-D-STAR=OFF
 #02-BlueDV=OFF
 #03-YSF=OFF
