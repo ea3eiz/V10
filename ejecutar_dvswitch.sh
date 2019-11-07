@@ -12,7 +12,7 @@ if [ "$bm" = 'MMDVMBM=ON' ];then
 
 sudo sh cerrar_bm.sh
 clear
-echo "CERRANDO BM"
+echo "+++++++ CERRANDO BM +++++++++++"
 fi
 
 
