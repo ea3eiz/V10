@@ -9,7 +9,9 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-
+echo "${BLANCO}"
+echo "SE VAN ACERRAR LOS SISTEMAS BM,DMRPLUS"
+echo "SI ESTAN ABIERTOS"
 cd /home/pi/$SCRIPTS_version
 
 bm=$(awk "NR==7" /home/pi/status.ini)
@@ -27,6 +29,28 @@ clear
 echo "${VERDE}"
 echo "+++++++ CERRANDO DMRPLUS +++++++++++"
 fi
+
+
+
+#01-D-STAR=OFF
+#02-BlueDV=OFF
+#03-YSF=OFF
+#04-DV4mini=OFF
+#05-MMDVM=OFF
+#06-MMDVMPLUS=OFF
+#07-MMDVMBM=OFF
+#08-SVXLINK=OFF
+#09-dstarrepeater=OFF
+#10-MMDVMLIBRE=OFF
+#11-AMBE_SERVER=OFF
+#12-SOLOFUSION=OFF
+#13-SOLODSTAR=OFF
+#14-YSF2DMR=OFF
+#15-DMR2YSF=OFF
+#16-DMR2NXDN=OFF
+#17-NXDN=OFF
+
+
 
 #sudo sh cerrar_d-star.sh
 #clear
