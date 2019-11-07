@@ -1,5 +1,5 @@
 ﻿#!/bin/bash
-clear
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Activar_dvswitch.desktop /home/pi
@@ -9,7 +9,7 @@ sed -i "10c Name[es_ES]=Activar Dvswitch" /home/pi/Activar_dvswitch.desktop
 
 cd /home/pi
 sudo cp Activar_dvswitch.desktop /home/pi/Desktop
-sleep 2
+
 sudo rm /home/pi/Activar_dvswitch.desktop
 
 sudo systemctl stop ysfgateway.service
