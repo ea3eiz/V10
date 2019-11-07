@@ -11,6 +11,8 @@ cd /home/pi/$SCRIPTS_version
 
 bm=$(awk "NR==7" /home/pi/status.ini)
 
+echo "$bm"
+read a
 
 if [ "$bm" == 'MMDVMBM=ON' ];
 then
