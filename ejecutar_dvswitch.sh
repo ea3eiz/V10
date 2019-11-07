@@ -31,6 +31,8 @@ echo ""
 echo "SI ESTAN ABIERTOS"
 cd /home/pi/$SCRIPTS_version
 
+sleep 5
+
 bm=$(awk "NR==7" /home/pi/status.ini)
 if [ "$bm" = 'MMDVMBM=ON' ];then
 sudo sh cerrar_bm.sh
