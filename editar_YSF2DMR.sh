@@ -677,7 +677,12 @@ do
                           read -p 'Intruduce reflector DMR+ al que se conectara (ej:4370) ' opcion
                           letra1=c
                           linea4=$linea33port$letra1
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/YSF2DMR/YSF2DMR.ini
+                          if [ $opcion = 21465 ]
+                          then
+                          sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
+                          else
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
+                          fi
                           break;;
                           [nN]* ) echo ""
                           letra1=c
