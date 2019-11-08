@@ -1,18 +1,17 @@
 #!/bin/bash
+modo=$(awk "NR==18" /home/pi/status.ini)
 
-sudo sh stop_dvswitch.sh
-echo "\033[1;32m" #verde
-echo ""
-echo ""
-echo ""
-echo "************************************************************************"
-echo "*                                                                      *"
-echo "*                                                                      *"
-echo "*\033[1;31m                        DESACTIVANDO DVSWITCH                         *"
-echo "*                                                                      *"
-echo "*                                                                      *"
-echo "*\033[1;32m                                                                      *"
-echo "************************************************************************"
+
+if [ "$modo" = 'DVSWITCH=ON' ];then
+echo "${VERDE}"
+echo "******************************************"
+echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
+echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
+echo "******************************************"
+
+else
+
+
 
 sleep 3
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
@@ -58,3 +57,5 @@ echo "*            ABRIENDO BRANDMEISTER            * "
 echo "***********************************************"
 sleep 1
 sudo ./MMDVMBM MMDVMBM.ini
+
+fi
