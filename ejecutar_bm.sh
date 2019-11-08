@@ -10,7 +10,9 @@ echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
 echo "******************************************"
 sleep 3
 else
-
+echo "***********************************************"
+echo "*            ABRIENDO BRANDMEISTER            * "
+echo "***********************************************"
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
