@@ -94,6 +94,14 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO ircDDB +++++++++++"
 fi
 
+DstarRepeater=$(awk "NR==9" /home/pi/status.ini)
+if [ "$DstarRepeater" = 'D-STAR=ON' ];then
+sudo sh cerrar_dstarrepeater_30.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO DstarRepeater +++++++++++"
+fi
+
 #01-D-STAR=OFF
 #02-BlueDV=OFF
 #03-YSF=OFF
