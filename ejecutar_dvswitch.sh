@@ -102,12 +102,12 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO DstarRepeater +++++++++++"
 fi
 
-ysf=$(awk "NR==3" /home/pi/status.ini)
-if [ "$ysf" = 'YSF=ON' ];then
-sudo sh cerrar_ysf.sh
+ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
+if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
+sudo sh cerrar_YSF2DMR.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO YSF +++++++++++"
+echo "+++++++ CERRANDO YSF2DMR +++++++++++"
 fi
 
 #01-D-STAR=OFF
