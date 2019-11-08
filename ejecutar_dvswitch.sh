@@ -86,7 +86,7 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO solo FUSION +++++++++++"
 fi
 
-ircDDB=$(awk "NR==12" /home/pi/status.ini)
+ircDDB=$(awk "NR==1" /home/pi/status.ini)
 if [ "$ircDDB" = 'D-STAR=ON' ];then
 sudo sh cerrar_d-star.sh
 clear
