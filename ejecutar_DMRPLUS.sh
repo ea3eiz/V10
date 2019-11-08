@@ -4,7 +4,7 @@ sudo sh stop_dvswitch.sh
 echo "***********************************************"
 echo "*               ABRIENDO DMR+                 * "
 echo "***********************************************"
-
+sleep 3
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMPLUS.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`

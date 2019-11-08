@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo sh stop_dvswitch.sh
-
+sleep 3
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp ircDDBGateway /home/pi
