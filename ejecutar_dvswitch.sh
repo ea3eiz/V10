@@ -10,8 +10,10 @@ GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 echo "${BLANCO}"
-echo "SE VAN ACERRAR LOS SISTEMAS SIGUIENTES:"
-echo "***************************************"
+echo "*****************************************"
+echo "SE CERRARAN TODAS LOS SISTEMAS SIGUIENTES"
+echo "SI ESTUVIERAN ABIERTOS"
+echo "*****************************************"
 echo "${VERDE}"
 echo "BM"
 echo "DMR+"
@@ -28,7 +30,6 @@ echo "DMR2NXDN"
 echo "NXDN"
 echo "${BLANCO}"
 echo ""
-echo "SI ESTAN ABIERTOS"
 
 						read -p 'Quieres Seguir? S/N ' seguir   
                         if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
