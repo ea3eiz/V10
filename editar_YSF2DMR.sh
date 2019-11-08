@@ -679,9 +679,9 @@ do
                           linea4=$linea33port$letra1
                           if [ $opcion = 21465 ]
                           then
-                          sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "$linea4 Options=StartRef=4000;RelinkTime=15;TS2_1=21465" $usuario/YSF2DMR/YSF2DMR.ini
                           else
-                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "$linea4 Options=StartRef=$opcion;RelinkTime=10;" $usuario/YSF2DMR/YSF2DMR.ini
                           fi
                           break;;
                           [nN]* ) echo ""
