@@ -1,7 +1,6 @@
 #!/bin/bash
+
 modo=$(awk "NR==18" /home/pi/status.ini)
-
-
 if [ "$modo" = 'DVSWITCH=ON' ];then
 echo "\033[1;31m" #ROJO
 echo "******************************************"
