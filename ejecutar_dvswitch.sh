@@ -12,7 +12,7 @@ SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 echo "${BLANCO}"
 echo "*****************************************"
 echo "SE CERRARAN TODAS LOS SISTEMAS SIGUIENTES"
-echo "SI ESTUVIERAN ABIERTOS"
+echo "        SI ENCUENTRAN ABIERTOS"
 echo "*****************************************"
 echo "${VERDE}"
 echo "BM"
@@ -31,20 +31,17 @@ echo "NXDN"
 echo "${BLANCO}"
 echo ""
 
-						read -p 'Quieres Seguir? S/N ' seguir   
-                        if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
-			            
-                          
-
+read -p 'Quieres Seguir? S/N ' seguir   
+if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 			                                   
 cd /home/pi/$SCRIPTS_version
-
-
 bm=$(awk "NR==7" /home/pi/status.ini)
 if [ "$bm" = 'MMDVMBM=ON' ];then
 sudo sh cerrar_bm.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO BM +++++++++++"
+echo "*******************************"
+echo "         CERRANDO BM"
+echo "*******************************"
 fi
 
 plus=$(awk "NR==6" /home/pi/status.ini)
@@ -52,7 +49,9 @@ if [ "$plus" = 'MMDVMPLUS=ON' ];then
 sudo sh cerrar_DMRPLUS.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO DMRPLUS +++++++++++"
+echo "*******************************"
+echo "        CERRANDO BM"
+echo "*******************************"
 fi
 
 libre=$(awk "NR==10" /home/pi/status.ini)
@@ -60,7 +59,9 @@ if [ "$libre" = 'MMDVMLIBRE=ON' ];then
 sudo sh cerrar_LIBRE.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO LIBRE +++++++++++"
+echo "*******************************"
+echo "        CERRANDO LIBRE"
+echo "*******************************"
 fi
 
 radio=$(awk "NR==5" /home/pi/status.ini)
@@ -68,7 +69,9 @@ if [ "$radio" = 'MMDVM=ON' ];then
 sudo sh cerrar_radio.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO RADIO +++++++++++"
+echo "*******************************"
+echo "       CERRANDO RADIO"
+echo "*******************************"
 fi
 
 solodstar=$(awk "NR==13" /home/pi/status.ini)
@@ -76,7 +79,9 @@ if [ "$solodstar" = 'SOLODSTAR=ON' ];then
 sudo sh cerrar_solodstar.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO solo D-STAR +++++++++++"
+echo "*******************************"
+echo "    CERRANDO solo D-STAR"
+echo "*******************************"
 fi
 
 solofusion=$(awk "NR==12" /home/pi/status.ini)
@@ -84,7 +89,9 @@ if [ "$solofusion" = 'SOLOFUSION=ON' ];then
 sudo sh cerrar_solofusion.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO solo FUSION +++++++++++"
+echo "*******************************"
+echo "     CERRANDO solo FUSION"
+echo "*******************************"
 fi
 
 ircDDB=$(awk "NR==1" /home/pi/status.ini)
@@ -92,7 +99,9 @@ if [ "$ircDDB" = 'D-STAR=ON' ];then
 sudo sh cerrar_d-star.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO ircDDB & DstarRepeater +++++++++++"
+echo "*******************************"
+echo "CERRANDO ircDDB & DstarRepeater"
+echo "*******************************"
 fi
 
 DstarRepeater=$(awk "NR==9" /home/pi/status.ini)
@@ -100,7 +109,9 @@ if [ "$DstarRepeater" = 'dstarrepeater=ON' ];then
 sudo sh cerrar_dstarrepeater_30.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO DstarRepeater +++++++++++"
+echo "*******************************"
+echo "    CERRANDO DstarRepeater"
+echo "*******************************"
 fi
 
 ysf2dmr=$(awk "NR==14" /home/pi/status.ini)
@@ -108,7 +119,9 @@ if [ "$ysf2dmr" = 'YSF2DMR=ON' ];then
 sudo sh cerrar_YSF2DMR.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO YSF2DMR +++++++++++"
+echo "*******************************"
+echo "      CERRANDO YSF2DMR"
+echo "*******************************"
 fi
 
 dmr2ysf=$(awk "NR==15" /home/pi/status.ini)
@@ -116,7 +129,9 @@ if [ "$dmr2ysf" = 'DMR2YSF=ON' ];then
 sudo sh cerrar_DMR2YSF.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO DMR2YSF +++++++++++"
+echo "*******************************"
+echo "      CERRANDO DMR2YSF"
+echo "*******************************"
 fi
 
 dmr2nxdn=$(awk "NR==16" /home/pi/status.ini)
@@ -124,7 +139,9 @@ if [ "$dmr2nxdn" = 'DMR2NXDN=ON' ];then
 sudo sh cerrar_DMR2NXDN.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO DMR2NXDN +++++++++++"
+echo "*******************************"
+echo "      CERRANDO DMR2NXDN"
+echo "*******************************"
 fi
 
 nxdn=$(awk "NR==17" /home/pi/status.ini)
@@ -132,7 +149,9 @@ if [ "$nxdn" = 'NXDN=ON' ];then
 sudo sh cerrar_NXDN.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO NXDN +++++++++++"
+echo "*******************************"
+echo "CERRANDO NXDN"
+echo "*******************************"
 fi
 
 #01-D-STAR=OFF
@@ -152,56 +171,6 @@ fi
 #15-DMR2YSF=OFF
 #16-DMR2NXDN=OFF
 #17-NXDN=OFF
-
-
-
-#sudo sh cerrar_d-star.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_DMR2NXDN.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_DMR2YSF.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_DMRPLUS.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_dstarrepeater_30.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_LIBRE.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_NXDN.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_radio.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_solodstar.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_solofusion.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_ysf.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
-
-#sudo sh cerrar_YSF2DMR.sh
-#clear
-#echo "CERRANDO TODOS LOS SISTEMAS"
 
 sleep 2
 
