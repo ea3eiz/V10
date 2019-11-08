@@ -11,9 +11,6 @@ echo "******************************************"
 sleep 3
 else
 
-
-
-sleep 3
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
