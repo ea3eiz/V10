@@ -10,6 +10,7 @@ echo "*                                                                      *"
 echo "*                                                                      *"
 echo "*\033[1;32m                                                                      * "
 echo "************************************************************************"
+read a
 sleep 3
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
 buscar=":"
