@@ -3,11 +3,12 @@
 sudo sh stop_dvswitch.sh
 echo "\033[1;32m" #verde
 echo "************************************************************************"
-echo "*                                                                      * "
-echo -n "\033[1;31m"
-echo "*                        DESACTIVANDO DVSWITCH                         * "
-echo -n "\033[1;32m" #verde
-echo "*                                                                      * "
+echo "*                                                                      *"
+echo "*                                                                      *"
+echo "*\033[1;31m                        DESACTIVANDO DVSWITCH                         * "
+echo "*                                                                      *"
+echo "*                                                                      *"
+echo "*\033[1;32m                                                                      * "
 echo "************************************************************************"
 sleep 3
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMBM.ini`
