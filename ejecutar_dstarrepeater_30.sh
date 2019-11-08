@@ -1,7 +1,14 @@
 #!/bin/bash
 
-sudo sh stop_dvswitch.sh
-sleep 3
+modo=$(awk "NR==18" /home/pi/status.ini)
+if [ "$modo" = 'DVSWITCH=ON' ];then
+echo "\033[1;31m" #ROJO
+echo "******************************************"
+echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
+echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
+echo "******************************************"
+sleep 5
+else
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp ircDDBGateway /home/pi
@@ -29,5 +36,6 @@ sudo rm /home/pi/Abrir_D-STARRepeater
 sudo ircddbgateway -gui  & 
 sleep 2
 sudo dstarrepeater
+fi
  
 
