@@ -118,6 +118,14 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO DMR2YSF +++++++++++"
 fi
 
+dmr2nxdn=$(awk "NR==16" /home/pi/status.ini)
+if [ "$dmr2nxdn" = 'DMR2NXDN=ON' ];then
+sudo sh cerrar_DMR2NXDN.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO DMR2NXDN +++++++++++"
+fi
+
 #01-D-STAR=OFF
 #02-BlueDV=OFF
 #03-YSF=OFF
