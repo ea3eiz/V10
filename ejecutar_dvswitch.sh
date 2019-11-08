@@ -10,8 +10,8 @@ GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 echo "${BLANCO}"
-echo "SE VAN ACERRAR LOS SISTEMAS:"
-echo "****************************"
+echo "SE VAN ACERRAR LOS SISTEMAS SIGUIENTES:"
+echo "***************************************"
 echo "${VERDE}"
 echo "BM"
 echo "DMR+"
@@ -91,7 +91,7 @@ if [ "$ircDDB" = 'D-STAR=ON' ];then
 sudo sh cerrar_d-star.sh
 clear
 echo "${VERDE}"
-echo "+++++++ CERRANDO ircDDB +++++++++++"
+echo "+++++++ CERRANDO ircDDB & DstarRepeater +++++++++++"
 fi
 
 DstarRepeater=$(awk "NR==9" /home/pi/status.ini)
