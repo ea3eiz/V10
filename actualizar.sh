@@ -22,14 +22,14 @@ sed -i "17c NXDN=OFF" /home/pi/status.ini
 
 #Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 
-#cp /home/pi/Desktop/Activar_dvswitch.desktop /home/pi
+cp /home/pi/Desktop/Activar_dvswitch.desktop /home/pi
 
 
 cd /home/pi/$SCRIPTS_version/Desktop
 cp * /home/pi/Desktop
 sleep 1
 
-#cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop
+cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop
 
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
