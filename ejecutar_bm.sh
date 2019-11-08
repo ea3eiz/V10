@@ -2,6 +2,9 @@
 
 sudo sh stop_dvswitch.sh
 echo "\033[1;32m" #verde
+echo ""
+echo ""
+echo ""
 echo "************************************************************************"
 echo "*                                                                      *"
 echo "*                                                                      *"
