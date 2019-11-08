@@ -1,7 +1,14 @@
 #!/bin/bash
 
-sudo sh stop_dvswitch.sh
-sleep 3
+modo=$(awk "NR==18" /home/pi/status.ini)
+if [ "$modo" = 'DVSWITCH=ON' ];then
+echo "\033[1;31m" #ROJO
+echo "******************************************"
+echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
+echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
+echo "******************************************"
+sleep 5
+else
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDMR2NXDN.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -44,4 +51,4 @@ sudo lxterminal --geometry=80x12 -e ./DMR2NXDN MMDVMDMR2NXDN.ini &
 
 cd /home/pi/NXDNClients/NXDNGateway
 sudo ./NXDNGateway NXDNGateway.ini
-
+fi

@@ -1,10 +1,17 @@
 #!/bin/bash
 
-sudo sh stop_dvswitch.sh
+modo=$(awk "NR==18" /home/pi/status.ini)
+if [ "$modo" = 'DVSWITCH=ON' ];then
+echo "\033[1;31m" #ROJO
+echo "******************************************"
+echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
+echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
+echo "******************************************"
+sleep 5
+else
 echo "***********************************************"
 echo "*             ABRIENDO YSF                    * "
 echo "***********************************************"
-sleep 3
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_YSF.desktop /home/pi
@@ -26,6 +33,7 @@ echo "***********************************************"
 sleep 1
 echo "\33[1;33m"
 sudo ./YSFGateway YSFGateway.ini
+fi
 
 
 
