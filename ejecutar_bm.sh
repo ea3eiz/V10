@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo sh stop_dvswitch.sh
+echo "\033[1;31m"
 echo "***********************************************"
 echo "*            ABRIENDO BRANDMEISTER            * "
 echo "***********************************************"
