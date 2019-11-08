@@ -112,7 +112,7 @@ fi
 
 dmr2ysf=$(awk "NR==15" /home/pi/status.ini)
 if [ "$dmr2ysf" = 'DMR2YSF=ON' ];then
-sudo sh cerrar_YSF2DMR.sh
+sudo sh cerrar_DMR2YSF.sh
 clear
 echo "${VERDE}"
 echo "+++++++ CERRANDO DMR2YSF +++++++++++"
