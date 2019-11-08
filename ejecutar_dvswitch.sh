@@ -194,7 +194,7 @@ sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
-fi
+
 clear
 echo "${BLANCO}"
 echo "   *********************************************"
@@ -212,4 +212,5 @@ echo "   *********************************************"
 echo "   *********************************************"
 echo "   *********************************************"
 
-sleep 2						
+sleep 2		
+fi				
