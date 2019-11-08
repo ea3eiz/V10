@@ -1,10 +1,17 @@
 #!/bin/bash
 
-sudo sh stop_dvswitch.sh
+modo=$(awk "NR==18" /home/pi/status.ini)
+if [ "$modo" = 'DVSWITCH=ON' ];then
+echo "\033[1;31m" #ROJO
+echo "******************************************"
+echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
+echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
+echo "******************************************"
+sleep 5
+else
 echo "***********************************************"
 echo "*             ABRIENDO SOLO D-STAR            * "
 echo "***********************************************"
-sleep 3
 mode=`grep -n -m 1 "^Port=" /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 buscar=":"
 caracteres=`expr index $mode $buscar`
@@ -47,3 +54,4 @@ echo "*             ABRIENDO SOLO D-STAR            * "
 echo "***********************************************"
 sleep 1
 sudo ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
+fi
