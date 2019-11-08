@@ -8,7 +8,7 @@ echo "******************************************"
 echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
 echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
 echo "******************************************"
-
+sleep 3
 else
 
 
