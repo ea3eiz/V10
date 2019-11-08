@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sudo sh stop_dvswitch.sh
-
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp Abrir_dv4mini.desktop /home/pi
