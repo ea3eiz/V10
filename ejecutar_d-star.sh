@@ -2,8 +2,8 @@
 
 modo=$(awk "NR==18" /home/pi/status.ini)
 if [ "$modo" = 'DVSWITCH=ON' ];then
-sudo sh /home/pi/V10/ejecutar_bm.sh
-
+cd /home/pi/V10
+sudo sh ejecutar_bm.sh
 else
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
