@@ -126,6 +126,14 @@ echo "${VERDE}"
 echo "+++++++ CERRANDO DMR2NXDN +++++++++++"
 fi
 
+nxdn=$(awk "NR==17" /home/pi/status.ini)
+if [ "$nxdn" = 'NXDN=ON' ];then
+sudo sh cerrar_NXDN.sh
+clear
+echo "${VERDE}"
+echo "+++++++ CERRANDO NXDN +++++++++++"
+fi
+
 #01-D-STAR=OFF
 #02-BlueDV=OFF
 #03-YSF=OFF
