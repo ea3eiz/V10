@@ -10,10 +10,11 @@ GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 echo "${BLANCO}"
-echo "   *********************************************"
-echo "   * SE CERRARAN TODAS LOS SISTEMAS SIGUIENTES *"
-echo "   *       SI SE ENCUENTRAN ABIERTOS           *"
-echo "   *********************************************"
+echo "   ****************************************************************"
+echo "   * SI ACTIVAMOS EL DVSWITCH SE CERRARAN LOS SISTEMAS SIGUIENTES *"
+echo "   *       Y NO SE PODRAN VOLVER A UTILIZAR HASTA QUE NO          *"
+echo "   *                    CERREMOS EL DVSWITCH                      *"
+echo "   ****************************************************************"
 echo "${VERDE}"
 echo "   BM"
 echo "   DMR+"
@@ -31,7 +32,7 @@ echo "   NXDN"
 echo "${CIAN}"
 echo -n "   "
 
-read -p 'Quieres Seguir? S/N ' seguir   
+read -p 'Quieres activar DVSWITCH? S/N ' seguir   
 if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 			                                   
 cd /home/pi/$SCRIPTS_version
 bm=$(awk "NR==7" /home/pi/status.ini)
