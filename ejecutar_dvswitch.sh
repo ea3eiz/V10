@@ -22,7 +22,7 @@ echo "   LIBRE"
 echo "   RADIO"
 echo "   solo D-STAR"
 echo "   solo FUSION"
-echo "   rcDDB"
+echo "   ircDDB"
 echo "   D-STAR Repeater"
 echo "   YSF"
 echo "   YSF2DMR"
@@ -172,6 +172,7 @@ fi
 #15-DMR2YSF=OFF
 #16-DMR2NXDN=OFF
 #17-NXDN=OFF
+
 
 sleep 2
 
