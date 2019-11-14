@@ -9,9 +9,20 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 # Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-echo "\33[1;32m   ********************************************************************"
-echo "   *      Script para hacer actualizaciones y varios \33[1;33mV.02.05          *"
-echo "   *                          $SCRIPTS_version by EA3EIZ                              *"
+#Colores
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
+
+echo "${VERDE}"
+echo "   ********************************************************************"
+echo "   *               Script para actualizar BlueDV                      *"
+echo -n "${ROJO}"
+echo "   *             $SCRIPTS_version by EA3EIZ                           *"
+echo -n "${VERDE}"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 echo "\33[1;36m   2)\33[1;37m Volver a la versión anterior del BlueDV"
