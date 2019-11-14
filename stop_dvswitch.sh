@@ -1,6 +1,7 @@
 ﻿#!/bin/bash
 
 sed -i "9c Terminal=false" /home/pi/Desktop/Abrir_D-STARRepeater
+sed -i "9c Terminal=false" /home/pi/Desktop/Abrir_ircDDBGateway.desktop
 
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
