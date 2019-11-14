@@ -33,7 +33,11 @@ echo "${CIAN}"
 echo -n "   "
 
 read -p 'Quieres activar DVSWITCH? S/N ' seguir   
-if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 			                                   
+if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
+
+sed -i "9c Terminal=true" /home/pi/Desktop/Abrir_D-STARRepeater
+
+			                                   
 cd /home/pi/$SCRIPTS_version
 bm=$(awk "NR==7" /home/pi/status.ini)
 if [ "$bm" = 'MMDVMBM=ON' ];then
