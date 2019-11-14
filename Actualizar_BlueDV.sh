@@ -1,5 +1,5 @@
 #!/bin/bash
-exit;
+clear
 while true
 do
 clear
