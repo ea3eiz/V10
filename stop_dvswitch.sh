@@ -1,7 +1,24 @@
 ﻿#!/bin/bash
 
+
+
+SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+cd /home/pi/Desktop
+sudo cp Abrir_D-STARRepeater /home/pi
 sed -i "9c Terminal=false" /home/pi/Desktop/Abrir_D-STARRepeater
+cd /home/pi
+sudo cp Abrir_D-STARRepeater /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/cp Abrir_D-STARRepeater
+
+cd /home/pi/Desktop
+sudo cp Abrir_ircDDBGateway.desktop /home/pi
 sed -i "9c Terminal=false" /home/pi/Desktop/Abrir_ircDDBGateway.desktop
+cd /home/pi
+sudo cp Abrir_ircDDBGateway.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/cp Abrir_ircDDBGateway.desktop
+
 
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)

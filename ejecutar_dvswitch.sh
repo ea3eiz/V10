@@ -35,8 +35,25 @@ echo -n "   "
 read -p 'Quieres activar DVSWITCH? S/N ' seguir   
 if [ "$seguir" = 'S' -o "$seguir" = 's' ];then 
 
+
+
+cd /home/pi/Desktop
+sudo cp Abrir_D-STARRepeater /home/pi
 sed -i "9c Terminal=true" /home/pi/Desktop/Abrir_D-STARRepeater
+cd /home/pi
+sudo cp Abrir_D-STARRepeater /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/cp Abrir_D-STARRepeater
+
+cd /home/pi/Desktop
+sudo cp Abrir_ircDDBGateway.desktop /home/pi
 sed -i "9c Terminal=true" /home/pi/Desktop/Abrir_ircDDBGateway.desktop
+cd /home/pi
+sudo cp Abrir_ircDDBGateway.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/cp Abrir_ircDDBGateway.desktop
+
+
 
 cd /home/pi/$SCRIPTS_version
 bm=$(awk "NR==7" /home/pi/status.ini)
