@@ -5,7 +5,7 @@ do
 clear
 # path usuario
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
-# path usuario
+
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
 #Editor MMDVMBM.ini

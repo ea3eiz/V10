@@ -4,9 +4,11 @@ while true
 do
 clear
 
+SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
+
 echo "\33[1;32m   ********************************************************************"
 echo "   *      Script para hacer actualizaciones y varios \33[1;33mV.02.05          *"
-echo "   *                          \33[1;31mby EA3EIZ\33[1;32m                               *"
+echo "   *                          $SCRIPTS_version by EA3EIZ"                               *"
 echo "   ********************************************************************"
 echo "\33[1;36m   1)\33[1;37m Actualizar BlueDV"
 echo "\33[1;36m   2)\33[1;37m Volver a la versión anterior del BlueDV"
