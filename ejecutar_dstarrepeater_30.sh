@@ -3,6 +3,11 @@
 
 modo=$(awk "NR==18" /home/pi/status.ini)
 if [ "$modo" = 'DVSWITCH=ON' ];then
+
+sed -i "9c Terminal=true" /home/pi/Desktop/Abrir_D-STARRepeater
+
+
+
 echo "\033[1;31m" #ROJO
 echo "******************************************"
 echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
@@ -10,6 +15,10 @@ echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
 echo "******************************************"
 sleep 5
 else
+
+sed -i "9c Terminal=false" /home/pi/Desktop/Abrir_D-STARRepeater
+
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
 sudo cp ircDDBGateway /home/pi
