@@ -1,7 +1,7 @@
 ﻿#!/bin/bash
 
 
-
+clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
  
 sudo cp /home/pi/Desktop/Abrir_D-STARRepeater /home/pi
