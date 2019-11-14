@@ -26,11 +26,6 @@ echo "   * ${BLANCO}                                                            
 echo "   *************************************************************************"
 echo ""
 
-read a
-
-
-
-
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
@@ -47,3 +42,4 @@ sudo rm /home/pi/Abrir_BlueDV.desktop
 
 cd /home/pi/bluedv/
 mono BlueDV.exe
+exit
