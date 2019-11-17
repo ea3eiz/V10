@@ -1,11 +1,21 @@
 #!/bin/bash
 
 
-echo "PRUEBA"
+cd /home/pi/V10
+
+sudo sh popus_abrir_bluedv.sh
 
 
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+
+
+
+
+
+
+
+
 cd /home/pi/Desktop
 sudo cp Abrir_BlueDV.desktop /home/pi
 sleep 1
