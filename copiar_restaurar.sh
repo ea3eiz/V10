@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 while true
 do
 clear
@@ -17,27 +18,20 @@ echo "                             $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   ********************************************************************"
 
-
-
-
-
-
-
 echo "\33[1;36m   1)\33[1;37m Hacer copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
 echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
 echo "      D-STAR Repeater y Editor GENERAL"
-
 echo ""
 echo "\33[1;36m   2)\33[1;32m Restaurar copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION, "
 echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
 echo "      D-STAR Repeater y Editor GENERAL"
 echo ""
+echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
 echo -n "\33[1;36m   Elige una opción " 
 read escoger_menu
 echo ""
 case $escoger_menu in
-
 1) echo ""
 while true
 do
