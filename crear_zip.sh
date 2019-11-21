@@ -22,6 +22,8 @@
             sudo cp -f MMDVMDMR2NXDN.ini /home/pi/Downloads
             sudo cp -f MMDVMDMR2YSF.ini /home/pi/Downloads
 
+            sudo cp -f MMDVMNXDN.ini /home/pi/Downloads
+
             cp -f /home/pi/DMR2NXDN/DMR2NXDN.ini  /home/pi/Downloads
             cp -f /home/pi/NXDNClients/NXDNGateway/NXDNGateway.ini  /home/pi/Downloads
             cp -f /home/pi/DMR2YSF/DMR2YSF.ini  /home/pi/Downloads
@@ -65,6 +67,7 @@
 
             cd /home/pi
             sudo cp info_panel_control.ini /home/pi/Downloads            
+
 cd /home/pi/
 tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
