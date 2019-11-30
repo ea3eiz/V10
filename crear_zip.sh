@@ -97,7 +97,7 @@ port=`expr substr $port 8 5`
 
 
 location=$(awk "NR==14" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
-location=`expr substr $location 10 30`
+
 
 url=$(awk "NR==16" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 url=`expr substr $url 5 30`
