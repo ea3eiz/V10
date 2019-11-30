@@ -76,7 +76,7 @@ id=`echo "$id" | tr -d '[[:space:]]'`
 
 
 
-
+id=`expr substr $id 14 7`
 
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
