@@ -75,8 +75,7 @@ echo "***************************************************"
             cp info_panel_control.ini /home/pi/
 
 
-indicativo=$(awk "NR==1" /home/pi/Downloads/datos_dvswitch)
-           
+indicativo=$(awk "NR==1" /home/pi/Downloads/datos_dvswitch)          
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/dmrplus.ini
@@ -86,3 +85,15 @@ sudo sed -i "2c gatewayCallsign=$indicativo" /etc/ircddbgateway
 sudo sed -i "95c ircddbUsername=$indicativo" /etc/ircddbgateway
 sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+
+
+address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "70c $address_especial /opt/MMDVM_Bridge/especial.ini
+
+
+
+
+
+
+
+
