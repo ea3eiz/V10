@@ -91,6 +91,17 @@ port=`echo "$port" | tr -d '[[:space:]]'`
 port=`expr substr $port 8 5`
 
 
+
+
+
+
+
+location=$(awk "NR==14" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+location=`expr substr $location 10 30`
+
+url=$(awk "NR==16" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+url=`expr substr $url 5 30`
+
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
@@ -98,7 +109,8 @@ sudo sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
-
+sudo sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
 
 
 
