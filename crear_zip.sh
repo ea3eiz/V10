@@ -70,15 +70,7 @@
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
 
-sudo sed -i "1c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "2c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "3c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "4c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "5c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "6c gatewayCallsign=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "7c ircddbUsername=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "8c dplusLogin=$indicativo" /home/pi/Downloads/datos_dvswitch
-sudo sed -i "9c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 
 cd /home/pi/
 tar -zcvf copia.tar.gz Downloads
