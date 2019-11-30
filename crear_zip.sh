@@ -81,8 +81,10 @@ id2=$(awk "NR==3" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 id2=`expr substr $id2 4 9`
 
 Latitude=$(awk "NR==11" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+Latitude=`expr substr $Latitude 10 10`
 
 Longitude=$(awk "NR==12" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+Longitude=`expr substr $Longitude 11 10`
 
 port=$(awk "NR==56" /opt/Analog_Bridge/Analog_Bridge.ini)
 port=`echo "$port" | tr -d '[[:space:]]'`
