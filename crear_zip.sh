@@ -70,7 +70,31 @@
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
 
+
+
+
+address_especial=$(awk "NR==70" /opt/MMDVM_Bridge/especial.ini)
+
+
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 cd /home/pi/
 tar -zcvf copia.tar.gz Downloads
