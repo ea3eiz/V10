@@ -67,8 +67,7 @@
 
             cd /home/pi
             sudo cp info_panel_control.ini /home/pi/Downloads   
-i
-ndicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
 
 sudo sed -i "1c Callsign=$indicativo" /home/pi/Downloads/datos_dvswitch
