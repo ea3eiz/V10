@@ -159,17 +159,14 @@ sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-
-
-
-
 address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
 
+password_especial=$(awk "NR==10" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "74c $password_especial" /opt/MMDVM_Bridge/especial.ini
 
-
-
-
+port_especial=$(awk "NR==11" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "71c $port_especial" /opt/MMDVM_Bridge/especial.ini
 
 
 
