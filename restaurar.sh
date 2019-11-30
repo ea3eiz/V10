@@ -87,7 +87,7 @@ sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 
-address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch
+address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial /opt/MMDVM_Bridge/especial.ini
 
 
