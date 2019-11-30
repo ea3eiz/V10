@@ -99,6 +99,11 @@ password_especial=$(awk "NR==74" /opt/MMDVM_Bridge/especial.ini)
 
 port_especial=$(awk "NR==71" /opt/MMDVM_Bridge/especial.ini)
 
+sala_fcs=$(awk "NR==40" /opt/Analog_Bridge/FCS.ini)
+sala_fcs=`echo "$sala_fcs" | tr -d '[[:space:]]'`
+
+sala_nxdn=$(awk "NR==10" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt)
+
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
@@ -110,14 +115,8 @@ sudo sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
-
-
-
-
-
-
-
-
+sudo sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
 
 cd /home/pi/
 tar -zcvf copia.tar.gz Downloads
