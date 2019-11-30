@@ -143,6 +143,26 @@ sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/especial.ini
 sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/nxdn.ini
 sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/ysf.ini
 
+
+location=$(awk "NR==8" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/dmrplus.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/especial.ini
+#sudo sed -i "17c $location" /opt/NXDNGateway.ini
+sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+
+url=$(awk "NR==9" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/dmrplus.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
+
+
+
+
+
 address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
 
