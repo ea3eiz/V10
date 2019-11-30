@@ -129,6 +129,7 @@ sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
+port=$(awk "NR==7" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/Analog_Bridge.ini
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dmr.ini
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dstar.ini
