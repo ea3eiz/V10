@@ -82,9 +82,11 @@ id2=`expr substr $id2 4 9`
 
 Latitude=$(awk "NR==11" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 
+Longitude=$(awk "NR==12" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+
 port=$(awk "NR==56" /opt/Analog_Bridge/Analog_Bridge.ini)
 port=`echo "$port" | tr -d '[[:space:]]'`
-port=`expr substr $port 1 20`
+port=`expr substr $port 8 5`
 
 
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
