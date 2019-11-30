@@ -97,6 +97,8 @@ url=`expr substr $url 5 30`
 
 password_especial=$(awk "NR==74" /opt/MMDVM_Bridge/especial.ini)
 
+port_especial=$(awk "NR==71" /opt/MMDVM_Bridge/especial.ini)
+
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
@@ -107,7 +109,7 @@ sudo sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "8c $location" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "9c $url" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "10c $password_especial" /home/pi/Downloads/datos_dvswitch
-
+sudo sed -i "11c $port_especial" /home/pi/Downloads/datos_dvswitch
 
 
 
