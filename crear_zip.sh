@@ -101,6 +101,7 @@ port_especial=$(awk "NR==71" /opt/MMDVM_Bridge/especial.ini)
 
 sala_fcs=$(awk "NR==40" /opt/Analog_Bridge/FCS.ini)
 sala_fcs=`echo "$sala_fcs" | tr -d '[[:space:]]'`
+sala_fcs=`expr substr $sala_fcs 6 20`
 
 sala_nxdn=$(awk "NR==10" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt)
 
