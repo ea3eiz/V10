@@ -87,6 +87,21 @@ sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
 
+id=$(awk "NR==3" /home/pi/Downloads/datos_dvswitch)
+id_nxdn=`expr substr $id 3 5`
+sudo sed -i "30c ID = $id" /opt/MMDVM_Bridge/DVSwitch.ini
+sudo sed -i "40c FallbackID = $id" /opt/MMDVM_Bridge/DVSwitch.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/Analog_Bridge.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/dmr.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/dstar.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/especial.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/nxdn.ini
+sudo sed -i "43c ;; FallbackID = $id_nxdn" /opt/Analog_Bridge/nxdn.ini
+sudo sed -i "44c ;; NXDNFallbackID = $id_nxdn" /opt/Analog_Bridge/nxdn.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/ysf.ini
+sudo sed -i "43c ;; FallbackID = $id" /opt/Analog_Bridge/ysf.ini
+sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/FCS.ini
+
 address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
 
