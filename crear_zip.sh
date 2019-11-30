@@ -68,9 +68,10 @@
             cd /home/pi
             sudo cp info_panel_control.ini /home/pi/Downloads   
 
-$indicativo=sed -i '2p /opt/MMDVM_Bridge/MMDVM_Bridge.ini'
-$indicativo=substr("$indicativo, 9, 6");
-
+indicativo=sed -i '2p /opt/MMDVM_Bridge/MMDVM_Bridge.ini'
+indicativo=`expr substr $indicativo 9 6`
+echo "$indicativo"
+read a
 sudo sed -i '1c Callsign=$indicativo' /home/pi/Downloads/datos_dvswitch);
 sudo sed -i '2c Callsign=$indicativo' /home/pi/Downloads/datos_dvswitch);
 sudo sed -i '3c Callsign=$indicativo' /home/pi/Downloads/datos_dvswitch);
