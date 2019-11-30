@@ -67,8 +67,7 @@
 
             cd /home/pi
             sudo cp info_panel_control.ini /home/pi/Downloads   
-
-indicativo=sed -i '2p /opt/MMDVM_Bridge/MMDVM_Bridge.ini'
+indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 9 6`
 echo "$indicativo"
 read a
