@@ -70,26 +70,30 @@
 
 indicativo=$(awk "NR==2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 indicativo=`expr substr $indicativo 10 6`
+
 address_especial=$(awk "NR==70" /opt/MMDVM_Bridge/especial.ini)
+
 id=$(awk "NR==38" /opt/Analog_Bridge/Analog_Bridge.ini)
 id=`echo "$id" | tr -d '[[:space:]]'`
 id=`expr substr $id 14 7`
 
-
 id2=$(awk "NR==3" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
 id2=`expr substr $id2 4 9`
 
+Latitude=$(awk "NR==11" /opt/MMDVM_Bridge/MMDVM_Bridge.ini)
+
+port=$(awk "NR==56" /opt/Analog_Bridge/Analog_Bridge.ini)
+port=`echo "$port" | tr -d '[[:space:]]'`
+port=`expr substr $port 1 20`
 
 
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "3c $id" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "4c $id2" /home/pi/Downloads/datos_dvswitch
-
-
-
-
-
+sudo sed -i "5c $Latitude" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "6c $Longitude" /home/pi/Downloads/datos_dvswitch
+sudo sed -i "7c $port" /home/pi/Downloads/datos_dvswitch
 
 
 

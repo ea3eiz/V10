@@ -115,11 +115,32 @@ sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/FCS.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
+Latitude=$(awk "NR==5" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/dmrplus.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
+Longitude=$(awk "NR==6" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/dmrplus.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/especial.ini
+sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-
-
-
+sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/Analog_Bridge.ini
+sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dmr.ini
+sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dstar.ini
+sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/especial.ini
+sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/nxdn.ini
+sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/ysf.ini
+sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/Analog_Bridge.ini
+sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/dmr.ini
+sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/dstar.ini
+sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/especial.ini
+sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/nxdn.ini
+sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/ysf.ini
 
 address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
