@@ -105,7 +105,7 @@ sala_fcs=`expr substr $sala_fcs 6 20`
 
 sala_nxdn=$(awk "NR==10" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt)
 
-selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/especial.ini)
+selfcare=$(awk "NR==74" /opt/MMDVM_Bridge/brandmeister_esp.ini)
 
 sudo sed -i "1c $indicativo" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "2c $address_especial" /home/pi/Downloads/datos_dvswitch
