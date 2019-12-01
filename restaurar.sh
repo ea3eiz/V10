@@ -176,7 +176,8 @@ sudo sed -i "39c Startup=$sala_fcs" /home/pi/YSFClients/YSFGateway/YSFGateway.in
 sala_nxdn=$(awk "NR==13" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "10c $sala_nxdn" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt
 
-
+selfcare=$(awk "NR==14" /home/pi/Downloads/datos_dvswitch)
+sudo sed -i "74c $selfcare" /opt/MMDVM_Bridge/brandmeister_esp.ini
 
 
 
