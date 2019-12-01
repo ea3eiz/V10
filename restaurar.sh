@@ -75,7 +75,7 @@ echo "***************************************************"
             cp info_panel_control.ini /home/pi/
 
 
-indicativo=$(awk "NR==1" /home/pi/datos_dvswitch)          
+indicativo=$(awk "NR==1" /home/pi/Downloads/datos_dvswitch)          
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/dmrplus.ini
@@ -86,7 +86,7 @@ sudo sed -i "95c ircddbUsername=$indicativo" /etc/ircddbgateway
 sudo sed -i "117c dplusLogin=$indicativo" /etc/ircddbgateway
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-id=$(awk "NR==3" /home/pi/datos_dvswitch)
+id=$(awk "NR==3" /home/pi/Downloads/datos_dvswitch)
 id_nxdn=`expr substr $id 3 5`
 sudo sed -i "30c ID = $id" /opt/MMDVM_Bridge/DVSwitch.ini
 sudo sed -i "40c FallbackID = $id" /opt/MMDVM_Bridge/DVSwitch.ini
@@ -101,7 +101,7 @@ sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "43c ;; FallbackID = $id" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "38c gatewayDmrId = $id" /opt/Analog_Bridge/FCS.ini
 
-id2=$(awk "NR==4" /home/pi/datos_dvswitch)
+id2=$(awk "NR==4" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/dmrplus.ini
@@ -115,21 +115,21 @@ sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/ysf.ini
 sudo sed -i "39c repeaterID = $id2" /opt/Analog_Bridge/FCS.ini
 sudo sed -i "3c Id=$id2" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-Latitude=$(awk "NR==5" /home/pi/datos_dvswitch)
+Latitude=$(awk "NR==5" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "11c Latitude=$Latitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-Longitude=$(awk "NR==6" /home/pi/datos_dvswitch)
+Longitude=$(awk "NR==6" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "12c Longitude=$Longitude" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-port=$(awk "NR==7" /home/pi/datos_dvswitch)
+port=$(awk "NR==7" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/Analog_Bridge.ini
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dmr.ini
 sudo sed -i "55c txPort = $port" /opt/Analog_Bridge/dstar.ini
@@ -144,7 +144,7 @@ sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/nxdn.ini
 sudo sed -i "56c rxPort = $port" /opt/Analog_Bridge/ysf.ini
 
 
-location=$(awk "NR==8" /home/pi/datos_dvswitch)
+location=$(awk "NR==8" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/dmrplus.ini
@@ -152,28 +152,28 @@ sudo sed -i "14c $location" /opt/MMDVM_Bridge/especial.ini
 #sudo sed -i "17c $location" /opt/NXDNGateway.ini
 sudo sed -i "14c $location" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-url=$(awk "NR==9" /home/pi/datos_dvswitch)
+url=$(awk "NR==9" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/brandmeister_esp.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/dmrplus.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/especial.ini
 sudo sed -i "16c URL=$url" /opt/MMDVM_Bridge/MMDVM_Bridge_FCS.ini
 
-address_especial=$(awk "NR==2" /home/pi/datos_dvswitch)
+address_especial=$(awk "NR==2" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "70c $address_especial" /opt/MMDVM_Bridge/especial.ini
 
-password_especial=$(awk "NR==10" /home/pi/datos_dvswitch)
+password_especial=$(awk "NR==10" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "74c $password_especial" /opt/MMDVM_Bridge/especial.ini
 
-port_especial=$(awk "NR==11" /home/pi/datos_dvswitch)
+port_especial=$(awk "NR==11" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "71c $port_especial" /opt/MMDVM_Bridge/especial.ini
 
-sala_fcs=$(awk "NR==12" /home/pi/datos_dvswitch)
+sala_fcs=$(awk "NR==12" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "40c txTg = $sala_fcs" /opt/Analog_Bridge/FCS.ini
 sudo sed -i "39c Startup=$sala_fcs" /home/pi/YSFClients/YSFGateway/YSFGateway.ini
 
 
-sala_nxdn=$(awk "NR==13" /home/pi/datos_dvswitch)
+sala_nxdn=$(awk "NR==13" /home/pi/Downloads/datos_dvswitch)
 sudo sed -i "10c $sala_nxdn" /opt/NXDNClients/NXDNGateway/private/NXDNHosts.txt
 
 
