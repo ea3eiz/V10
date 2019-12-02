@@ -19,12 +19,10 @@ echo -n "${VERDE}"
 echo "   ********************************************************************"
 
 echo "\33[1;36m   1)\33[1;37m Hacer copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION"
-echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
-echo "      D-STAR Repeater y Editor GENERAL"
+echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, Editor GENERAL y DVSWITCH, "
 echo ""
 echo "\33[1;36m   2)\33[1;32m Restaurar copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION, "
-echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, ircDDB, "
-echo "      D-STAR Repeater y Editor GENERAL"
+echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, Editor GENERAL y DVSWITCH, "
 echo ""
 echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
 echo ""
@@ -243,7 +241,7 @@ sleep 3
             cp dstarrepeater /usr/local/etc/opendv/
 
             cp info_panel_control.ini /home/pi/
-            
+
 indicativo=$(awk "NR==1" /home/pi/Downloads/datos_dvswitch)          
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/MMDVM_Bridge.ini
 sudo sed -i "2c Callsign=$indicativo" /opt/MMDVM_Bridge/brandmeister_esp.ini
