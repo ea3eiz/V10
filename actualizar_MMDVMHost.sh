@@ -75,7 +75,11 @@ sudo cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
                     sudo chmod +x MMDVMHostLIBRE
                     #=================================================
 
-                    # Crea los ficheros de Memorias ==================
+                    
+                    # Crea el fichero para que arranque NextionDriver ==================
+                    cp MMDVM.ini MMDVM.ini_NextionDriver
+
+                    # Crea los ficheros .ini y Memorias ==================
                     cp MMDVM.ini MMDVM.ini_original
                     cp MMDVM.ini MMDVM.ini_copia
                     cp MMDVM.ini MMDVM.ini_copia2
