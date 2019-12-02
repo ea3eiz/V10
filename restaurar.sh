@@ -7,7 +7,7 @@ sudo rm *.*
 cd /home/pi
 tar -xvzf copia.tar.gz
 
-
+sudo rm copia.tar.gz
 
 rm /home/pi/Downloads/copia.tar.gz
 echo "\33[1;32m" #color verde
