@@ -19,7 +19,7 @@ echo -n "${VERDE}"
 echo "   ********************************************************************"
 
 echo "\33[1;36m   1)\33[1;37m Hacer copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION, YSF2DMR"
-echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, Editor GENERAL y DVSWITCH, "
+echo "      DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, Editor GENERAL y DVSWITCH, "
 echo ""
 echo "\33[1;36m   2)\33[1;32m Restaurar copia de BM, DMR+, LIBRE, RADIO, solo D-STAR, solo FUSION, "
 echo "      YSF2DMR, DMR2YSFF, DMR2NXDN, NXDN, YSF, BlueDV, SVXLINK, Editor GENERAL y DVSWITCH, "
