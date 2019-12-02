@@ -1,12 +1,14 @@
 #!/bin/bash
 cd /var/www/html/upload/files
 sudo chmod -R 777 /home/pi/Downloads
-cp copia.tar.gz /home/pi/Downloads
+cp copia.tar.gz /home/pi
 cd /home/pi/Downloads
+sudo rm *.*
+cd /home/pi
 tar -xvzf copia.tar.gz
-cd /home/pi/Downloads/Downloads
-cp *.* /home/pi/Downloads
-rm -r /home/pi/Downloads/Downloads
+
+
+
 rm /home/pi/Downloads/copia.tar.gz
 echo "\33[1;32m" #color verde
 echo "***************************************************"
