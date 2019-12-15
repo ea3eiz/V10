@@ -38,7 +38,12 @@ git pull
 #=================================================================================
 
 #pone todos los datos de DMR+ , Brandameiter, svxlink etc en panel_control.ini
-
+bm=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMBM.ini`
+plus=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
+dstar=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMDSTAR.ini`
+fusion=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMFUSION.ini`
+frbm=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMBM.ini`
+frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 #BM
 indi=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMBM.ini)
 ide=$(awk "NR==3" /home/pi/MMDVMHost/MMDVMBM.ini)
@@ -51,11 +56,11 @@ largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 letra=c            
 linea_master=$largo$letra
-master=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVMBM.ini)
+masterbm=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVMBM.ini)
 sed -i "1c $indi" /home/pi/info_panel_control.ini
 sed -i "2c $ide" /home/pi/info_panel_control.ini
 sed -i "3c $frec" /home/pi/info_panel_control.ini
-sed -i "4c $master" /home/pi/info_panel_control.ini
+sed -i "4c $masterbm" /home/pi/info_panel_control.ini
 
 #PLUS
 indi=$(awk "NR==2" /home/pi/MMDVMHost/MMDVMPLUS.ini)
@@ -69,11 +74,11 @@ largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 letra=c            
 linea_master=$largo$letra
-master=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVMPLUS.ini)
+masterplus=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVMPLUS.ini)
 sed -i "11c $indi" /home/pi/info_panel_control.ini
 sed -i "12c $ide" /home/pi/info_panel_control.ini
 sed -i "13c $frec" /home/pi/info_panel_control.ini
-sed -i "14c $master" /home/pi/info_panel_control.ini
+sed -i "14c $masterplus" /home/pi/info_panel_control.ini
 
 #Radio
 indi=$(awk "NR==2" /home/pi/MMDVMHost/MMDVM.ini)
@@ -87,11 +92,11 @@ largo1=`expr $largo - 2`
 largo=`expr substr $master 1 $largo1`
 letra=c            
 linea_master=$largo$letra
-master=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVM.ini)
+masterradio=$(awk "NR==$linea_master" /home/pi/MMDVMHost/MMDVM.ini)
 sed -i "6c $indi" /home/pi/info_panel_control.ini
 sed -i "7c $ide" /home/pi/info_panel_control.ini
 sed -i "8c $frec" /home/pi/info_panel_control.ini
-sed -i "9c $master" /home/pi/info_panel_control.ini
+sed -i "9c $masterradio" /home/pi/info_panel_control.ini
 
 #YSF
 master=$(awk "NR==39" /home/pi/YSFClients/YSFGateway/YSFGateway.ini)
@@ -145,10 +150,7 @@ dstar=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMFUSION.ini`
 frbm=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
-rbm=`sed -n '151p'  /home/pi/MMDVMHost/MMDVMBM.ini`
-rplus=`sed -n '151p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
-rradio=`sed -n '151p'  /home/pi/MMDVMHost/MMDVM.ini`
-sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$rradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
+sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
