@@ -139,8 +139,15 @@ cp /home/pi/$SCRIPTS_version/conectar_MMDVMBM.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/desconectar_MMDVMBM.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/conectar_MMDVMPLUS.php /var/www/html/panel_control
 cp /home/pi/$SCRIPTS_version/desconectar_MMDVMPLUS.php /var/www/html/panel_control
-#=================================================================================
-
+bm=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMBM.ini`
+plus=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
+dstar=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMDSTAR.ini`
+fusion=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMFUSION.ini`
+frbm=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMBM.ini`
+frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
+rbm=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMBM.ini`
+rplus=`sed -n '148p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
+sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
