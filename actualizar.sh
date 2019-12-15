@@ -147,7 +147,8 @@ frbm=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
 rbm=`sed -n '151p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 rplus=`sed -n '151p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
-sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$masterradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
+rradio=`sed -n '151p'  /home/pi/MMDVMHost/MMDVM.ini`
+sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$rbm'&'masterPLUS=$rplus'&'radio=$rradio'&'version=$SCRIPTS_version'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
