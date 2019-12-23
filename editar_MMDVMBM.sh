@@ -1095,7 +1095,7 @@ while true
 do
                           
 
-                          port_modem=$(awk "NR==46" $usuario/MMDVMHost/$DIRECTORIO)
+                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
 
 echo $port_modem
 echo $numero_linea_port
