@@ -115,9 +115,9 @@ url=`grep -n "URL" $usuario/MMDVMHost/$DIRECTORIO`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)${AMARILLO}"
+echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
 echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
-echo "${CIAN}   8)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM1)${AMARILLO}"
+echo "${CIAN}   8)${GRIS} Introducir Puerto manual${AMARILLO}"
 echo "${CIAN}   9)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
 echo -n "                            - "
 
@@ -1096,14 +1096,18 @@ do
                           
 
                           port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
-                          echo $port
                           echo "Valor del Port: ${AMARILLO}$port_modem"
-                          read -p 'Ejp. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' port
+                          read -p 'Ejp. modem, /dev/ttyAMA1, /dev/ttyACM1, /dev/ttyUSB1/, dev/ttyS0,/dev/rfcomm0 :' port
                           actualizar=S 
                           case $actualizar in
                           [sS]* ) echo ""
                           letra=c
                           numero_linea_port=$numero_linea_port$letra
+
+
+                          echo $numero_linea_port
+                          echo $port
+                          read a
                           sed -i "$ $numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
