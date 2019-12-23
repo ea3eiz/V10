@@ -1098,6 +1098,7 @@ do
                           port_modem=$(awk "NR==46" $usuario/MMDVMHost/$DIRECTORIO)
 
 echo $port_modem
+echo $numero_linea_port
 
 read a
                           echo $port
