@@ -546,21 +546,6 @@ do
 			                    break;;
 esac
 done;;
-9borrar) echo ""
-while true
-do
-                     
-                          actualizar=S 
-                          case $actualizar in
-			                    [sS]* ) echo ""
-                          letrac=c
-                          numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" $usuario/MMDVMHost/$DIRECTORIO
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
-esac
-done;;
 10) echo ""
 while true
 do
@@ -1077,20 +1062,6 @@ do
                           break;;
 esac
 done;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 9) echo ""
 while true
 do
@@ -1110,21 +1081,6 @@ do
                           break;;
 esac
 done;;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 i) echo ""
 while true
 do
