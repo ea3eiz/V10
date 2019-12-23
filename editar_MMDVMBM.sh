@@ -1096,11 +1096,6 @@ do
                           
 
                           port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
-
-echo $port_modem
-echo $numero_linea_port
-
-read a
                           echo $port
                           echo "Valor del Port: ${AMARILLO}$port_modem"
                           read -p 'Ejp. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' port
