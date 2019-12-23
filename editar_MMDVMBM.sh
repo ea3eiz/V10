@@ -120,7 +120,7 @@ echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (t
 echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
 echo -n "${CIAN}   9)${GRIS} Entrar Puerto manual${CIAN}"
 
-echo -n "                            - "
+echo -n "  - "
 
 mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
