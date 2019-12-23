@@ -1095,7 +1095,7 @@ while true
 do
                           
 
-                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
+                          port_modem=$(awk "NR==46" $usuario/MMDVMHost/$DIRECTORIO)
                           echo "Valor del Port: ${AMARILLO}$port_modem"
                           read -p 'Ejp. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' port
                           actualizar=S 
