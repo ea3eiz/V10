@@ -118,9 +118,9 @@ echo "$url1"
 echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
 echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
 echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
-echo -n "${CIAN}   9)${GRIS} Entrar Puerto manual${CIAN}"
+echo "${CIAN}   9)${GRIS} Entrar Puerto manual${CIAN}"
 
-echo -n "  - "
+echo -n "                            - "
 
 mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
 buscar=":"
