@@ -531,7 +531,7 @@ do
 			                    break;;
 esac
 done;;
-8) echo ""
+8borrar) echo ""
 while true
 do
                           actualizar=S 
@@ -1076,6 +1076,54 @@ do
                           break;;
 esac
 done;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8) echo ""
+while true
+do
+                          
+
+                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
+                          echo "Valor del Port: ${AMARILLO}$port_modem"
+                          read -p 'Ejp. modem, /dev/ttyAMA0, /dev/rfcomm0, /dev/ttyUSB0 :' port
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          letra=c
+                          numero_linea_port=$numero_linea_port$letra
+                          sed -i "$ $numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 i) echo ""
 while true
 do
