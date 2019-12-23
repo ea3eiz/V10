@@ -62,7 +62,7 @@ echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   *******************************************************************************"
 
-echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
+echo -n "${AMARILLO}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 ind=`grep -n "^Callsign=" $usuario/MMDVMHost/$DIRECTORIO`
 indi1=`echo "$ind" | tr -d '[[:space:]]'`
 buscar=":"
@@ -74,7 +74,7 @@ numero_linea_indi=$numero_linea$letrac
 contenido_indicativo=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$contenido_indicativo"
 
-echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${AMARILLO}"
+echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${CIAN}"
 rxf=`grep -n "^RXFrequency=" $usuario/MMDVMHost/$DIRECTORIO`
 rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
 buscar=":"
