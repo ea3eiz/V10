@@ -118,7 +118,7 @@ echo "$url1"
 echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
 echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
 echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
-echo "${CIAN}   9)Introducir Puerto manual${AMARILLO}"
+echo "${CIAN}   9) Entrar Puerto manual${AMARILLO}"
 
 echo -n "                            - "
 
