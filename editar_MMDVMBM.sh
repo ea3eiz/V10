@@ -62,7 +62,7 @@ echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   *******************************************************************************"
 
-echo -n "${AMARILLO}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
+echo -n "${CIAN}   1)${GRIS} Modificar indicativo  - ${AMARILLO}"
 ind=`grep -n "^Callsign=" $usuario/MMDVMHost/$DIRECTORIO`
 indi1=`echo "$ind" | tr -d '[[:space:]]'`
 buscar=":"
@@ -74,7 +74,7 @@ numero_linea_indi=$numero_linea$letrac
 contenido_indicativo=$(awk "NR==$numero_linea" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$contenido_indicativo"
 
-echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${CIAN}"
+echo -n "${CIAN}   2)${GRIS} Modificar RXFrequency - ${AMARILLO}"
 rxf=`grep -n "^RXFrequency=" $usuario/MMDVMHost/$DIRECTORIO`
 rxf1=`echo "$rxf" | tr -d '[[:space:]]'`
 buscar=":"
@@ -118,7 +118,7 @@ echo "$url1"
 echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
 echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
 echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
-echo "${CIAN}   9) Entrar Puerto manual${AMARILLO}"
+echo "${CIAN}   9)${GRIS} Entrar Puerto manual${CIAN}"
 
 echo -n "                            - "
 
