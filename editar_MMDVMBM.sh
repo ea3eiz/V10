@@ -117,8 +117,9 @@ echo "$url1"
 
 echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
 echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
-echo "${CIAN}   8)${GRIS} Introducir Puerto manual${AMARILLO}"
-echo "${CIAN}   9)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
+echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
+echo "${CIAN}   9)Introducir Puerto manual${AMARILLO}"
+
 echo -n "                            - "
 
 mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
@@ -531,7 +532,7 @@ do
 			                    break;;
 esac
 done;;
-8borrar) echo ""
+8) echo ""
 while true
 do
                           actualizar=S 
@@ -539,13 +540,13 @@ do
 			                    [sS]* ) echo ""
                           letrac=c
                           numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyACM1" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" $usuario/MMDVMHost/$DIRECTORIO
 			                    break;;
 			                    [nN]* ) echo ""
 			                    break;;
 esac
 done;;
-9) echo ""
+9borrar) echo ""
 while true
 do
                      
@@ -1090,7 +1091,7 @@ done;;
 
 
 
-8) echo ""
+9) echo ""
 while true
 do
                           
@@ -1103,12 +1104,7 @@ do
                           [sS]* ) echo ""
                           letra=c
                           numero_linea_port=$numero_linea_port$letra
-
-
-                          echo $numero_linea_port
-                          echo $port
-                          read a
-                          sed -i "$ $numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+                          sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
