@@ -58,7 +58,7 @@ echo "   ***********************************************************************
 echo -n "${CIAN}"
 echo "                       Script para Modificar $DIRECTORIO    "
 echo -n "${ROJO}"
-echo "                                  $SCRIPTS_version by EA3EIZz"
+echo "                                  $SCRIPTS_version by EA3EIZ"
 echo -n "${VERDE}"
 echo "   *******************************************************************************"
 
