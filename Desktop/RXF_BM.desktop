@@ -1,7 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=ls
 Icon=/home/pi/V10/ICONO_INFO.png
 Type=Application
 StartupNotify=false
