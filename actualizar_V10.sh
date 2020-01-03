@@ -25,13 +25,28 @@ sed -i "17c NXDN=OFF" /home/pi/status.ini
 
 cp /home/pi/Desktop/Activar_dvswitch.desktop /home/pi #deja el icono en el estado que se reinició
 
-
 #cd /home/pi/$SCRIPTS_version/Desktop
 #cp * /home/pi/Desktop
 #sleep 1
 
-cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
+cd /home/pi/$SCRIPTS_version/Desktop
+cp Abrir_MMDVMBM.desktop /home/pi/Desktop
+cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
+cp Abrir_Radio.desktop /home/pi/Desktop
+cp Abrir_soloYSF.desktop /home/pi/Desktop
 
+
+
+
+
+
+
+
+
+
+
+
+cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
 
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
