@@ -1,6 +1,8 @@
 ﻿#!/bin/bash
 SCRIPTS_version="V10"
-SCRIPTS_version_01="V10.01"
+
+SCRIPTS_version_01="V10.01" # OJO!!! provisional
+
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
 sed -i "2c BlueDV=OFF" /home/pi/status.ini
@@ -21,32 +23,21 @@ sed -i "16c DMR2NXDN=OFF" /home/pi/status.ini
 sed -i "17c NXDN=OFF" /home/pi/status.ini
 #=================================================================================
 
-#Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
-
 cp /home/pi/Desktop/Activar_dvswitch.desktop /home/pi #deja el icono en el estado que se reinició
+cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
 
+#Actualiza todos los iconos y Quita todos los iconos verdes que se quedan al cerrar la imagen
 #cd /home/pi/$SCRIPTS_version/Desktop
 #cp * /home/pi/Desktop
 #sleep 1
 
+#Actualiza todos estos iconos y quita los iconos verdes que se quedan al cerrar la imagen
 cd /home/pi/$SCRIPTS_version/Desktop
 cp Abrir_MMDVMBM.desktop /home/pi/Desktop
 cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
 cp Abrir_Radio.desktop /home/pi/Desktop
 cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 cp AbrirsoloYSF.desktop /home/pi/Desktop
-
-
-
-
-
-
-
-
-
-
-
-cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
 
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
