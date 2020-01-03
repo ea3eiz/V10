@@ -33,8 +33,8 @@ cd /home/pi/$SCRIPTS_version/Desktop
 cp Abrir_MMDVMBM.desktop /home/pi/Desktop
 cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
 cp Abrir_Radio.desktop /home/pi/Desktop
-cp Abrir_soloYSF.desktop /home/pi/Desktop
-
+cp Abrir_DMR2YSF.desktop /home/pi/Desktop
+cp AbrirsoloYSF.desktop /home/pi/Desktop
 
 
 
