@@ -42,6 +42,7 @@ sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRPLUS_ON.png" /home/pi/Abrir_M
 sed -i "10c Name[es_ES]=Cerrar DMR+" /home/pi/Abrir_MMDVMPLUS.desktop
 sed -i "6c MMDVMPLUS=ON" /home/pi/status.ini
 cd /home/pi
+sleep 5
 sudo cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
