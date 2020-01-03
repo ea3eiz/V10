@@ -49,7 +49,7 @@ echo "***********************************************"
 echo "*               ABRIENDO DMR+                 * "
 echo "***********************************************"
 sleep 1
-sudo ./MMDVMPLUS MMDVMPLUS.ini &
+sudo ./MMDVMPLUS MMDVMPLUS.ini
 
 
 
