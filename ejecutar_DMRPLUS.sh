@@ -25,11 +25,7 @@ frecuencia=$(awk "NR==13" /home/pi/MMDVMHost/MMDVMPLUS.ini)
 frecuencia=`expr substr $frecuencia 13 9`
 frecuencia=$frecuencia$puerto
 sed -i "11c Name=$frecuencia" /home/pi/RXF_DMRPLUS.desktop
-cd /home/pi
-sleep 1
-sudo cp RXF_DMRPLUS.desktop /home/pi/Desktop
-sleep 1
-sudo rm /home/pi/RXF_DMRPLUS.desktop
+
 
 #Escribe en el fichero INFO_NXDN para poner los datos en los iconos INFO TXF 
 sed -i "2c $frecuencia" /home/pi/INFO_RXF
@@ -42,7 +38,6 @@ sed -i "5c Icon=/home/pi/$SCRIPTS_version/ICONO_DMRPLUS_ON.png" /home/pi/Abrir_M
 sed -i "10c Name[es_ES]=Cerrar DMR+" /home/pi/Abrir_MMDVMPLUS.desktop
 sed -i "6c MMDVMPLUS=ON" /home/pi/status.ini
 cd /home/pi
-sleep 5
 sudo cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_MMDVMPLUS.desktop
@@ -54,8 +49,14 @@ echo "***********************************************"
 echo "*               ABRIENDO DMR+                 * "
 echo "***********************************************"
 sleep 1
-sudo ./MMDVMPLUS MMDVMPLUS.ini
+sudo ./MMDVMPLUS MMDVMPLUS.ini &
 
+
+
+sleep 1
+sudo cp /home/pi/RXF_DMRPLUS.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/RXF_DMRPLUS.desktop
 #cd /home/pi/Desktop
 #sudo cp Abrir_MMDVMPLUS.desktop /home/pi
 #sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh ejecutar_plus_30.sh'" /home/pi/Abrir_MMDVMPLUS.desktop
