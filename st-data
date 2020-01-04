@@ -1,0 +1,19 @@
+--2020-01-02 00:36:50--  http://associacioader.com/prueba1.php?callBM=Callsign=EAXXXX&callPLUS=Callsign=G9BF&masterBM=Address=master.spain-dmr.es&masterPLUS=Address=44.131.4.1&radio=Address=44.131.4.1&version=V10&DMR2YSF=Address=44.131.4.1&YSFGateway=
+Resolviendo associacioader.com (associacioader.com)... 37.152.88.77
+Conectando con associacioader.com (associacioader.com)[37.152.88.77]:80... conectado.
+Petición HTTP enviada, esperando respuesta... 301 Moved Permanently
+Localización: http://www.associacioader.com/prueba1.php?callBM=Callsign=EAXXXX&callPLUS=Callsign=G9BF&masterBM=Address=master.spain-dmr.es&masterPLUS=Address=44.131.4.1&radio=Address=44.131.4.1&version=V10&DMR2YSF=Address=44.131.4.1&YSFGateway= [siguiendo]
+--2020-01-02 00:36:50--  http://www.associacioader.com/prueba1.php?callBM=Callsign=EAXXXX&callPLUS=Callsign=G9BF&masterBM=Address=master.spain-dmr.es&masterPLUS=Address=44.131.4.1&radio=Address=44.131.4.1&version=V10&DMR2YSF=Address=44.131.4.1&YSFGateway=
+Resolviendo www.associacioader.com (www.associacioader.com)... 37.152.88.77
+Reutilizando la conexión con associacioader.com:80.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: no especificado [text/html]
+Grabando a: “associacioader.com/prueba1.php?callBM=Callsign=EAXXXX&callPLUS=Callsign=G9BF&masterBM=Address=master.spain-dmr.es&masterPLUS=Address=44.131.4.1&radio=Address=44.131.4.1&version=V10&DMR2YSF=Address=44.131.4.1&YSFGateway=”
+
+     0K                                                        53,0K=0s
+
+2020-01-02 00:36:51 (53,0 KB/s) - “associacioader.com/prueba1.php?callBM=Callsign=EAXXXX&callPLUS=Callsign=G9BF&masterBM=Address=master.spain-dmr.es&masterPLUS=Address=44.131.4.1&radio=Address=44.131.4.1&version=V10&DMR2YSF=Address=44.131.4.1&YSFGateway=” guardado [3]
+
+ACABADO --2020-01-02 00:36:51--
+Tiempo total de reloj: 0,3s
+Descargados: 1 ficheros, 3 en 0s (53,0 KB/s)

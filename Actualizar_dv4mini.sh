@@ -38,7 +38,6 @@ clear
                         sudo rm -r /home/pi/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir /home/pi/dv4mini
-                        sudo chmod 777 -R /home/pi/dv4mini
                         cd /home/pi/$CRIPTS_version/DV4MINI/20190307
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
@@ -73,7 +72,6 @@ clear
                         sudo rm -r /home/pi/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir /home/pi/dv4mini
-                        sudo chmod 777 -R /home/pi/dv4mini
                         cd /home/pi/$CRIPTS_version/DV4MINI/20190127
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
@@ -108,7 +106,6 @@ clear
                         sudo rm -r /home/pi/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir /home/pi/dv4mini
-                        sudo chmod 777 -R /home/pi/dv4mini
                         cd /home/pi/$CRIPTS_version/DV4MINI/20170517
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
@@ -143,7 +140,6 @@ clear
                         sudo rm -r /home/pi/dv4mini
                         sudo rm /usr/bin/dv_serial
                         sudo mkdir /home/pi/dv4mini
-                        sudo chmod 777 -R /home/pi/dv4mini
                         cd /home/pi/$CRIPTS_version/DV4MINI/20190307new
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
