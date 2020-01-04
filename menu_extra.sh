@@ -562,6 +562,22 @@ clear
                         break;;
 esac
 done;;
+1000) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo "\33[1;32m<<<< HABILITANDO AMA0 >>>>"
+                        echo ""
+                        sed -i "4c Exec=sh -c 'cd /home/pi/V10;sudo sh actualizar_V10.sh'" /home/pi/.config/autostart/actualizar.desktop
+                        break;;
+                        [nN]* ) echo " "
+clear
+exit;
+break;;
+esac
+done;;
 0) echo ""
 clear
 echo "\33[1;33m   ******************************"
