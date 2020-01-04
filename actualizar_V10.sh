@@ -38,7 +38,6 @@ cp Abrir_MMDVMPLUS.desktop /home/pi/Desktop
 cp Abrir_Radio.desktop /home/pi/Desktop
 cp Abrir_DMR2YSF.desktop /home/pi/Desktop
 cp AbrirsoloYSF.desktop /home/pi/Desktop
-cp RXF_RADIO.desktop /home/pi/Desktop
 
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
