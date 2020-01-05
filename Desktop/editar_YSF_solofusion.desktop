@@ -5,6 +5,6 @@ Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=80x25 -e sh editar_YSF.sh"
 Icon=/home/pi/V10/ICONO_EDITAR_YSF.png
 Type=Application
 Terminal=false
-Comment[es_ES]=EA3EIZ
+Comment[es_ES]=
 Name[es_ES]=Editar YSF
 
