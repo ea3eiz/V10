@@ -1,4 +1,5 @@
 ﻿#!/bin/bash
+sleep 5
 SCRIPTS_version="V10"
 
 SCRIPTS_version_01="V10.1" # OJO!!! provisional
@@ -158,7 +159,6 @@ dstar=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMDSTAR.ini`
 fusion=`sed -n '2p'  /home/pi/MMDVMHost/MMDVMFUSION.ini`
 frbm=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMBM.ini`
 frplus=`sed -n '13p'  /home/pi/MMDVMHost/MMDVMPLUS.ini`
-sleep 5
 sudo wget -post-data http://associacioader.com/prueba1.php?callBM=$bm'&'callPLUS=$plus'&'masterBM=$masterbm'&'masterPLUS=$masterplus'&'radio=$masterradio'&'version=$SCRIPTS_version_01'&'DMR2YSF=$masterDMR2YSF'&'YSFGateway=$masterYSFGateway
 #Lee el fichero INFO_NXDN para poner los datos en los iconos INFO TXF                        
 frecuencia=$(awk "NR==1" /home/pi/INFO_RXF)
