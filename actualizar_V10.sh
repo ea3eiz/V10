@@ -203,7 +203,7 @@ rm /home/pi/RXF_DSTAR.desktop
 frecuencia=$(awk "NR==6" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
 cp RXF_C4FM.desktop /home/pi/
-sed -i "11c Name=$frecuencia" /home/pi/RXF_C4FM.desktop
+sed -i "11c Name=$frecuencia" /home/pi/RXF_SOLOFUSION.desktop
 cd /home/pi
 cp RXF_C4FM.desktop /home/pi/Desktop
 rm /home/pi/RXF_C4FM.desktop
