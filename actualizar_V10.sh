@@ -1,7 +1,7 @@
 ﻿#!/bin/bash
 SCRIPTS_version="V10"
 
-SCRIPTS_version_01="V10.01" # OJO!!! provisional
+SCRIPTS_version_01="V10.1" # OJO!!! provisional
 
 #pone todos los status de inicio en OFF
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
