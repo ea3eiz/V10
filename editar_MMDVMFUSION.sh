@@ -1,19 +1,20 @@
 ﻿#!/bin/bash
+clear
 while true
 do
 clear
 # path usuario
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
-# path usuario
+
+# Versión
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 
-#MMDVMFUSION.ini
+#Editor MMDVMFUSION.ini
 DIRECTORIO="MMDVMFUSION.ini"
 DIRECTORIO_copia="MMDVMFUSION.ini_copia"
 DIRECTORIO_copia2="MMDVMFUSION.ini_copia2"
 DIRECTORIO_copia3="MMDVMFUSION.ini_copia3"
-
-#Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
+  #Escribe datos en el fichero $usuario/info_panel_control.ini para las memorias M1, M2 y M3
 primer="18c"
 segun="19c"
 tercer="20c"
@@ -92,10 +93,11 @@ url=`grep -n "URL" $usuario/MMDVMHost/$DIRECTORIO`
 url1=`expr substr $url 4 30`
 echo "$url1"
 
-echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberri PI (ttyAMA0)${AMARILLO}"
-echo "${CIAN}   7)${GRIS} Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM0)${AMARILLO}"
-echo "${CIAN}   8)${GRIS} Puerto para placa NTH/ZUM en arduino y Pincho Low Cost (ttyACM1)${AMARILLO}"
-echo "${CIAN}   9)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB a Raspberry Pi(ttyUSB0)${AMARILLO}"
+echo "${CIAN}   6)${GRIS} Puerto para DVMEGA pinchado en Raspberry Pi (ttyAMA0)${AMARILLO}"
+echo "${CIAN}   7)${GRIS} Puerto para NTH/ZUM, Hotspots, Nano, Low Cost etc.. (ttyACM0)${AMARILLO}"
+echo "${CIAN}   8)${GRIS} Puerto para DVMEGA + Bluestack conectado por USB (ttyUSB0)${AMARILLO}"
+echo "${CIAN}   9)${GRIS} Entrar Puerto manual  ${CIAN}"
+
 echo -n "                            - "
 
 mode=`grep -n -m 1 "^Port=" $usuario/MMDVMHost/$DIRECTORIO`
@@ -105,7 +107,7 @@ caracteres_linea=`expr $caracteres - 1`
 numero_linea_port=`expr substr $mode 1 $caracteres_linea`
 mode=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
 echo "$mode"
-
+echo ""
 echo -n "${CIAN}  10)${GRIS} Modificar ID          - ${AMARILLO}"
 idd=`grep -n "^Id=" $usuario/MMDVMHost/$DIRECTORIO`
 idd1=`expr substr $idd 3 30`
@@ -526,16 +528,20 @@ done;;
 9) echo ""
 while true
 do
-                     
+                          
+
+                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
+                          echo "Valor del Port: ${AMARILLO}$port_modem"
+                          read -p 'Ejp. modem, /dev/ttyAMA1, /dev/ttyACM1, /dev/ttyUSB1/, dev/ttyS0,/dev/rfcomm0 :' port
                           actualizar=S 
                           case $actualizar in
-			                    [sS]* ) echo ""
-                          letrac=c
-                          numero_linea_port=$numero_linea_port$letrac
-                          sed -i "$numero_linea_port Port=/dev/ttyUSB0" $usuario/MMDVMHost/$DIRECTORIO
-			                    break;;
-			                    [nN]* ) echo ""
-			                    break;;
+                          [sS]* ) echo ""
+                          letra=c
+                          numero_linea_port=$numero_linea_port$letra
+                          sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
 esac
 done;;
 10) echo ""
