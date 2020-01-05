@@ -205,8 +205,8 @@ cd /home/pi/Desktop/
 cp RXF_SOLOFUSION.desktop /home/pi/
 sed -i "11c Name=$frecuencia" /home/pi/RXF_SOLOFUSION.desktop
 cd /home/pi
-cp RXF_C4FM.desktop /home/pi/Desktop
-rm /home/pi/RXF_C4FM.desktop
+cp RXF_SOLOFUSION.desktop /home/pi/Desktop
+rm /home/pi/RXF_SOLOFUSION.desktop
 
 frecuencia=$(awk "NR==13" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
