@@ -3,7 +3,7 @@ clear
 while true
 do
 clear
-# path usuario
+# path usuario 
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 
 # Versión
@@ -546,6 +546,25 @@ do
 			                    break;;
 esac
 done;;
+9) echo ""
+while true
+do
+                          
+
+                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
+                          echo "Valor del Port: ${AMARILLO}$port_modem"
+                          read -p 'Ejp. modem, /dev/ttyAMA1, /dev/ttyACM1, /dev/ttyUSB1/, dev/ttyS0,/dev/rfcomm0 :' port
+                          actualizar=S 
+                          case $actualizar in
+                          [sS]* ) echo ""
+                          letra=c
+                          numero_linea_port=$numero_linea_port$letra
+                          sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
+                          break;;
+                          [nN]* ) echo ""
+                          break;;
+esac
+done;;
 10) echo ""
 while true
 do
@@ -1057,25 +1076,6 @@ do
                           case $actualizar in
                           [sS]* ) echo ""
                           sed -i "$linea_sed_MN Port=$lat1" $usuario/MMDVMHost/$DIRECTORIO
-                          break;;
-                          [nN]* ) echo ""
-                          break;;
-esac
-done;;
-9) echo ""
-while true
-do
-                          
-
-                          port_modem=$(awk "NR==$numero_linea_port" $usuario/MMDVMHost/$DIRECTORIO)
-                          echo "Valor del Port: ${AMARILLO}$port_modem"
-                          read -p 'Ejp. modem, /dev/ttyAMA1, /dev/ttyACM1, /dev/ttyUSB1/, dev/ttyS0,/dev/rfcomm0 :' port
-                          actualizar=S 
-                          case $actualizar in
-                          [sS]* ) echo ""
-                          letra=c
-                          numero_linea_port=$numero_linea_port$letra
-                          sed -i "$numero_linea_port Port=$port" $usuario/MMDVMHost/$DIRECTORIO
                           break;;
                           [nN]* ) echo ""
                           break;;
