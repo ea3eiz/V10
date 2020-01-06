@@ -1,6 +1,6 @@
 ﻿#!/bin/bash
 sleep 5
-startxfce4
+#startxfce4
 SCRIPTS_version="V10"
 
 SCRIPTS_version_01="V10.1" # OJO!!! provisional
