@@ -43,6 +43,7 @@ sed -i "10c Name[es_ES]=Cerrar Radio" /home/pi/Abrir_Radio.desktop
 sed -i "5c MMDVM=ON" /home/pi/status.ini
 cd /home/pi
 sudo cp Abrir_Radio.desktop /home/pi/Desktop
+lxpanelctl restart && openbox --restart
 sleep 1
 sudo rm /home/pi/Abrir_Radio.desktop
 
