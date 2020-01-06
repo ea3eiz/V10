@@ -200,7 +200,7 @@ sed -i "11c Name=$frecuencia" /home/pi/RXF_DSTAR.desktop
 cd /home/pi
 cp RXF_DSTAR.desktop /home/pi/Desktop
 rm /home/pi/RXF_DSTAR.desktop
-
+sudo rm -R associacioader.com
 frecuencia=$(awk "NR==6" /home/pi/INFO_RXF)
 cd /home/pi/Desktop/
 cp RXF_SOLOFUSION.desktop /home/pi/
