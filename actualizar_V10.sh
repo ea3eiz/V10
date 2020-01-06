@@ -242,3 +242,6 @@ cd /home/pi
 cp RXF_NXDN.desktop /home/pi/Desktop
 rm /home/pi/RXF_NXDN.desktop
 #=================================================================================
+
+
+sudo startxfce4
