@@ -51,7 +51,7 @@ cd /home/pi
 sudo mv Abrir_Radio.desktop /home/pi/Desktop
 
 cd /home/pi
-sudo cp desktop-items-0.conf /home/pi/.config/pcmanfm/LXDE-pi/
+sudo cp desktop-items-1.conf /home/pi/.config/pcmanfm/LXDE-pi/
 
 lxpanelctl restart && openbox --restart
 
