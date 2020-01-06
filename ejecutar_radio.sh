@@ -35,25 +35,16 @@ sudo rm /home/pi/RXF_RADIO.desktop
 sed -i "4c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-
-cd /home/pi/.config/pcmanfm/LXDE-pi/
-sudo cp desktop-items-1.conf /home/pi
-
-
-
 cd /home/pi/Desktop
-sudo mv Abrir_Radio.desktop /home/pi
+sudo cp Abrir_Radio.desktop /home/pi
 sed -i "4c Exec=sh -c 'cd /home/pi/$SCRIPTS_version;lxterminal --geometry=72x15 -e sudo sh cerrar_radio.sh'" /home/pi/Abrir_Radio.desktop
 sed -i "5c Icon=/home/pi/$SCRIPTS_version/MMDVM_ON.png" /home/pi/Abrir_Radio.desktop
 sed -i "10c Name[es_ES]=Cerrar Radio" /home/pi/Abrir_Radio.desktop
 sed -i "5c MMDVM=ON" /home/pi/status.ini
 cd /home/pi
-sudo mv Abrir_Radio.desktop /home/pi/Desktop
-
-cd /home/pi
-sudo cp desktop-items-1.conf /home/pi/.config/pcmanfm/LXDE-pi/
-
-lxpanelctl restart && openbox --restart
+sudo cp Abrir_Radio.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_Radio.desktop
 
 cd /home/pi/MMDVMHost
 clear
