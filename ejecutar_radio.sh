@@ -37,7 +37,7 @@ sed -i "4c $frecuencia" /home/pi/INFO_RXF
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 
 cd /home/pi/.config/pcmanfm/LXDE-pi/
-sudo cp desktop-items-0.conf /home/pi
+sudo cp desktop-items-1.conf /home/pi
 
 
 
