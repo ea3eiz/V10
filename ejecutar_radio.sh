@@ -44,7 +44,7 @@ sed -i "5c MMDVM=ON" /home/pi/status.ini
 
 
 
-
+sleep 5
 
 cd /home/pi/MMDVMHost
 clear
