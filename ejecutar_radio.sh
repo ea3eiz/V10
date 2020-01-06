@@ -53,6 +53,7 @@ sudo mv Abrir_Radio.desktop /home/pi/Desktop
 cd /home/pi
 sudo cp desktop-items-0.conf /home/pi/.config/pcmanfm/LXDE-pi/
 
+lxpanelctl restart && openbox --restart
 
 cd /home/pi/MMDVMHost
 clear
