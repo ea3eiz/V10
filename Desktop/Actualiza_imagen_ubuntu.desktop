@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=sh -c "cd /home/ubuntu/V10;lxterminal --geometry=60x20 -e sudo sh  actualiza_imagen.sh"
+Exec=sh -c "cd /home/ubuntu/V10;lxterminal --geometry=60x20 -e sudo sh  actualiza_imagen_ubuntu.sh"
 Icon=/home/ubuntu/V10/ICONO_ACTUALIZAR_IMAGEN.png
 Type=Application
 StartupNotify=false
