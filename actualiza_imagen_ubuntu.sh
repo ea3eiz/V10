@@ -9,11 +9,6 @@ AUTOARRANQUE="AUTOARRANQUE"
 AUTOARRANQUE=$AUTOARRANQUE$SCRIPTS_version
 
 
-echo "$version"
-echo "$usuario"
-
-read a
-
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
