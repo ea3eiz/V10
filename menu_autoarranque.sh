@@ -911,7 +911,7 @@ clear
                         echo "Poniendo DMR+ en el autoarranque >>>>>"
                         sleep 2
                         cd /home/pi/AUTOARRANQUEV10
-                        cp DMRPLUS.desktop /home/pi/.config/autostart
+                        sudo cp DMRPLUS.desktop /home/pi/.config/autostart
                         sed -i "6c MMDVMPLUS=ON" /home/pi/autoarranque.ini
                         break;;
                         [nN]* ) echo ""
