@@ -2,7 +2,7 @@
 Encoding=UTF-8
 TryExec=lxterminal
 Exec=ls
-Icon=/home/pi/V10/RXF_DSTAR.png
+Icon=/home/pi/V10/ICONO_INFO.png
 Type=Application
 StartupNotify=false
 Categories=GTK;Utility;TerminalEmulator;
