@@ -102,7 +102,7 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea + 1` # y le suma uno qudando coomo: (75)
+numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
 STARTUP=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_ST=$numero_linea$letra
