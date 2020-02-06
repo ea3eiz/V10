@@ -408,7 +408,7 @@ clear
                         git clone https://github.com/g4klx/YSFClients
                         cd /home/pi/YSFClients/YSFGateway
                         make
-                        sudo cp /home/pi/V10/FCSHost.txt /home/pi/YSFClients/YSFGateway                                                             
+                        sudo cp /home/pi/V10/FCSRooms.txt /home/pi/YSFClients/YSFGateway                                                             
                         clear                                                              
                         exit;
                         break;;
