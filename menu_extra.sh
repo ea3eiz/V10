@@ -403,11 +403,11 @@ clear
                         case $ejecutar1 in
                         [sS]* ) echo ""
                         echo ">>> Actualizar YCS Para Conectar Por Protocolo FCS >>>"
-                        #sudo rm -R /home/pi/YSFClients
-                        #cd /home/pi
-                        #git clone https://github.com/g4klx/YSFClients
-                        #cd /home/pi/YSFClients/YSFGateway
-                        #make
+                        sudo rm -R /home/pi/YSFClients
+                        cd /home/pi
+                        git clone https://github.com/g4klx/YSFClients
+                        cd /home/pi/YSFClients/YSFGateway
+                        make
                         sudo cp /home/pi/V10/FCSRooms.txt /home/pi/YSFClients/YSFGateway                                                             
                         clear                                                              
                         exit;
