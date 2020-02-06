@@ -33,10 +33,10 @@ echo "\33[1;32m      =================="
 echo ""
 echo "\33[1;36m   8)\33[1;37m Instalar Anydesk"
 echo "\33[1;36m   9)\33[1;37m Grabar pantalla Nextion"
-echo ""
 echo "\33[1;36m  10)${VERDE} Menú Actualizar MMDVM_HS Libre kit y ZUMSpot"
+echo "\33[1;36m  11)${AMARILLO} Actualizar YCS Para Conectar Por Protocolo FCS"
 echo ""
-echo "\33[1;36m  11)\33[1;31m Reiniciar Sistema"
+echo "\33[1;36m  12)\33[1;31m Reiniciar Sistema"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -396,6 +396,28 @@ break;;
 esac
 done;;
 11) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>> Actualizar YCS Para Conectar Por Protocolo FCS >>>"
+                        sudo rm -R /home/pi/YSFClients
+                        cd /home/pi
+                        git clone https://github.com/g4klx/YSFClients
+                        cd /home/pi/YSFClients/YSFGateway
+                        make
+                        clear                                                              
+                        exit;
+                        break;;
+                        [nN]* ) echo ""
+                        clear
+                        exit;
+                        break;;
+esac
+done;;
+12) echo ""
 while true
 do
 clear
