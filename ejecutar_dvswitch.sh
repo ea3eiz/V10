@@ -16,12 +16,12 @@ echo "   *       Y NO SE PODRAN VOLVER A UTILIZAR HASTA QUE NO          *"
 echo "   *                    CERREMOS EL DVSWITCH                      *"
 echo "   ****************************************************************"
 echo "${VERDE}"
-echo "   BM"
-echo "   DMR+"
-echo "   LIBRE"
-echo "   RADIO"
-echo "   solo D-STAR"
-echo "   solo FUSION"
+#echo "   BM"
+#echo "   DMR+"
+#echo "   LIBRE"
+#echo "   RADIO"
+#echo "   solo D-STAR"
+#echo "   solo FUSION"
 echo "   ircDDB"
 echo "   D-STAR Repeater"
 echo "   YSF"
@@ -51,66 +51,66 @@ sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
 
 
-cd /home/pi/$SCRIPTS_version
-bm=$(awk "NR==7" /home/pi/status.ini)
-if [ "$bm" = 'MMDVMBM=ON' ];then
-sudo sh cerrar_bm.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "         CERRANDO BM"
-echo "*******************************"
-fi
+#cd /home/pi/$SCRIPTS_version
+#bm=$(awk "NR==7" /home/pi/status.ini)
+#if [ "$bm" = 'MMDVMBM=ON' ];then
+#sudo sh cerrar_bm.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "         CERRANDO BM"
+#echo "*******************************"
+#fi
 
-plus=$(awk "NR==6" /home/pi/status.ini)
-if [ "$plus" = 'MMDVMPLUS=ON' ];then
-sudo sh cerrar_DMRPLUS.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "        CERRANDO BM"
-echo "*******************************"
-fi
+#plus=$(awk "NR==6" /home/pi/status.ini)
+#if [ "$plus" = 'MMDVMPLUS=ON' ];then
+#sudo sh cerrar_DMRPLUS.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "        CERRANDO BM"
+#echo "*******************************"
+#fi
 
-libre=$(awk "NR==10" /home/pi/status.ini)
-if [ "$libre" = 'MMDVMLIBRE=ON' ];then
-sudo sh cerrar_LIBRE.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "        CERRANDO LIBRE"
-echo "*******************************"
-fi
+#libre=$(awk "NR==10" /home/pi/status.ini)
+#if [ "$libre" = 'MMDVMLIBRE=ON' ];then
+#sudo sh cerrar_LIBRE.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "        CERRANDO LIBRE"
+#echo "*******************************"
+#fi
 
-radio=$(awk "NR==5" /home/pi/status.ini)
-if [ "$radio" = 'MMDVM=ON' ];then
-sudo sh cerrar_radio.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "       CERRANDO RADIO"
-echo "*******************************"
-fi
+#radio=$(awk "NR==5" /home/pi/status.ini)
+#if [ "$radio" = 'MMDVM=ON' ];then
+#sudo sh cerrar_radio.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "       CERRANDO RADIO"
+#echo "*******************************"
+#fi
 
-solodstar=$(awk "NR==13" /home/pi/status.ini)
-if [ "$solodstar" = 'SOLODSTAR=ON' ];then
-sudo sh cerrar_solodstar.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "    CERRANDO solo D-STAR"
-echo "*******************************"
-fi
+#solodstar=$(awk "NR==13" /home/pi/status.ini)
+#if [ "$solodstar" = 'SOLODSTAR=ON' ];then
+#sudo sh cerrar_solodstar.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "    CERRANDO solo D-STAR"
+#echo "*******************************"
+#fi
 
-solofusion=$(awk "NR==12" /home/pi/status.ini)
-if [ "$solofusion" = 'SOLOFUSION=ON' ];then
-sudo sh cerrar_solofusion.sh
-clear
-echo "${VERDE}"
-echo "*******************************"
-echo "     CERRANDO solo FUSION"
-echo "*******************************"
-fi
+#solofusion=$(awk "NR==12" /home/pi/status.ini)
+#if [ "$solofusion" = 'SOLOFUSION=ON' ];then
+#sudo sh cerrar_solofusion.sh
+#clear
+#echo "${VERDE}"
+#echo "*******************************"
+#echo "     CERRANDO solo FUSION"
+#echo "*******************************"
+#fi
 
 ircDDB=$(awk "NR==1" /home/pi/status.ini)
 if [ "$ircDDB" = 'D-STAR=ON' ];then
