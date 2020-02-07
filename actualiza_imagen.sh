@@ -1,7 +1,7 @@
 #!/bin/bash
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 sed -i "4c #Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" $usuario/.config/autostart/nextiondriver.desktop
-sed -i "57c dtoverlay=pi3-disable-bt" /boot/config.txt
+sudo sed -i "57c dtoverlay=pi3-disable-bt" /boot/config.txt
 # path usuario
 
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
