@@ -1,14 +1,14 @@
 #!/bin/bash
 
-modo=$(awk "NR==18" /home/pi/status.ini)
-if [ "$modo" = 'DVSWITCH=ON' ];then
-echo "\033[1;31m" #ROJO
-echo "******************************************"
-echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
-echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
-echo "******************************************"
-sleep 5
-else
+#modo=$(awk "NR==18" /home/pi/status.ini)
+#if [ "$modo" = 'DVSWITCH=ON' ];then
+#echo "\033[1;31m" #ROJO
+#echo "******************************************"
+#echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
+#echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
+#echo "******************************************"
+#sleep 5
+#else
 echo "***********************************************"
 echo "*             ABRIENDO SOLO FUSION            * "
 echo "***********************************************"
