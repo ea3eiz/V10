@@ -1,6 +1,8 @@
 #!/bin/bash
-# path usuario
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+sed -i "#Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" $usuario/.config/autostart/nextion_driver.desktop
+# path usuario
+
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 version=`expr substr $SCRIPTS_version 2 2`
 AUTOARRANQUE="AUTOARRANQUE"
