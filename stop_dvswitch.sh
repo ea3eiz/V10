@@ -3,17 +3,17 @@
 clear
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
  
-#sudo cp /home/pi/Desktop/Abrir_D-STARRepeater /home/pi
-#sed -i "9c Terminal=false" /home/pi/Abrir_D-STARRepeater
-#sudo cp /home/pi/Abrir_D-STARRepeater /home/pi/Desktop
-#sleep 1
-#sudo rm /home/pi/Abrir_D-STARRepeater
+sudo cp /home/pi/Desktop/Abrir_D-STARRepeater /home/pi
+sed -i "9c Terminal=false" /home/pi/Abrir_D-STARRepeater
+sudo cp /home/pi/Abrir_D-STARRepeater /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_D-STARRepeater
 
-#sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi
-#sed -i "9c Terminal=false" /home/pi/Abrir_ircDDBGateway.desktop
-#sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop
-#sleep 1
-#sudo rm /home/pi/Abrir_ircDDBGateway.desktop
+sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi
+sed -i "9c Terminal=false" /home/pi/Abrir_ircDDBGateway.desktop
+sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
 
 clear
