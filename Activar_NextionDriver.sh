@@ -14,7 +14,7 @@ echo " *                                                                   *"
 echo " *********************************************************************"
 echo ""
 echo "${CIAN}"
-echo -n " Quieres Activar NextionDriver S/N ?"
+echo -n " Quieres Activar NextionDriver S/N ? "
 read activar
 case "$activar" in
 [sS]* )
