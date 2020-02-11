@@ -24,7 +24,7 @@ echo " *                                                                   *"
 echo " * <<<<<<<<<<<<<<<<<< ACTIVANDO NextioDriver >>>>>>>>>>>>>>>>>>>>>> *"
 echo " *                                                                   *"
 echo " *********************************************************************"
-echo ""
+sleep 3
 sudo sed -i "4c Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
 break;;
 [nN]*) 
