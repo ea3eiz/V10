@@ -29,7 +29,7 @@ sleep 3
 sudo sed -i "4c Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
 break;;
 [nN]*) 
-exit ;;
+
 esac
 
 sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi
@@ -38,3 +38,4 @@ sudo sed -i "5c Icon=/home/pi/V10/ICONO_AMBE_SERVER_ON.png'"
 sudo sed -i "10c Name[es_ES]=Desactivar NextionDriver'"
 cd /home/pi
 sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
+exit ;;
