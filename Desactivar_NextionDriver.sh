@@ -29,7 +29,7 @@ sleep 3
 
 sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi
 sudo sed -i "4c Exec=sh -c 'cd /home/pi/V10;lxterminal --geometry=72x15 -e sudo sh Activar_NextionDriver.sh'" /home/pi/Activar_NextionDriver.desktop
-sudo sed -i "5c Icon=/home/pi/V10/ICONO_NEXTION_DRIVER.png" /home/pi/Activar_NextionDriver.desktop
+sudo sed -i "5c Icon=/home/pi/V10/ICONO_NEXTIONDRIVER.png" /home/pi/Activar_NextionDriver.desktop
 sudo sed -i "10c Name[es_ES]=Activar NextionDriver" /home/pi/Activar_NextionDriver.desktop
 cd /home/pi
 sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
