@@ -26,20 +26,17 @@ echo " *     <<<<<<<<      DESACTIVANDO NextionDriver      >>>>>>>>>       *"
 echo " *                                                                   *"
 echo " *********************************************************************"
 sleep 3
+
+sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi
+sudo sed -i "4c Exec=sh -c 'cd /home/pi/V10;lxterminal --geometry=72x15 -e sudo sh Activar_NextionDriver.sh'" /home/pi/Activar_NextionDriver.desktop
+sudo sed -i "5c Icon=/home/pi/V10/ICONO_DISPLAY.png'" /home/pi/Activar_NextionDriver.desktop
+sudo sed -i "10c Name[es_ES]=Activar NextionDriver'" /home/pi/Activar_NextionDriver.desktop
+cd /home/pi
+sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
+sudo rm Activar_NextionDriver.desktop
+
 sudo sed -i "4c #Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
 break;;
 [nN]*) 
-
-
-
-sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi
-sudo sed -i "4c Exec=sh -c 'cd /home/pi/V10;lxterminal --geometry=72x15 -e sudo sh Activar_NextionDriver.sh'"
-sudo sed -i "5c Icon=/home/pi/V10/ICONO_DISPLAY.png'"
-sudo sed -i "10c Name[es_ES]=Activar NextionDriver'"
-cd /home/pi
-sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
-
-
-
 exit ;;
 esac
