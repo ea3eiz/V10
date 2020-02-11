@@ -32,4 +32,9 @@ break;;
 exit ;;
 esac
 
-
+sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi
+sudo sed -i "4c Exec=sh -c 'cd /home/pi/V10;lxterminal --geometry=72x15 -e sudo sh Desactivar_NextionDriver.sh'"
+sudo sed -i "5c Icon=/home/pi/V10/ICONO_AMBE_SERVER_ON.png'"
+sudo sed -i "10c Name[es_ES]=Desactivar NextionDriver'"
+cd /home/pi
+sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
