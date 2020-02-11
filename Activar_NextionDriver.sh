@@ -14,11 +14,10 @@ echo " *                                                                   *"
 echo " *********************************************************************"
 echo ""
 echo "${CIAN}"
-echo " Quieres activarlo S/N ?"
+echo "Quieres Activar NextionDriver S/N ?"
 read activar
-if [ $activar = s ] or [ $activar = S ]
-then
-clear
+case "$activar" in
+[sS]* )
 echo "${VERDE}"
 echo " *********************************************************************"
 echo " *                                                                   *"
@@ -27,7 +26,9 @@ echo " *                                                                   *"
 echo " *********************************************************************"
 echo ""
 sudo sed -i "4c Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
-else
-exit;
-fi
+break;;
+[nN]*) 
+exit ;;
+esac
+
 
