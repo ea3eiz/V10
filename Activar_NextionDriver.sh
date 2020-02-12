@@ -43,6 +43,8 @@ sudo rm Activar_NextionDriver.desktop
 
 sudo sed -i "4c Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
 
+sudo reboot
+
 break;;
 [nN]*) 
 exit ;;
