@@ -13,6 +13,12 @@ echo " * Si activas NextionDriver no funcionará la China pinchada en Raspi *"
 echo " *                                                                   *"
 echo " *********************************************************************"
 echo ""
+echo "${ROJO}"
+echo " *********************************************************************"
+echo " *                                                                   *"
+echo " *        OJO!! Una vez activado se reiniciará la Raspberry          *"
+echo " *                                                                   *"
+echo " *********************************************************************"
 echo "${CIAN}"
 echo -n " Quieres Activar NextionDriver S/N ? "
 read activar
@@ -36,6 +42,7 @@ sudo cp Activar_NextionDriver.desktop /home/pi/Desktop
 sudo rm Activar_NextionDriver.desktop
 
 sudo sed -i "4c Exec=sh -c 'cd /home/pi/NextionDriver/;sudo ./NextionDriver -c /home/pi/MMDVMHost/MMDVM.ini'" /home/pi/.config/autostart/nextiondriver.desktop
+
 break;;
 [nN]*) 
 exit ;;
