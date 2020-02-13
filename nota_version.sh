@@ -19,12 +19,13 @@ echo "${BLANCO}"
 info=$(cat /etc/os-release)
 info=$(awk "NR==1" /home/pi/info.txt)
 echo "   $info"
+echo -n "${AMARILLO}"
 echo "   No compatible con Raspberry pi 4."
 echo ""
 
 echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIO AFICIONADOS."
 echo "\33[1;32m"
-echo "   Imagen Linux basada en Debian Stretch."
+
 echo -n "${AMARILLO}"
 
 echo ""
