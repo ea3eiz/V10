@@ -29,7 +29,7 @@ echo -n "${AMARILLO}"
 
 echo ""
 echo "   Participants in de proyect:"
-echo "${BLANCO}   -EA3EIZ (Programer & Designer) -EA3EG (Innovative & System Tester)"
+echo "${BLANCO}   - EA3EIZ (Programer & Designer) -EA3EG (Innovative & System Tester)"
 
 echo ""
 echo "\33[1;33m   - Utilizar adecuadamente los puertos de los correspondientes Módems."
