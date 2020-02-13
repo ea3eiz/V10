@@ -15,10 +15,11 @@ echo -n "${VERDE}"
 echo "   ************************************************************************************"
 echo "\33[1;36m   Gracias por descargar la imagen de ADER V.02.07.$NUMERO_VERSION"
 echo ""
-
+echo "${BLANCO}"
 info=$(cat /etc/os-release)
 info=$(awk "NR==1" /home/pi/info.txt)
-echo "$info"
+echo "   $info"
+echo ""
 
 echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIO AFICIONADOS."
 echo "\33[1;32m"
