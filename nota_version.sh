@@ -16,9 +16,9 @@ echo "   ***********************************************************************
 echo "\33[1;36m   Gracias por descargar la imagen de ADER V.02.07.$NUMERO_VERSION"
 echo ""
 
-info=$(cat /etc/os-release)
-info=`expr substr $info 1 45`
-echo "$info"
+info2=$(cat /etc/os-release)
+info1=`expr substr $info2 1 45`
+echo "$info1"
 
 echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIO AFICIONADOS."
 echo "\33[1;32m"
