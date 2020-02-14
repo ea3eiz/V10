@@ -1,7 +1,8 @@
 #!/bin/bash
 
-modo=$(awk "NR==18" /home/pi/status.ini)
-if [ "$modo" = 'DVSWITCH=ON' ]
+status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
+status_dvswitch=`expr substr $status_dvswitch 10 2`
+if [ $status_dvswitch = ON ]
 then
 echo "\033[1;31m" #ROJO
 echo "******************************************"
