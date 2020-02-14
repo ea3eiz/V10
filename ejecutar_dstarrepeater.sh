@@ -1,12 +1,8 @@
 #!/bin/bash
 
-
-modo=$(awk "NR==18" /home/pi/status.ini)
-if [ "$modo" = 'DVSWITCH=ON' ];then
-
-
-
-
+status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
+status_dvswitch=`expr substr $status_dvswitch 10 2`
+if [ $status_dvswitch = ON ]
 
 echo "\033[1;31m" #ROJO
 echo "******************************************"
@@ -15,9 +11,6 @@ echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
 echo "******************************************"
 sleep 5
 else
-
-
-
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
