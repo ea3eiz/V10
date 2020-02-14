@@ -3,6 +3,8 @@
 status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 status_dvswitch=`expr substr $status_dvswitch 10 2`
 if [ $status_dvswitch = ON ]
+	echo "este es el status de dvswitch $status_dvswitch"
+	read a
 then
 echo "\033[1;31m" #ROJO
 echo "******************************************"
