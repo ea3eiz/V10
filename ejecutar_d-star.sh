@@ -3,8 +3,7 @@
 status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 status_dvswitch=`expr substr $status_dvswitch 10 2`
 if [ $status_dvswitch = ON ]
-	echo "este es el status de dvswitch $status_dvswitch"
-	read a
+
 then
 echo "\033[1;31m" #ROJO
 echo "******************************************"
@@ -12,6 +11,8 @@ echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
 echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
 echo "******************************************"
 sleep 5
+	echo "este es el status de dvswitch $status_dvswitch"
+	read a
 else
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
