@@ -11,8 +11,6 @@ echo "      NO SE PUEDE ABRIR ESTE SISTEMA     *"
 echo "       SI ESTA EL DVSWITCH ACTIVADO      *"
 echo "******************************************"
 sleep 5
-	echo "este es el status de dvswitch $status_dvswitch"
-	read a
 else
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 cd /home/pi/Desktop
