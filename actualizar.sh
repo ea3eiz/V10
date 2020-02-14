@@ -233,3 +233,12 @@ cd /home/pi
 cp RXF_NXDN.desktop /home/pi/Desktop
 rm /home/pi/RXF_NXDN.desktop
 #=================================================================================
+
+status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
+if [ $status_dvswitch =  DVSWITCH=OFF ]; then
+systemctl stop ircddbgateway.service
+else
+fi
+
+
+
