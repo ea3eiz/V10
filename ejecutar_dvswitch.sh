@@ -61,7 +61,7 @@ sed -i "9c Terminal=true" /home/pi/Abrir_ircDDBGateway.desktop
 
 sed -i "4c Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_d-star.sh'" /home/pi/Abrir_ircDDBGateway.desktop
 sed -i "5c Icon=/home/pi/V10/DSTAR.png" /home/pi/Abrir_ircDDBGateway.desktop
-
+sed -i "10c Name[es_ES]=Abrir ircDDB" /home/pi/Abrir_ircDDBGateway.desktop
 cd 
 sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop
 sleep 1
