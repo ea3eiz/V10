@@ -1,14 +1,16 @@
-﻿E567U-   452#!/bin/bash
-# -*- ENCODING: UTF-8 -*-
+﻿#!/bin/bash
 clear
+# path usuario
+usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
-
                     echo "${ROJO}"
                     echo " *********************************************************************"
                     echo " * Si actualizas MMDVMhost desde esta opción, perderás todas las     *"
@@ -42,11 +44,7 @@ GRIS="\033[0m"
                     
                     sed -i "22c $FIJA$HOY1$PUNTO" /home/pi/MMDVMHost/Version.h
 
-
-
-sudo cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
-
-
+                    sudo cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
 
                     make clean
                     make
@@ -147,6 +145,15 @@ sudo cp /home/pi/$SCRIPTS_version/YSFControl.cpp /home/pi/MMDVMHost
             sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_02
             sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_03
             sed -i "10c URL=www.google.co.uk" /home/pi/YSF2DMR/YSF2DMR.ini_copia_04
+
+            var2=`grep -n -m 1 "Id" $usuario/YSF2DMR/YSF2DMR.ini`
+            buscar=":"
+            largo_linea=`expr index $var2 $buscar`
+            largo_linea=`expr $largo_linea - 1`
+            numero_linea=`expr substr $var2 1 $largo_linea`
+            id=$(awk "NR==$numero_linea" $usuario/YSF2DMR/YSF2DMR.ini)
+            letra=c
+            linea_id=$numero_linea$letra
 
             sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini
             sed -i "26c Id=1234567" /home/pi/YSF2DMR/YSF2DMR.ini_copia_01
