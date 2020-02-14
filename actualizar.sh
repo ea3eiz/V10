@@ -238,6 +238,7 @@ status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 status_dvswitch=`expr substr $status_dvswitch 10 3`
 if [ $status_dvswitch =  OFF ]; then
 systemctl stop ircddbgateway.service
+sudo killall ircddbgatewayd
 else
 fi
 
