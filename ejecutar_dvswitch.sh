@@ -219,6 +219,7 @@ sudo systemctl restart md380-emu.service
 sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
+sudo killall ircddbgatewayd
 
 clear
 echo "${BLANCO}"
