@@ -44,12 +44,24 @@ if [ "$seguir" = 'S' -o "$seguir" = 's' ];then
 
 sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi 
 sed -i "9c Terminal=true" /home/pi/Abrir_D-STARRepeater.desktop
+
+
+
+
+
+
+
 sudo cp /home/pi/Abrir_D-STARRepeater.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_D-STARRepeater.desktop
 
 sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi
 sed -i "9c Terminal=true" /home/pi/Abrir_ircDDBGateway.desktop
+
+
+sed -i "4c Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_d-star.sh'" /home/pi/Abrir_ircDDBGateway.desktop
+sed -i "5c Icon=/home/pi/V10/DSTAR.png" /home/pi/Abrir_ircDDBGateway.desktop
+
 cd 
 sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop
 sleep 1
