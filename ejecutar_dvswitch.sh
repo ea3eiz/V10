@@ -45,7 +45,9 @@ if [ "$seguir" = 'S' -o "$seguir" = 's' ];then
 sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi 
 sed -i "9c Terminal=true" /home/pi/Abrir_D-STARRepeater.desktop
 
-
+sed -i "4c Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_d-star.sh'" /home/pi/Abrir_D-STARRepeater.desktop
+sed -i "5c Icon=/home/pi/V10/DSTAR.png" /home/pi/Abrir_D-STARRepeater.desktop
+sed -i "10c Name[es_ES]=Abrir ircDDB" /home/pi/Abrir_D-STARRepeater.desktop
 
 
 
@@ -58,10 +60,10 @@ sudo rm /home/pi/Abrir_D-STARRepeater.desktop
 sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi
 sed -i "9c Terminal=true" /home/pi/Abrir_ircDDBGateway.desktop
 
-
 sed -i "4c Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_d-star.sh'" /home/pi/Abrir_ircDDBGateway.desktop
 sed -i "5c Icon=/home/pi/V10/DSTAR.png" /home/pi/Abrir_ircDDBGateway.desktop
 sed -i "10c Name[es_ES]=Abrir ircDDB" /home/pi/Abrir_ircDDBGateway.desktop
+
 cd 
 sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop
 sleep 1
@@ -232,6 +234,7 @@ sudo systemctl restart mmdvm_bridge.service
 sudo systemctl restart nxdngateway.service
 
 sudo killall ircddbgateway
+sudo killall dstarrepeater
 
 clear
 echo "${BLANCO}"
