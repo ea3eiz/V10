@@ -30,7 +30,7 @@ sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi #deja con el term
 
 cd /home/pi/$SCRIPTS_version/Desktop
 cp * /home/pi/Desktop
-sleep 1
+sleep 3
 
 sudo cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
 sudo cp /home/pi/Activar_NextionDriver.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
