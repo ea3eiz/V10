@@ -38,6 +38,4 @@ sudo systemctl stop md380-emu.service
 sudo systemctl stop mmdvm_bridge.service
 sudo systemctl stop nxdngateway.service
 
-sudo killall ircddbgatewayd
-
 sed -i "18c DVSWITCH=OFF" /home/pi/status.ini
