@@ -239,7 +239,7 @@ status_dvswitch=`expr substr $status_dvswitch 10 3`
 if [ $status_dvswitch = OFF ]
 then
 systemctl stop ircddbgateway.service
-sudo killall ircddbgatewayd
+#sudo killall ircddbgatewayd
 else
 echo ""
 fi
