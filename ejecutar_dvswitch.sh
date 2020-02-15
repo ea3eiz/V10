@@ -47,7 +47,7 @@ sed -i "9c Terminal=true" /home/pi/Abrir_D-STARRepeater.desktop
 
 sed -i "4c Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_d-star.sh'" /home/pi/Abrir_D-STARRepeater.desktop
 sed -i "5c Icon=/home/pi/V10/DSTAR.png" /home/pi/Abrir_D-STARRepeater.desktop
-sed -i "10c Name[es_ES]=Abrir ircDDB" /home/pi/Abrir_D-STARRepeater.desktop
+sed -i "10c Name[es_ES]=Abrir D-STAR Repeater" /home/pi/Abrir_D-STARRepeater.desktop
 
 
 
