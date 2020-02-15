@@ -28,7 +28,7 @@ echo "\33[1;32m   Imagen multi plataforma para \33[1;33mRADIO AFICIONADOS."
 echo -n "${AMARILLO}"
 
 echo ""
-echo "   Participants in the proyect:"
+echo "   Proyect participants:"
 echo "${BLANCO}   - EA3EIZ (Programer & Designer) -EA3EG (Innovative & System Tester)"
 
 echo ""
