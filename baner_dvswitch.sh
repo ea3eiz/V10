@@ -30,8 +30,8 @@ echo "   ***********************************************************************
 echo ""
 echo "   **************************************************************************"
 
-echo ""
-echo -n "\33[1;36m   Pulsa la tecla ENTER para salir "
+echo "${BLANCO}"
+echo -n "\33[1;36m   Pulsa ENTER para seguir "
 read A
 exit;
 
