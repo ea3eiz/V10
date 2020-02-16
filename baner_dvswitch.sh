@@ -31,7 +31,7 @@ echo ""
 echo "   **************************************************************************"
 
 echo "${BLANCO}"
-echo -n "\33[1;36m   Pulsa ENTER para seguir "
+echo -n "   Pulsa ENTER para seguir "
 read A
 exit;
 
