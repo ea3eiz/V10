@@ -31,7 +31,7 @@ echo ""
 echo "   **************************************************************************"
 
 echo "${BLANCO}"
-echo -n "   Pulsa ENTER para seguir "
+echo -n "   Pulsa ENTER para seguir y activar el DVSWITCH"
 read A
 exit;
 
