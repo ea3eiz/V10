@@ -1,4 +1,5 @@
 #!/bin/bash
+actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
 NUMERO_VERSION=`expr substr $SCRIPTS_version 2 2`
 ROJO="\033[1;31m"
@@ -10,7 +11,7 @@ GRIS="\033[0m"
 echo "${VERDE}"
 echo "   ************************************************************************************"
 echo -n "${CIAN}"
-echo "                             NOTAS DE LA VERSIÓN V.02.07.$NUMERO_VERSION"
+echo "            NOTAS DE LA VERSIÓN: $NUMERO_VERSION Actualización:$actualizacion"
 echo -n "${VERDE}"                                                                                 
 echo "   ************************************************************************************"
 echo "\33[1;36m   Gracias por descargar la imagen de ADER V.02.07.$NUMERO_VERSION"
