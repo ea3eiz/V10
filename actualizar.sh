@@ -1,4 +1,10 @@
 ﻿#!/bin/bash
+if [ -f /home/pi/.config/autostart/actualizacion ];
+then
+echo "Sí, sí existe."
+else
+sudo cp actualizacion /home/pi/.config/autostart
+fi
 SCRIPTS_version="V10"
 version="V10.03.01"
 #pone todos los status de inicio en OFF
