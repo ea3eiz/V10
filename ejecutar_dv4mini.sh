@@ -1,9 +1,6 @@
 #!/bin/bash
+
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-
-cd /home/pi/$SCRIPTS_version
-sudo sh baner_dvswitch.sh
-
 cd /home/pi/Desktop
 sudo cp Abrir_dv4mini.desktop /home/pi
 sed -i "4c DV4mini=ON" /home/pi/status.ini

@@ -9,6 +9,10 @@ CIAN="\033[1;36m"
 GRIS="\033[0m"
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
+
+cd /home/pi/$SCRIPTS_version
+sudo sh baner_dvswitch.sh
+
 echo "${BLANCO}"
 echo "   ****************************************************************"
 echo "   * SI ACTIVAMOS EL DVSWITCH SE CERRARAN LOS SISTEMAS SIGUIENTES *"
