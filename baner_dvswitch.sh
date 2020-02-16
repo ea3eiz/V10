@@ -11,6 +11,8 @@ GRIS="\033[0m"
 clear
 echo ""
 echo ""
+echo ""
+echo ""
 echo "${VERDE}"
 echo "   **************************************************************************"
 echo -n "${AMARILLO}"
