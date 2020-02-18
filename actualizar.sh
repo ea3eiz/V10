@@ -34,9 +34,9 @@ sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi #deja el icono e
 sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi #deja con el terminal en el estado que se reinició
 sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi #deja con el terminal en el estado que se reinició
 
-sudo rm -R /home/pi/Desktop
+
 cd /home/pi/$SCRIPTS_version/Desktop
-cp * /home/pi/Desktop
+cp * -f /home/pi/Desktop
 sleep 3
 
 sudo cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
