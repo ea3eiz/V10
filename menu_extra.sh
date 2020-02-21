@@ -274,7 +274,7 @@ clear
                         
 						
 						#comprueba si el fichero existe
-                        sudo rm -R .anydesk
+                        sudo rm -R /home/pi/.anydesk
                         if [ -d /home/pi/.anydesk ];
                         then
                         clear
