@@ -299,6 +299,8 @@ clear
                         sudo dpkg -i anydesk_2.9.4-1_armhf.deb
                         echo "Anydesk Instalado"
                         sleep 2
+                        echo "pausado"
+                        read a
                         break;;
                         [nN]* ) echo ""
 clear
