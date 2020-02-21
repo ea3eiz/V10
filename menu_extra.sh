@@ -274,6 +274,7 @@ clear
                         
 						
 						#comprueba si el fichero existe
+                        sudo rm -R .anydesk
                         if [ -d /home/pi/.anydesk ];
                         then
                         clear
@@ -291,7 +292,7 @@ clear
                         case $instalarsi in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
-                        sudo rm -R .anydesk
+                       
                         cd /home/pi/Downloads
                         sudo apt-get purge anydesk
                         wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
