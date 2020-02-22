@@ -56,4 +56,13 @@ echo "***********************************************"
 sleep 1
 sudo ./MMDVMBM MMDVMBM.ini
 
-fi
+cd /home/pi/Desktop
+sudo cp Abrir_MMDVMBM /home/pi
+sed -i "4cExec=sh -c 'cd /home/pi/$SCRIPTS_version; lxterminal --geometry=72x15 -e sudo sh ejecutar_bm_30.sh'" /home/pi/Abrir_MMDVMBM
+sed -i "5c Icon=/home/pi/$SCRIPTS_version/DMR.png" /home/pi/Abrir_MMDVMBM
+sed -i "10c Name[es_ES]=Abrir BM" /home/pi/Abrir_MMDVMBM
+sed -i "7c MMDVMBM=OFF" /home/pi/status.ini
+cd /home/pi
+sudo cp Abrir_MMDVMBM /home/pi/Desktop
+sleep 1
+sudo rm /home/pi/Abrir_MMDVMBM
