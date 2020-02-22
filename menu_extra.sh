@@ -282,6 +282,7 @@ clear
                         [sS]* ) echo ""
                         cd /home/pi
                         sudo rm -R .anydesk
+                        clear
                         echo "${VERDE}"
                         echo "*******************************************"
                         echo "*           INSTALANDO ANYDESK            *"
