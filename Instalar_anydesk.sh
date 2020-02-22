@@ -1,6 +1,12 @@
 #!/bin/bash
+ROJO="\033[1;31m"
+VERDE="\033[1;32m"
+BLANCO="\033[1;37m"
+AMARILLO="\033[1;33m"
+CIAN="\033[1;36m"
+GRIS="\033[0m"
 
-
+                        clear
                         echo "${VERDE}"
                         echo "*************************************************"
                         echo "*  ${ROJO}ADVERTENCIA!!!${VERDE}                               *"
@@ -49,5 +55,6 @@
                         sleep 2
                         sudo reboot
                         break;;
-                        [nN]* ) 
+                        [nN]* )
+                        exit; 
                         echo ""
