@@ -57,9 +57,7 @@ GRIS="\033[0m"
                         break;;
                         [nN]* ) 
                         echo ""
-                        clear
-                        exit;
-                        break;;
+
                         esac
-                        exit;
+
 
