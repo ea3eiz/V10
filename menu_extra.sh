@@ -271,23 +271,14 @@ done;;
 while true
 do
 clear
-                        
-						
-						#comprueba si el fichero existe
-                        #if [ -d /home/pi/.anydesk ];
-                        #then
-                        #clear
-                        #echo "${VERDE}"
-                        #echo "*******************************************"
-                        #echo "*       ANYDESK YA ESTÁ INSTALADO         *"
-                        #echo "*******************************************"
-                        #sleep 5
-                        #instalarsi="N"
-                        #else
-                        instalarsi="S"
-                        #fi
-                        #================================
-                        case $instalarsi in
+                        echo "${VERDE}"
+                        echo "*************************************************"
+                        echo "*  ${ROJO}ADVERTENCIA!!!${VERDE}                               *"
+                        echo "*  ${ROJO}AL INSTALAR ANYDESK SE REINICIARÁ EL SISTEMA${VERDE} *"
+                        echo "*************************************************"
+                        echo "${CIAN}" 
+                        read -p 'Quieres instalar Anydesk ? S/N ' actualizar                                              
+                        case $actualizar in
                         [sS]* ) echo ""
                         cd /home/pi
                         sudo rm -R .anydesk
@@ -328,7 +319,8 @@ clear
                         sleep 2
                         sudo reboot
                         break;;
-                        [nN]* ) echo ""
+                        [nN]* ) 
+                        echo ""
 clear
 exit;
 break;;
