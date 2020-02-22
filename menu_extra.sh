@@ -292,7 +292,7 @@ clear
                         sudo apt-get purge anydesk
                         wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
                         clear
-                        sudo dpkg -i anydesk_5.5.3-1_armhf.deb
+                        sudo dpkg -i anydesk_5.5.3-1_armhf.deb -y
                         clear
                         echo "${VERDE}"
                         echo "*******************************************"
