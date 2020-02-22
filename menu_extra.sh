@@ -274,7 +274,6 @@ clear
                         
 						
 						#comprueba si el fichero existe
-                        sudo rm -R /home/pi/.anydesk
                         if [ -d /home/pi/.anydesk ];
                         then
                         clear
@@ -288,10 +287,10 @@ clear
                         instalarsi="S"
                         fi
                         #================================
-
                         case $instalarsi in
                         [sS]* ) echo ""
                         echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
+                        sleep 3
                        
                         cd /home/pi/Downloads
                         sudo apt-get purge anydesk
@@ -300,9 +299,11 @@ clear
                         sudo dpkg -i anydesk_5.5.3-1_armhf.deb
 
                         echo "Anydesk Instalado"
-                        sleep 2
-                        echo "pausado"
-                        read a
+                        sleep 3
+                        clear
+                        echo ">>>>>>>>> SE REINICIARÁ EL SISTEMA >>>>>>>>"
+                        sleep 3
+                        sudo reboot
                         break;;
                         [nN]* ) echo ""
 clear
