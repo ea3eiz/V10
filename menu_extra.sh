@@ -298,11 +298,29 @@ clear
 
                         sudo dpkg -i anydesk_5.5.3-1_armhf.deb
 
-                        echo "Anydesk Instalado"
-                        sleep 3
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*        SE HA INSTALADO ANYDESK          *"
+                        echo "*******************************************"
+                        sleep 2
                         clear
-                        echo ">>>>>>>>> SE REINICIARÁ EL SISTEMA >>>>>>>>"
-                        sleep 3
+                        echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${AMARILLO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
+                        clear
+                        echo "${ROJO}"
+                        echo "*******************************************"
+                        echo "*        SE REINICIARÁ EL SISTEMA         *"
+                        echo "*******************************************"
+                        sleep 2
                         sudo reboot
                         break;;
                         [nN]* ) echo ""
