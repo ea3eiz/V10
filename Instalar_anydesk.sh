@@ -61,4 +61,5 @@ GRIS="\033[0m"
                         exit;
                         break;;
                         esac
+                        exit;
 
