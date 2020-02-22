@@ -1,4 +1,6 @@
 #!/bin/bash
+while true
+do
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -60,3 +62,5 @@ GRIS="\033[0m"
                         clear
                         exit;
                         break;;
+esac
+done;;
