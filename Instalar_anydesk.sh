@@ -57,6 +57,6 @@ GRIS="\033[0m"
                         [nN]* ) 
                         echo ""
                         esac
-                        exit
+                        
 
 
