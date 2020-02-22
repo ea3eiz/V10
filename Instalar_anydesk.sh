@@ -54,9 +54,11 @@ GRIS="\033[0m"
                         echo "*******************************************"
                         sleep 2
                         sudo reboot
+                        break;;
                         [nN]* ) 
                         echo ""
+                        clear
+
                         esac
-                        
 
 
