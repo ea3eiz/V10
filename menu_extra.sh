@@ -274,24 +274,28 @@ clear
                         
 						
 						#comprueba si el fichero existe
-                        if [ -d /home/pi/.anydesk ];
-                        then
-                        clear
-                        echo "${VERDE}"
-                        echo "*******************************************"
-                        echo "*       ANYDESK YA ESTÁ INSTALADO         *"
-                        echo "*******************************************"
-                        sleep 5
-                        instalarsi="N"
-                        else
+                        #if [ -d /home/pi/.anydesk ];
+                        #then
+                        #clear
+                        #echo "${VERDE}"
+                        #echo "*******************************************"
+                        #echo "*       ANYDESK YA ESTÁ INSTALADO         *"
+                        #echo "*******************************************"
+                        #sleep 5
+                        #instalarsi="N"
+                        #else
                         instalarsi="S"
-                        fi
+                        #fi
                         #================================
                         case $instalarsi in
                         [sS]* ) echo ""
-                        echo ">>>>>>>>> INSTALANDO ANYDESK >>>>>>>>"
-                        sleep 3
-                       
+                        cd /home/pi
+                        sudo rm -R .anydesk
+                        echo "${VERDE}"
+                        echo "*******************************************"
+                        echo "*           INSTALANDO ANYDESK            *"
+                        echo "*******************************************"
+                        sleep 2                       
                         cd /home/pi/Downloads
                         sudo apt-get purge anydesk
                         wget https://download.anydesk.com/rpi/anydesk_5.5.3-1_armhf.deb
