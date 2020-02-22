@@ -406,7 +406,7 @@ echo "   *********************************************************************"
 echo "${VERDE}"
 echo -n "    Pulsa una tecla para seguir "
 read a
-                                sh flash_mmdvm_hs_gpio.sh
+                                sh Instalar_anydesk.sh
                                 echo ""
                                 break;;
                                 [nN]* ) echo ""
