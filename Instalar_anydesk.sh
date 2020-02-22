@@ -55,6 +55,8 @@ GRIS="\033[0m"
                         sleep 2
                         sudo reboot
                         break;;
-                        [nN]* )
-                        exit; 
+                        [nN]* ) 
                         echo ""
+                        clear
+                        exit;
+                        break;;""
