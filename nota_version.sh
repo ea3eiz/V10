@@ -14,7 +14,7 @@ echo -n "${CIAN}"
 echo "                      NOTAS DE LA VERSIÓN: ${AMARILLO}V$NUMERO_VERSION ${CIAN}Actualización: ${AMARILLO}$actualizacion"
 echo -n "${VERDE}"                                                                                 
 echo "   ************************************************************************************"
-echo "\33[1;36m   Gracias por descargar la imagen de ADER V.02.07.$NUMERO_VERSION"
+echo "\33[1;36m   Gracias por descargar la imagen de ${AMARILLO}ADER $SCRIPTS_version"
 
 echo "${BLANCO}"
 info=$(cat /etc/os-release > /home/pi/info.txt)
