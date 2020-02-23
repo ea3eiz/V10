@@ -7,7 +7,7 @@ sudo cp actualizacion /home/pi/.config/autostart
 fi
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version="V10"
-version="V10.03.01"
+version="V10.03."
 version=$version$actualizacion
 #pone todos los status de inicio en OFF 
 sed -i "1c D-STAR=OFF" /home/pi/status.ini
