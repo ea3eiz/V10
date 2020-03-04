@@ -57,4 +57,4 @@ sudo lxterminal --geometry=80x12 -e ./YSFGateway YSFGateway.ini &
 cd /home/pi/MMDVMHost
 
 sudo ./MMDVMFUSION MMDVMFUSION.ini
-fi
+

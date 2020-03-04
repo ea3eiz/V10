@@ -3,7 +3,7 @@ clear
 while true
 do
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
-#Colores
+#Colores 
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
@@ -145,6 +145,41 @@ clear
                         sudo mkdir /home/pi/dv4mini
                         sudo chmod 777 -R /home/pi/dv4mini
                         cd /home/pi/$CRIPTS_version/DV4MINI/20190307new
+                        cp dv_serial /home/pi/dv4mini
+                        cp dv4mini.exe /home/pi/dv4mini
+                        cp xref.ip /home/pi/dv4mini
+                        sudo cp dv_serial /usr/bin/
+                        cd /usr/bin/
+                        sudo chmod 777 dv_serial
+                        cd /home/pi/dv4mini
+                        sudo chmod 777 dv_serial
+                        clear
+                        echo "************************************"
+                        echo "*** SE HA ACTUALIZADO CON EXITO  ***"
+                        echo "************************************"
+                        sleep 3                        
+                        clear
+                        break;;
+                        [nN]* ) echo ""
+                        break;;
+esac
+done;;
+5) echo ""
+while true
+do
+clear
+                        ejecutar1=S
+                        case $ejecutar1 in
+                        [sS]* ) echo ""
+                        echo ">>>>>>>>> ACTUALIZANDO >>>>>>>>"
+                        sudo rm -r /home/pi/$CRIPTS_version/DV4MINI/
+                        cd /home/pi/$CRIPTS_version
+                        git clone http://github.com/ea3eiz/DV4MINI
+                        sudo rm -r /home/pi/dv4mini
+                        sudo rm /usr/bin/dv_serial
+                        sudo mkdir /home/pi/dv4mini
+                        sudo chmod 777 -R /home/pi/dv4mini
+                        cd /home/pi/$CRIPTS_version/DV4MINI/DV4MINI-RPI_2020_03_03
                         cp dv_serial /home/pi/dv4mini
                         cp dv4mini.exe /home/pi/dv4mini
                         cp xref.ip /home/pi/dv4mini
