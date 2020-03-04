@@ -24,8 +24,6 @@ echo  "\33[1;36m   5)\33[1;33m Actualizar \33[1;32mecho  "\33[1;36m   4)\33[1;33
 ${AMARILLO} (NEW)   \33[1;33m"
 
 
-DV4MINI-RPI_2020_03_03
-
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
