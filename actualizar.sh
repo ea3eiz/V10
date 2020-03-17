@@ -5,6 +5,22 @@ echo "Sí, sí existe."
 else
 sudo cp actualizacion /home/pi/.config/autostart
 fi
+
+estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
+if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
+sudo systemctl stop ysfgateway.service
+sudo systemctl stop dmr2ysf.service
+
+sudo systemctl stop analog_bridge.service
+sudo systemctl stop ircddbgateway.service
+sudo systemctl stop md380-emu.service
+sudo systemctl stop mmdvm_bridge.service
+sudo systemctl stop nxdngateway.service
+else
+echo ""
+fi
+
+
 actualizacion=$(awk "NR==1" /home/pi/.config/autostart/actualizacion)
 SCRIPTS_version="V10"
 version="V10.03."
@@ -246,15 +262,26 @@ cp RXF_NXDN.desktop /home/pi/Desktop
 rm /home/pi/RXF_NXDN.desktop
 #=================================================================================
 
-status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
-status_dvswitch=`expr substr $status_dvswitch 10 3`
-if [ $status_dvswitch = OFF ]
-then
-systemctl stop ircddbgateway.service
-#sudo killall ircddbgatewayd
+#status_dvswitch=$(awk "NR==18" /home/pi/status.ini)
+#status_dvswitch=`expr substr $status_dvswitch 10 3`
+#if [ $status_dvswitch = OFF ]
+#then
+#systemctl stop ircddbgateway.service
+#else
+#echo ""
+#fi
+
+estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
+if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
+sudo systemctl stop ysfgateway.service
+sudo systemctl stop dmr2ysf.service
+
+sudo systemctl stop analog_bridge.service
+sudo systemctl stop ircddbgateway.service
+sudo systemctl stop md380-emu.service
+sudo systemctl stop mmdvm_bridge.service
+sudo systemctl stop nxdngateway.service
 else
 echo ""
 fi
-
-
 
