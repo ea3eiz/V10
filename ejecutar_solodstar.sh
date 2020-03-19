@@ -31,7 +31,7 @@ sudo cp /home/pi/RXF_DSTAR.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/RXF_DSTAR.desktop
 
-#Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF                         
+#Escribe en el fichero INFO_RXF para poner los datos del icono INFO TXF                        
 sed -i "5c $frecuencia" /home/pi/INFO_RXF
 
 SCRIPTS_version=$(awk "NR==1" /home/pi/.config/autostart/version)
@@ -54,22 +54,4 @@ echo "*             ABRIENDO SOLO D-STAR            * "
 echo "***********************************************"
 sleep 1
 sudo ./MMDVMDSTAR MMDVMDSTAR.ini & ircddbgateway -gui
-
-
-
-
-cd /home/pi/Desktop
-sudo cp Abrir_solodstar.desktop /home/pi
-sed -i "6c Exec=sh -c 'cd /home/pi/V10/;lxterminal --geometry=80x20 -e sudo sh ejecutar_solodstar.sh'" /home/pi/Abrir_solodstar.desktop
-sed -i "7c Icon=/home/pi/$SCRIPTS_version/SOLO_D-STAR.png" /home/pi/Abrir_solodstar.desktop
-sed -i "11c Name[es_ES]=Abrir solo DSTAR" /home/pi/Abrir_solodstar.desktop
-sed -i "13c SOLODSTAR=OFF" /home/pi/status.ini
-cd /home/pi
-sudo cp Abrir_solodstar.desktop /home/pi/Desktop
-sleep 1
-sudo rm /home/pi/Abrir_solodstar.desktop
-
-
-
-
 fi
