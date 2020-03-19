@@ -49,8 +49,7 @@ if [ "$seguir" = 'S' -o "$seguir" = 's' ];then
 sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi 
 sed -i "9c Terminal=true" /home/pi/Abrir_D-STARRepeater.desktop
 
-sed -i "4c Exec=sh -c 'cd /home/pi/V104; lxterminal --geometry=72x8 -e sudo sh ejecutar_dstarrepeater.sh; sudo dstarrepeater & sudo ircddbgateway -gui'
-" /home/pi/Abrir_D-STARRepeater.desktop
+sed -i "4c Exec=sh -c 'cd /home/pi/V10; sudo sh ejecutar_dstarrepeater.sh'" /home/pi/Abrir_D-STARRepeater.desktop
 sed -i "5c Icon=/home/pi/V10/DSTAR.png" /home/pi/Abrir_D-STARRepeater.desktop
 sed -i "10c Name[es_ES]=Abrir DSTAR Repeater" /home/pi/Abrir_D-STARRepeater.desktop
 
