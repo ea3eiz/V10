@@ -49,8 +49,8 @@ sed -i "17c NXDN=OFF" /home/pi/status.ini
 
 sudo cp /home/pi/Desktop/Activar_dvswitch.desktop /home/pi #deja el icono en el estado que se reinició
 sudo cp /home/pi/Desktop/Activar_NextionDriver.desktop /home/pi #deja el icono en el estado que se reinició
-sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi #deja con el terminal en el estado que se reinició
-sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi #deja con el terminal en el estado que se reinició
+#sudo cp /home/pi/Desktop/Abrir_ircDDBGateway.desktop /home/pi #deja con el terminal en el estado que se reinició
+#sudo cp /home/pi/Desktop/Abrir_D-STARRepeater.desktop /home/pi #deja con el terminal en el estado que se reinició
 
 cd /home/pi/$SCRIPTS_version/Desktop
 cp * /home/pi/Desktop
@@ -58,8 +58,8 @@ sleep 3
 
 sudo cp /home/pi/Activar_dvswitch.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
 sudo cp /home/pi/Activar_NextionDriver.desktop /home/pi/Desktop #deja el icono en el estado que se reinició
-sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop #deja con el terminal en el estado que se reinició
-sudo cp /home/pi/Abrir_D-STARRepeater.desktop /home/pi/Desktop #deja con el terminal en el estado que se reinició
+#sudo cp /home/pi/Abrir_ircDDBGateway.desktop /home/pi/Desktop #deja con el terminal en el estado que se reinició
+#sudo cp /home/pi/Abrir_D-STARRepeater.desktop /home/pi/Desktop #deja con el terminal en el estado que se reinició
 
 #Actualiza Imagen
 cd /home/pi/$SCRIPTS_version
