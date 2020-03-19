@@ -35,10 +35,10 @@ sudo cp Abrir_D-STARRepeater.desktop /home/pi/Desktop
 sleep 1
 sudo rm /home/pi/Abrir_D-STARRepeater.desktop
 
-#sudo ircddbgateway -gui  & dstarrepeater & ircddbgateway -gui
-sudo ircddbgateway -gui  & 
-sleep 2
-sudo dstarrepeater
+sudo ircddbgateway -gui  & dstarrepeater & ircddbgateway -gui
+#sudo ircddbgateway -gui  & 
+#sleep 2
+#sudo dstarrepeater
 fi
  
 
