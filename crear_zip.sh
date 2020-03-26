@@ -124,8 +124,10 @@ sudo sed -i "12c $sala_fcs" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "13c $sala_nxdn" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "14c $selfcare" /home/pi/Downloads/datos_dvswitch
 sudo sed -i "15c $reflector_dstar" /home/pi/Downloads/datos_dvswitch
+sudo rm /home/pi/Downloads/anydesk*
 
 cd /home/pi/
+
 tar -zcvf copia.tar.gz Downloads
 cp  copia.tar.gz /var/www/html/upload/files
 sudo rm copia.tar.gz
