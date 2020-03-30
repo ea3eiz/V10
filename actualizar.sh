@@ -270,7 +270,10 @@ rm /home/pi/RXF_NXDN.desktop
 #else
 #echo ""
 #fi
-
+sudo rm -R /home/pi/V10/associacioader.com
+sudo rm -R /home/pi/V10/Desktop/associacioader.com
+sudo rm /home/pi/V10/Desktop/st-data
+sudo rm /home/pi/Desktop/st-data
 estado_dvswitch=$(awk "NR==18" /home/pi/status.ini)
 if [ "$estado_dvswitch" = 'DVSWITCH=OFF' ];then
 sudo systemctl stop ysfgateway.service
