@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
 TryExec=lxterminal
-Exec=sh -c 'sudo shutdown -h now'
+Exec=sh -c "cd /home/pi/V10;lxterminal --geometry=72x15 -e Apagar_raspberry.sh"
 Icon=/home/pi/V10/ICONO_APAGAR_IMAGEN.png
 Type=Application
 StartupNotify=false
