@@ -23,14 +23,14 @@ echo "   *****************************************************"
 sleep 2
 
 						# 01-04-2019 arregla no escribe port en FCS.ini
-						sudo cp /home/pi/V104/cambia_configuracion_port.php /var/www/html/
+						sudo cp /home/pi/V10/cambia_configuracion_port.php /var/www/html/
 
                         # 03-04-2019 añade el options manual para DMR+
-                        sudo cp /home/pi/V104/sistema_plus.php /var/www/html/
-                        sudo cp /home/pi/V104/cambia_reflector_dmrplus.php /var/www/html/
-                        sudo cp /home/pi/V104/cambia_options_dmrplus.php /var/www/html/
-                        sudo cp /home/pi/V104/panel_configuracion.php /var/www/html/
-                        
+                        sudo cp /home/pi/V10/sistema_plus.php /var/www/html/
+                        sudo cp /home/pi/V10/cambia_reflector_dmrplus.php /var/www/html/
+                        sudo cp /home/pi/V10/cambia_options_dmrplus.php /var/www/html/
+                        sudo cp /home/pi/V10/panel_configuracion.php /var/www/html/
+
 #Actualiza reflectores
                         cd /usr/local/share/opendv/
                         sudo curl --fail -o DExtra_Hosts.txt -s http://www.pistar.uk/downloads/DExtra_Hosts.txt
