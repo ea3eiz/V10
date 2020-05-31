@@ -202,7 +202,7 @@ body{
             <option value="Address=89.36.222.146">IPSC2-EA3Master</option>
             <option value="Address=80.211.226.37">IPSC2-EA4Master</option>
             <option value="Address=217.61.98.58">IPSC2-EA5Master</option>
-            <option value="Address=212.237.50.28">IPSC2-EA7Master</option>          
+            <option value="Address=207.180.195.121">IPSC2-EA7Master</option>          
             <option value="">-----------------------------------</option>
             </select>
             <br>
