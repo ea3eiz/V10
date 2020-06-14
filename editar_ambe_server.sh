@@ -15,7 +15,7 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 echo "${VERDE}"
 echo "   ************************************************************************"
-echo "   *        Script para Editor AMBE 17:15 SERVER\33[1;33m       ${ROJO} by EA3EIZ          \33[1;32m     *"
+echo "   *        Script para Editor AMBE 17:20 SERVER\33[1;33m       ${ROJO} by EA3EIZ          \33[1;32m     *"
 echo "   ************************************************************************"
 echo -n "\33[1;36m   1)\33[0m Modificar puerto ROUTER  - \33[1;33m"
 var1= sed -n '1p'  $usuario/ambe_server.ini
