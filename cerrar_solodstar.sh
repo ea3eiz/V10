@@ -42,6 +42,6 @@ sudo rm /home/pi/Abrir_ircDDBGateway.desktop
 
 sudo killall MMDVMDSTAR
 sudo killall ircddbgateway
-sudo killall MMDVMBM
+
 
  
