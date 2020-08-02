@@ -25,3 +25,5 @@ sed -i "$linea_sed DATABASEURL='https://ham-digital.org/status/users.csv'" /home
 
 
 sudo sh /home/pi/MMDVMHost/linux/DMRIDUpdate.sh
+
+cp /home/pi/MMDVMHost/DMRIds.dat /var/lib/mmdvm
