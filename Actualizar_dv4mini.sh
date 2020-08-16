@@ -10,23 +10,25 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+MARRON="\33[38;5;138m"
 echo "${VERDE}"         
-echo "   *********************************************************************"
-echo "   *                                                                   *"
-echo "   *           Script para Actualizar \33[1;33mDV4MINI           \33[1;31m by EA3EIZ\33[1;32m     *"
-echo "   *                                                                   *"
-echo "   *********************************************************************"
-echo  "\33[1;36m   1)\33[1;33m Actualizar \33[1;32mDV4MINI20190307   \33[1;33m"
-echo  "\33[1;36m   2)\33[1;33m Volver a la versión \33[1;32mDV4MINI20190127   \33[1;33m"
-echo  "\33[1;36m   3)\33[1;33m Volver a la versión \33[1;32mDV4MINI20170517   \33[1;33m"
-echo  "\33[1;36m   4)\33[1;33m Actualizar \33[1;32mDV4MINI20190307${AMARILLO} (NEW)   \33[1;33m"
-echo  "\33[1;36m   5)\33[1;33m Actualizar \33[1;32mDV4MINI-RPI_2020_03_03${AMARILLO} (NEW)   \33[1;33m"
+echo "   **************************************************************************"
+echo "   *                                                                        *"
+echo "   *                   Script para Actualizar DV4MINI                       *" 
+echo -n "${ROJO}"   
+echo "  ${VERDE} * ${ROJO}                            by EA3EIZ ${VERDE}                                 *"
+echo -n "${VERDE}" 
+echo "   *                                                                        *"
+echo "   **************************************************************************"
+echo ""
+echo  "\33[1;36m   1)${BLANCO} Actualizar para utilizar \33[1;32mDV4MINI 20200303${AMARILLO} (NEW)   \33[1;33m"
+echo  "\33[1;36m   2)${BLANCO} Actualizar para utilizar \33[1;32mDV4MINI 20170517   \33[1;33m"
 
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
 case $escoger_menu in
-1) echo ""
+1BLOQUEADO) echo ""
 while true
 do
 clear
@@ -61,7 +63,7 @@ clear
                         break;;
 esac
 done;;
-2) echo ""
+2BLOQUEADO) echo ""
 while true
 do
 clear
@@ -96,7 +98,7 @@ clear
                         break;;
 esac
 done;;
-3) echo ""
+2) echo ""
 while true
 do
 clear
@@ -131,7 +133,7 @@ clear
                         break;;
 esac
 done;;
-4) echo ""
+4BLOQUEADO) echo ""
 while true
 do
 clear
@@ -166,7 +168,7 @@ clear
                         break;;
 esac
 done;;
-5) echo ""
+1) echo ""
 while true
 do
 clear
