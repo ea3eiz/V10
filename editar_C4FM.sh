@@ -9,12 +9,14 @@ usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
 SCRIPTS_version=$(awk "NR==1" $usuario/.config/autostart/version)
 DIRECTORIO="YSFGateway.ini "
 
+#Colores
 ROJO="\033[1;31m"
 VERDE="\033[1;32m"
 BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+MARRON="\33[38;5;138m"
 
 echo "${VERDE}"
 echo "   ***************************************************************************"
@@ -102,7 +104,16 @@ buscar=":"
 largo_linea=`expr index $var $buscar`
 largo_linea=`expr $largo_linea - 1`
 numero_linea=`expr substr $var 1 $largo_linea`
-numero_linea=`expr $numero_linea + 2` # y le suma uno qudando coomo: (75)
+
+                        # Modificación 09-04-2020                    
+                        if [ "$numero_linea" = '38' ];then 
+                        numero_linea=`expr $numero_linea + 4`
+                        sudo sed -i "39c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                        sudo sed -i "40c # Startup=" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                        else
+                        numero_linea=`expr $numero_linea + 2`                        
+                        fi
+
 STARTUP=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_ST=$numero_linea$letra
@@ -140,9 +151,16 @@ Inactiv=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
 letra=c
 linea_sed_Inactiv=$numero_linea$letra
 
-
-
-
+#12
+var2=`grep -n -m 1 "\[Network\]" $usuario/YSFClients/YSFGateway/YSFGateway.ini`
+buscar=":"
+largo_linea=`expr index $var2 $buscar`
+largo_linea=`expr $largo_linea - 1`
+numero_linea=`expr substr $var2 1 $largo_linea`
+numero_linea=`expr $numero_linea + 5` # y le suma uno qudando coomo: (75)
+OPTIONS=$(awk "NR==$numero_linea" $usuario/YSFClients/YSFGateway/YSFGateway.ini)
+letra=c
+linea_sed_OPTIONS=$numero_linea$letra
 
 echo -n "\33[1;36m   1)\33[0m Modificar Indicativo  - \33[1;33m"
 echo "$INDICATIVO"
@@ -175,14 +193,17 @@ echo -n "\33[1;36m  10)\33[0m Habilitar FCS         - \33[1;33m"
 echo "$FCS"
 
 echo -n "\33[1;36m  11)\33[0m InactivityTimeout     - "
-echo -n "${AMARILLO}$Inactiv"
+echo "${AMARILLO}$Inactiv"
+
+echo -n "\33[1;36m  12)\33[0m Modificar Options     - "
+echo -n "${AMARILLO}$OPTIONS"
 
 echo ""
 echo ""
 echo "\33[1;36m  28)\33[1;33m Abrir fichero YSFGateway.ini para hacer cualquier cambio\33[1;33m"
 
 echo ""
-echo "   ${ROJO}0) Salir ${AMARILLO}(si usas ratón puedes salir directamente con la x del terminal)"
+echo "   ${ROJO}0) Salir"
 echo ""
 echo -n "\33[1;36m   Elige una opción: " 
 read escoger_menu
@@ -196,7 +217,7 @@ echo "Valor actual:   \33[1;33m$INDICATIVO"
                            actualizar=S 
                            case $actualizar in
 			                     [sS]* ) echo ""
-                            #Convierte de minúsculas a Mayúsculas
+                            #Convierte de minúsculas a Mayúsculas 
                            Valor=`echo "$Valor" | tr [:lower:] [:upper:]`
                            #Quita los espacios
                            Valor=`echo "$Valor" | tr -d '[[:space:]]'`
@@ -364,6 +385,20 @@ echo "Valor actual:   \33[1;33m$Inactiv"
                            case $actualizar in
                            [sS]* ) echo ""
                            sudo sed -i "$linea_sed_Inactiv InactivityTimeout=$Valor" $usuario/YSFClients/YSFGateway/YSFGateway.ini
+                           break;;
+                           [nN]* ) echo ""
+                           break;;
+esac
+done;;
+12) echo ""
+while true
+do
+echo "Valor actual:   \33[1;33m$OPTIONS"
+                           read -p 'Introduce DG-ID Ej. 9,14,24,63,65: ' Valor                     
+                           actualizar=S 
+                           case $actualizar in
+                           [sS]* ) echo ""
+                           sudo sed -i "$linea_sed_OPTIONS Options=$Valor" $usuario/YSFClients/YSFGateway/YSFGateway.ini
                            break;;
                            [nN]* ) echo ""
                            break;;
