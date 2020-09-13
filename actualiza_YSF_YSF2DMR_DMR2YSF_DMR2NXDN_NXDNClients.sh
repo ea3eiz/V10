@@ -26,12 +26,9 @@ MARRON="\33[38;5;138m"
                         git clone https://github.com/ea3eiz/YSFClients
                         cd YSFClients
                         cd YSFGateway
+                        sudo sed -i '209c std::string name = "ADER V103";' YSFGateway.cpp
                         make
                         sudo make install
-
-
-                        sudo sed -i '209c std::string name = "ADER V103";' /home/pi/YSFClients/YSFGateway/YSFGateway.cpp
-
 
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
