@@ -28,6 +28,11 @@ MARRON="\33[38;5;138m"
                         cd YSFGateway
                         make
                         sudo make install
+
+
+                        sudo sed -i '209c std::string name = "ADER V103";' /home/pi/YSFClients/YSFGateway/YSFGateway.cpp
+
+
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${ROJO}"
