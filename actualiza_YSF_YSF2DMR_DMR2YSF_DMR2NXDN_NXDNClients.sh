@@ -27,19 +27,19 @@ MARRON="\33[38;5;138m"
                         cd YSFClients
                         cd YSFGateway
                         sudo sed -i '209c std::string name = "IMAGEN ADER V10.03";' YSFGateway.cpp
+                        sudo sed -i '28c const char* YSF_VERSION = "ADER V10.03";' YSFNetwork.cppmake
                         make
-                        sudo make install
-                                                sudo make install
-                        sudo rm *.cpp
-                        sudo rm *.o
-                        sudo rm *.h
-                        sudo rm *.log
-                        sudo rm *.vcxp
-                        sudo rm *.vcxproj
-                        sudo rm *.filters 
-                        sudo rm Makefile
-                        sudo rm *.md
-                        sudo rm *.sh
+                        # sudo make install
+                        # sudo rm *.cpp
+                        # sudo rm *.o
+                        # sudo rm *.h
+                        # sudo rm *.log
+                        # sudo rm *.vcxp
+                        # sudo rm *.vcxproj
+                        # sudo rm *.filters 
+                        # sudo rm Makefile
+                        # sudo rm *.md
+                        # sudo rm *.sh
                         clear
                         echo "\v\v\v\v\v\v\v\v\v\v\v"
                         echo "${ROJO}"
