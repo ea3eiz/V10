@@ -44,6 +44,7 @@ sleep 3
 						sudo wget -O YSFHosts.txt http://register.ysfreflector.de/export_csv.php					
 						wget -O FCSRooms.txt https://raw.githubusercontent.com/g4klx/YSFClients/master/YSFGateway/FCSRooms.txt 
 						sleep 3
+						clear
 echo "${AMARILLO}"			
 echo "**********************************************************"
 echo "* El fichero YSFHost.txt se ha actualizado correctamente *"
