@@ -30,7 +30,7 @@ case $escoger_menu in
 while true
 do
 clear
-						read -p ' Quieres actualizar el listado de reflectores YSF S/N ?' ejecutar1
+						read -p ' Quieres actualizar el listado de reflectores S/N ?' ejecutar1
 		    			case $ejecutar1 in
 			            [sS]* ) echo ""
 			            echo "${VERDE}"
@@ -46,9 +46,9 @@ sleep 3
 						sleep 3
 						clear
 echo "${AMARILLO}"			
-echo "**********************************************************"
-echo "* El fichero YSFHost.txt se ha actualizado correctamente *"
-echo "**********************************************************"
+echo "*************************************************************"
+echo "* Los fichero YSFHost.txt y FCSRooms.txt se han actualizado *"
+echo "*************************************************************"
 sleep 3
 		                break;;
 						[nN]* ) echo ""
