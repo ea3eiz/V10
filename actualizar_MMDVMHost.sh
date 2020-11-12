@@ -1,5 +1,4 @@
 ﻿#!/bin/bash
-exit;
 clear
 # path usuario
 usuario=$(awk "NR==1" /home/pi/.config/autostart/usuario)
@@ -12,6 +11,22 @@ BLANCO="\033[1;37m"
 AMARILLO="\033[1;33m"
 CIAN="\033[1;36m"
 GRIS="\033[0m"
+
+
+
+echo "   *********************************************************************"
+echo ""
+echo "${AMARILLO}                           Actualizar MMDVMHost "
+echo " "
+echo "${BLANCO}                       DESHABILITADO TEMPORALMENTE "
+echo "${VERDE}"
+echo "   *********************************************************************"
+echo ""
+echo -n "${CIAN}  Pulsa enter para cerrar esta ventana: "
+read a
+exit;
+
+
                     echo "${ROJO}"
                     echo " *********************************************************************"
                     echo " * Si actualizas MMDVMhost desde esta opción, perderás todas las     *"
