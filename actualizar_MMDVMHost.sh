@@ -14,6 +14,7 @@ GRIS="\033[0m"
 
 
 
+echo "${VERDE}\v\v"
 echo "   *********************************************************************"
 echo ""
 echo "${AMARILLO}                           Actualizar MMDVMHost "
