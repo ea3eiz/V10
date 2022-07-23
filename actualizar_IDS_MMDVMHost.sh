@@ -24,9 +24,9 @@ sed -i "$linea_sed DATABASEURL='https://ham-digital.org/status/users.csv'" /home
 
 
 
-sudo sh /home/pi/MMDVMHost/linux/DMRIDUpdate.sh
+#sudo sh /home/pi/MMDVMHost/linux/DMRIDUpdate.sh
 
-sudo cp /home/pi/MMDVMHost/DMRIds.dat /var/lib/mmdvm
+#sudo cp /home/pi/MMDVMHost/DMRIds.dat /var/lib/mmdvm
 
 
 
@@ -35,5 +35,5 @@ sudo cp /home/pi/MMDVMHost/DMRIds.dat /var/lib/mmdvm
                         sudo curl --fail -o DMRIds.dat -s http://www.pistar.uk/downloads/DMRIds.dat
                         sudo chmod 777 -R /var/lib/mmdvm
 
-                        sudo cp DMRIds.dat /home/pi/MMDVMHost/
+                        sudo cp -f DMRIds.dat /home/pi/MMDVMHost/
                         sudo chmod 777 -R /home/pi/MMDVMHost/
