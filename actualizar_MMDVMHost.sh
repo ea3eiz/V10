@@ -25,7 +25,7 @@ echo "   *********************************************************************"
 echo ""
 echo -n "${CIAN}  Pulsa enter para cerrar esta ventana: "
 read a
-exit;
+#exit;
 
 
                     echo "${ROJO}"
